@@ -30,6 +30,9 @@
 
 \graphicspath{ {./images/} }
 
+\definecolor{nie}{RGB}{178,34,34}
+\definecolor{tak}{RGB}{0,120,0}
+
 \begin{document}
 \bibliographystyle{plain}
 
@@ -41,6 +44,90 @@
 \maketitle
 \end{titlepage}
 
+%===============================================================================
+%*** PYTANIA I ODPOWIEDZI ******************************************************
+%===============================================================================
+\part*{Pytania i odpowiedzi}
+
+\section{\textcolor{blue}{RS-232}}
+\subsection*{Prawda/Fałsz}
+\begin{itemize}
+	\item \textcolor{nie}{RS-232 jest portem przeznaczonym do synchronicznej transmisji znakowej. Generator taktu odpowiedzialny za wyprowadzanie znaków typowo ustawiany jest na: 1200bd, 2400bd, 4800bd, 9600bd, 19200bd.} \\
+	{\small \emph{RS-232 jest portem przeznaczonym do asynchronicznej transmisji znakowej. Da się sztucznie stworzyć synchroniczną transmisję.}}
+	
+	\item \textcolor{tak}{Linie kontrolne w interfejsie RS-232 to: DTR, DSR, RTS, CTS, RI, DCD. Pary DTR/DSR i RTS/CTS wykorzystywane są do realizacji handshake'u w połączeniach bezmodemowych.} \\ {\small \emph{Tak, te pary linii mogą być wykorzystywane do handshake podczas gdy RcD i TxD zajmują się przesyłem danych.}}
+	
+	\item \textcolor{nie}{Transakcja w systemie MODBUS składa się z zapytania (query) wysyłanego przez stację Slave i odpowiedzi odsyłanej przez stację Master.} \\
+	{\small \emph {Jest odwrotnie - zapytanie wysyła Master, a odpowiedź odsyła Slave.}}
+	
+	\item \textcolor{nie}{W trybie transmisji ASCII znacznikiem początku ramki jest znak ':', a kooca ramki para znaków CR LF. W trybie transmisji RTU znacznikiem początku ramki jest znak 'Ctrl-A', a kooca para znaków CTRL-Y CTRL-Z.} \\
+	{\small \emph{Zdanie jest poprawne dla ASCII. Dla RTU, znacznikiem początku i końca ramki jest przerwa o długości minimum 4T, gdzie T jest czasem trwania jednego znaku.}}
+	
+	\item \textcolor{nie}{Standard RS-232 transmituje znaki synchronicznie, bity w znakach [asynchronicznie]} \\
+	{\small \emph{Ostatnie słowo ucięte, więc spekuluję że tak właśnie było napisane. To nieprawda, jest odwrotnie.}}
+	
+	\item \textcolor{tak}{Standard RS-422 pozwala na osiągnięcie szybkości 10MBodów na odległości 100m.} \\
+	{\small \emph{IMO pozwala, na slajdzie 12 jest napisane że 10 Mbd przy zasięgu DO 100m - czyli 100m chyba też.}}
+	
+	\item \textcolor{tak}{Liniami kontrolnymi w RS-232 nie są linie TxD, RxD, SG.} \\
+	{\small \emph{Owszem, TxD i RxD są liniami danych, a SG to po prostu masa.}}
+	
+	\item \textcolor{tak}{System MODBUS składa się z faz zapytania i odpowiedzi.} \\
+	{\small \emph{Tak właśnie jest.}}
+	
+	\item \textcolor{tak}{W systemie MODBUS obowiązuje master/slave.} \\
+	{\small \emph{Pewnie, a w dodatku Slave'ów może być wielu.}}
+	
+	\item \textcolor{tak}{W systemie MODBUS prędkości transmisji wynoszą od 1200 do 19200bd.} \\
+	{\small \emph{Jak najbardziej.}}
+	
+	\item \textcolor{tak}{W systemie MODBUS ramka w ASCII może mieć format 7N2 (lub np. 7E1, 7O1).} \\
+	{\small \emph{Tak, patrz warstwa fizyczna MODBUS.}}
+	
+	\item \textcolor{tak}{W systemie MODBUS ramka w RTU może mieć format 8N2 *(lub np. 8E1, 8O1).} \\
+	{\small \emph{Tak, patrz warstwa fizyczna MODBUS.}}
+	
+	\item \textcolor{tak}{W trybie transmisji RTU jest kontrola błędów CRC.} \\
+	{\small \emph{Tak, jest elementem budowy ramki RTU.}}
+	
+	\item \textcolor{nie}{Bit kontrolny w RS-232 zależy od bitu danych i bitu stopu.} \\
+	{\small \emph{Bit kontrolny słuzy do kontroli parzystości/nieparzystości, nie ma związku z bitem stopu.}}
+	
+	\item \textcolor{nie}{Za pomocą RS-232 możemy połączyd ze sobą 2 stacje DCE} \\
+	{\small \emph{Połączyd możemy dwie stacje DTE, lub DTE z DCE. Dwie stacje DCE łączą się za pomocą łącza telefonicznego.}}
+	
+	\item \textcolor{tak}{W MODBUS kontrola błędów jest realizowana za pomocą LRC lub CRC.} \\
+	{\small \emph{Tak, LRC wykorzystywane jest w trybie ASCII, CRC w trybie RTU.}}
+	
+	\item \textcolor{nie}{Do portu RS 485 można podłączyć tylko jedno urządzenie, ale za to obsługiwać go z dużo większą szybkością i na większą odległość niż jest to możliwe w przypadku interfejsu RS 232.} \\
+	{\small \emph{Można podłączyć do 32 stacji.}}
+	
+	\item \textcolor{nie}{Format ramki w protokole Modbus jest następujący: znacznik początku ramki, adres urządzenia slave, adres mastera, pole danych, znacznik końca ramki.} \\
+	{\small \emph{Opis nie pasuje ani do trybu ASCII, ani RTU}}
+	
+	\item \textcolor{nie}{RS 232 jest portem przeznaczonym dla asynchronicznej transmisji znakowej, realizowanej zazwyczaj w trybie dupleksowym, czyli dwukierunkowej transmisji niejednoczenej (naprzemiennej)} \\
+	{\small \emph{Tryb dupleksowy jest równoczesny, to półdupleksowy jest niejednoczesny.}}
+	
+	\item \textcolor{tak}{W interfejsie RS 232 linie TxD i RxD służą do transmisji znaków, natomiast DTR, RTS to wyjścia kontrolne, a DSR, CTS, RI i DCD to wejścia kontrolne.} \\
+	{\small \emph{Indeed}}
+	
+	\item \textcolor{tak}{Multipleksowanie urządzeń ze znakowym portem asynchronicznym pozwala na ich kontrolę poprzez jeden port RS-232.} \\
+	{\small \emph{Żeby kontrolować kilka urządzeń z jednego portu potrzebny jest koncentrator. Jeśli "używanie koncentratora" równa się "multipleksowanie", to PRAWDA.}}
+	
+	\item \textcolor{tak}{Węzeł podrzędny w systemie MODBUS po wykryciu błędu w komunikacie wysyła potwierdzenie negatywne	do węzła nadrzędnego.} \\
+	{\small \emph{W odpowiedzi pole to jest wykorzystywane do pozytywnego lub negatywnego potwierdzenia wykonania polecenia.}}
+	
+	\item \textcolor{tak}{Czy w trybie ASCII systemu MODBUS każdy bajt wysyłany jest jako znak z przedziału 0x00, 0xFF?} \\
+	{\small \emph{Bajt dzielimy na 2 części i wysyłamy jako 2 znaki z przedziału 0-9 i Ah-Fh}}
+	
+	
+	
+\end{itemize}
+\section{\textcolor{blue}{USB}}
+
+\section{\textcolor{blue}{IEEE 1394 Firewire}}
+
+\section{\textcolor{blue}{IEEE-488 i SCPI}}
 
 
 \end{document}
