@@ -55,7 +55,7 @@
 	\item \textcolor{nie}{RS-232 jest portem przeznaczonym do synchronicznej transmisji znakowej. Generator taktu odpowiedzialny za wyprowadzanie znaków typowo ustawiany jest na: 1200bd, 2400bd, 4800bd, 9600bd, 19200bd.} \\
 	{\small \emph{RS-232 jest portem przeznaczonym do asynchronicznej transmisji znakowej. Da się sztucznie stworzyć synchroniczną transmisję.}}
 	
-	\item \textcolor{tak}{Linie kontrolne w interfejsie RS-232 to: DTR, DSR, RTS, CTS, RI, DCD. Pary DTR/DSR i RTS/CTS wykorzystywane są do realizacji handshake'u w połączeniach bezmodemowych.} \\ {\small \emph{Tak, te pary linii mogą być wykorzystywane do handshake podczas gdy RcD i TxD zajmują się przesyłem danych.}}
+	\item \textcolor{tak}{Linie kontrolne w interfejsie RS-232 to: DTR, DSR, RTS, CTS, RI, DCD. Pary DTR/DSR i RTS/CTS wykorzystywane są do realizacji handshake'u w połączeniach bezmodemowych.} \\ {\small \emph{Tak, te pary linii mogą być wykorzystywane do handshake podczas gdy RxD i TxD zajmują się przesyłem danych.}}
 	
 	\item \textcolor{nie}{Transakcja w systemie MODBUS składa się z zapytania (query) wysyłanego przez stację Slave i odpowiedzi odsyłanej przez stację Master.} \\
 	{\small \emph {Jest odwrotnie - zapytanie wysyła Master, a odpowiedź odsyła Slave.}}
@@ -75,17 +75,21 @@
 	\item \textcolor{tak}{System MODBUS składa się z faz zapytania i odpowiedzi.} \\
 	{\small \emph{Tak właśnie jest.}}
 	
-	\item \textcolor{tak}{W systemie MODBUS obowiązuje master/slave.} \\
-	{\small \emph{Pewnie, a w dodatku Slave'ów może być wielu.}}
+	\item {W systemie MODBUS}
+	\begin{itemize}
+		\item \textcolor{tak}{Obowiązuje master/slave.} \\
+		{\small \emph{Pewnie, a w dodatku Slave'ów może być wielu.}}
+		
+		\item \textcolor{tak}{Prędkości transmisji wynoszą od 1200 do 19200bd.} \\
+		{\small \emph{Jak najbardziej.}}
+		
+		\item \textcolor{tak}{Ramka w ASCII może mieć format 7N2 (lub np. 7E1, 7O1).} \\
+		{\small \emph{Tak, patrz warstwa fizyczna MODBUS.}}
+		
+		\item \textcolor{tak}{Ramka w RTU może mieć format 8N2 *(lub np. 8E1, 8O1).} \\
+		{\small \emph{Tak, patrz warstwa fizyczna MODBUS.}}
+	\end{itemize} 
 	
-	\item \textcolor{tak}{W systemie MODBUS prędkości transmisji wynoszą od 1200 do 19200bd.} \\
-	{\small \emph{Jak najbardziej.}}
-	
-	\item \textcolor{tak}{W systemie MODBUS ramka w ASCII może mieć format 7N2 (lub np. 7E1, 7O1).} \\
-	{\small \emph{Tak, patrz warstwa fizyczna MODBUS.}}
-	
-	\item \textcolor{tak}{W systemie MODBUS ramka w RTU może mieć format 8N2 *(lub np. 8E1, 8O1).} \\
-	{\small \emph{Tak, patrz warstwa fizyczna MODBUS.}}
 	
 	\item \textcolor{tak}{W trybie transmisji RTU jest kontrola błędów CRC.} \\
 	{\small \emph{Tak, jest elementem budowy ramki RTU.}}
@@ -93,8 +97,8 @@
 	\item \textcolor{nie}{Bit kontrolny w RS-232 zależy od bitu danych i bitu stopu.} \\
 	{\small \emph{Bit kontrolny słuzy do kontroli parzystości/nieparzystości, nie ma związku z bitem stopu.}}
 	
-	\item \textcolor{nie}{Za pomocą RS-232 możemy połączyd ze sobą 2 stacje DCE} \\
-	{\small \emph{Połączyd możemy dwie stacje DTE, lub DTE z DCE. Dwie stacje DCE łączą się za pomocą łącza telefonicznego.}}
+	\item \textcolor{nie}{Za pomocą RS-232 możemy połączyć ze sobą 2 stacje DCE} \\
+	{\small \emph{Połączyć możemy dwie stacje DTE, lub DTE z DCE. Dwie stacje DCE łączą się za pomocą łącza telefonicznego.}}
 	
 	\item \textcolor{tak}{W MODBUS kontrola błędów jest realizowana za pomocą LRC lub CRC.} \\
 	{\small \emph{Tak, LRC wykorzystywane jest w trybie ASCII, CRC w trybie RTU.}}
@@ -119,11 +123,133 @@
 	
 	\item \textcolor{tak}{Czy w trybie ASCII systemu MODBUS każdy bajt wysyłany jest jako znak z przedziału 0x00, 0xFF?} \\
 	{\small \emph{Bajt dzielimy na 2 części i wysyłamy jako 2 znaki z przedziału 0-9 i Ah-Fh}}
+		
 	
+\end{itemize}
+
+
+\section{\textcolor{blue}{USB}}
+\subsection*{Prawda/Fałsz}
+\begin{itemize}
+	
+	\item \textcolor{tak}{Kontrola urządzenia USB odbywa się poprzez zapisy komunikatów do bufora o numerze 0 i odczycie informacji statusowych z bufora o numerze 0.} \\
+	{\small \emph{Zgadza się.}}
+	
+	\item \textcolor{nie}{W przypadku błędu transmisji każda transakcja USB jest powtarzana, ponieważ niedopuszczalne jest przekazywanie danych przekłamanych.} \\
+	{\small \emph{Transakcje izochroniczne nie są powtarzane w przypadku błędu transmisji.}}
+	
+	\item \textcolor{tak}{Hub nie dopuszcza ruchu full speed do portów, do których są podłączone urządzenia low speed.} \\
+	{\small \emph{Tak, urządzenie lowspeed blokuje możliwość włączenia fullspeed na całym porcie.}}
+	
+	\item \textcolor{nie}{Reset portu USB polega na rekonfiguracji hosta, po której host zapisuje tablicę deskryptorów do urządzenia podłączonego do tego portu.} \\
+	{\small \emph{Reset portu USB polega na rekonfiguracji urządzenia. W następującej procedurze enumeracji między innymi dochodzi do odczytu tablicy deskryptorów z urządzenia przez host.}}
+	
+	\item \textcolor{nie}{Typowa transakcja USB składa się z pakietów żądania i odpowiedzi, z których każdy potwierdzany jest osobnym potwierdzeniem.} \\
+	{\small \emph{Typowa transakcja USB składa sie z pakietów token, data i handshake. Transakcje izochroniczne nie są potwierdzane.}}
+	
+	\item \textcolor{nie}{W systemie USB urządzenia zgłaszają żądania do hosta, który je kolejkuje i następnie obsługuje w kolejności pojawiania się zgłoszenia.} \\
+	{\small \emph{Urządzenia nie zgłaszają żądania, tylko są odpytywane przez hosta. Host nie tworzy jednej kolejki, tylko w miarę możliwości stara się obsługiwać wszystkie urządzenia jednocześnie, równomiernie, zapobiegając zawłaszczeniu.}}
+	
+	\item \textcolor{nie}{W USB można połączyd kaskadowo do 5 hubów, korzystających z zasilania magistralowego} \\
+	{\small \emph{Podłączyć je można tylko korzystając z zasilania zewnętrznego lub hybrydowego. Przy zasilaniu magistralowym zabraknie zasilania już na drugim hubie. Co więcej, należy mieć na uwadze maksymalne dopuszczalne opóźnienie sygnału, które przy przejściu przez 5 hubów jest osiągane - 350ns. Urządzenia podpięte do 5'tego huba mogą nie działać poprawnie.}}
+	
+	\item \textcolor{nie}{Mechanizm data toggle w USB służy do przywracania synchronizacji pomiędzy hostem i urządzeniem, utraconej na skutek wystąpienia błędów w pakietach danych.} \\
+	{\small \emph{Mechanizm data toggle zabezpiecza przed utratą synchronizacji pomiędzy hostem i urządzeniem na skutek błędu w potwierdzeniu odsyłanym przez odbiorcę.}}
+	
+	\item \textcolor{tak}{Host kontroler USB komunikuje się z interfejsem magistrali USB urządzenia peryferyjnego za pomocą fizycznego kanału komunikacyjnego.} \\
+	{\small \emph{Tak, używamy kabelka.}}
+	
+	\item \textcolor{nie}{Kamera internetowa może przesyłać obraz do komputera za pomocą transferu izochronicznego z szybkością LowSpeed w interfejsie USB.} \\
+	{\small \emph{Z tabelk można wyczytać, że dla transferu izochronicznego nie można wykorzystać szybkości LowSpeed.}}
+	
+	\item \textcolor{tak}{Pakiety USB przesyłane z szybkością LowSpeed muszą byd poprzedzone pakietem preambuły} \\
+	{\small \emph{Tak, jest on charakterystyczny dla pakietów przesyłanych z szybkością LowSpeed}}
+	
+	\item \textcolor{nie}{Urządzenie peryferyjne USB 2.0 może być podłączone do host kontrolera za pośrednictwem maksymalnie sześciu hubów.} \\
+	{\small \emph{Aby spełnid normę (ograniczenie czasowe oczekiwania na odpowiedź), można podłączyd za pośrednictwem maksymalnie 5 hubów.}}
+	
+	\item \textcolor{nie}{Pole PID w pakiecie USB zabezpieczone jest 16-bitową sumą kontrolną CRC.} \\
+	{\small \emph{Pole PID zabezpieczone jest 4-bitowym polem kontroli, będącym prostą negacją bitów pola PID.}}
+	
+	\item \textcolor{nie}{Do portu dolnego huba podłączane mogą byd tylko wtyki USB typu B.} \\
+	{\small \emph{Tylko wtyki typu A.}}
+	
+	\item \textcolor{nie}{Transakcja dzielona w USB 1.1 składa sie z dwóch części: SSPLIT i CSPLIT.} \\
+	{\small \emph{Takie czary dopiero w USB 2.0}}
+	
+	\item \textcolor{nie}{W przypadku połączenia USB HighSpeed wykonywane jest podparcie linii D- do Vcc za pośrednictwem rezystora 1,5k.} \\
+	{\small \emph{Po podłączeniu urządzenia High Speed wpierw jest ono identyfikowane jako Full Speed, więc wykonywane jest podparcie linii D+ do Vcc za pośrednictwem rezystora 1,5k. Następnie, poprzez chirp ("dwierkanie") host i urządzenie ustalają, czy możliwa jest komunikacja w trybie High Speed. Jeśli tak, usuwane jest podparcie przez rezystor, a obwód zamykany jest terminatorami.}}
+	
+	\item \textcolor{nie}{W kodowaniu NRZI co sześć jedynek jest wstawiany bit synchronizacji "0".} \\
+	{\small \emph{Pomieszane pojęcia. W kodowaniu NRZI nie występuje dodawanie bitu synchronizacji. Proces ten nazywa się bit stuffing. Zdanie było by poprawne, gdyby brzmiało np. W kodowaniu NRZI z bit stuffingiem co sześć.}}
+	
+	\item \textcolor{nie}{Transakcje kontrolna i przerwaniowa w USB 1.1 są transakcjami aperiodycznymi z gwarantowanym pasmem w ramach jednej mikroramki.} \\
+	{\small \emph{Transakcja kontrola jest transakcją aperiodyczną. Transakcja przerwaniowa jest transakcją periodyczną.}}
+	
+	\item \textcolor{tak}{W kontrolerze OHC transakcje izochroniczne są porządkowane/kolejkowane w drzewo/strukturę drzewiastą.} \\
+	{\small \emph{Tak, OHC wykorzystuje strukturę drzewa, a UHC tablicę wskaźników (listę podwieszaną).}}
+	
+	\item \textcolor{tak}{Standard USB 2.0 wymaga skręconych, ekranowanych kabli.} \\
+	{\small \emph{Well, High speed all the way, więc wymaga}}
+	
+	\item \textcolor{nie}{Transfer kontrolny i przerwaniowy są transferami aperiodycznymi.} \\
+	{\small \emph{Było podobne pytanie. Transfer kontrolny jest aperiodyczny, transfer przerwaniowy jest periodyczny.}}
+	
+	\item \textcolor{tak}{Wielowarstwowa architektura USB 2.0 składa się z 3 warstw.} \\
+	{\small \emph{Tak - warstwa interfejsu magistrali USB, warstwa urządzenia USB, warstwa funkcji urządzenia}}
+	
+	\item \textcolor{tak}{W porcie USB dane są dzielone na transakcje.} \\
+	{\small \emph{Dane w ramce są dzielone na transakcje, więc tak}}
+	
+	\item \textcolor{nie}{Hub podłączony do portu USB ma obciążalność 100uA.} \\
+	{\small \emph{Hub podłączony do portu USB bez własnego zasilania (zasilanie magistralowe) ma obciążalnośd dla portów dolnych do 100mA na port (maksymalną 400mA na cały hub). Hub z zasilaniem zewnętrznym lub hybrydowym ma obciążalnośd do 500mA na port.}}
+	
+	\item {W systemie USB do mechanizmów kontroli danych należą:}
+	\begin{itemize}
+		\item \textcolor{tak}{Przełączanie pakietów danych} \\
+		{\small \emph{Tzw. Data Toggle}}
+		
+		\item \textcolor{tak}{Wykrywanie braku aktywności na linii danych;}
+		
+		\item \textcolor{nie}{Zabezpieczenie znacznika SOF lub EOF} \\
+		{\small \emph{Reakcją jest natomiast objęte wystąpienie fałszywego znacznika kooca pakietu (false EOP)}}
+		
+		\item \textcolor{nie}{kodowanie LRC} \\
+		{\small \emph{Pakiety zabezpieczone są kodowaniem CRC.}}
+	\end{itemize}
+	
+	\item \textcolor{nie}{Wydajnośd dolnego portu (USB 2.0) wynosi 500mA.} \\
+	{\small \emph{Nie wiadomo. Zasilany Hub może wystawić te 500mA, ale niezasilany już tylko 100mA}}
+	
+	\item \textcolor{tak}{USB 2.0 ma parę przewodów ekranowanych.} \\
+	{\small \emph{Taki upgrade.}}
+	
+	\item \textcolor{nie}{W kodowaniu NZR wstawia się dodatkowe bity synchroniczne.} \\
+	{\small \emph{Dodatkowe bity synchroniczne wstawia się w kodowaniu NRZI}}
+		
+	\item \textcolor{nie}{Urządzenie USB 2.0 może zasygnalizować swoją niegotowość do zapisu danych z szybkością High-Speed wysyłając pakiet PING-NYET.} \\
+	{\small \emph{Wychodzi na to, że niegotowość zgłasza samym NYET? Pyta – PING, odpowiada (niegotowość) NYET. I Tak cały czas, chyba że dostanie ACK. ACK – wykonanie transakcji OUT. NYRT – host kontynuuje wysyłanie zapytań PING}}
+	
+	\item \textcolor{nie}{W systemie deskryptorów urządzenia USB może wystąpić kilka deskryptorów urządzenia, konfiguracji, interfejsów I punktów końcowych.} \\
+	{\small \emph{Deskryptor urządzenia może być jeden. Innych – konfiguracji, interfejsu, końcowych może być więcej.}}
+	
+	\item \textcolor{tak}{Hub USB ma przerwaniowy punkt końcowy, który wykorzystuje do powiadamiania hosta o podłączeniu	urządzenia USB do któregoś z jego portów dolnych.} \\
+	{\small \emph{Chyba.}}
+	
+	\item \textcolor{nie}{Na wierzchołku wielopoziomowego, hierarchicznego układu deskryptorów USB znajduje się deskryptor konfiguracji.}
+	{\small \emph{Na szczycie znajduje się pojedynczy deskryptor urządzenia.}}
+	
+	\item \textcolor{nie}{Transfer masowy I izochroniczny USB 1.1 są przykładami transferów aperiodycznych z zagwarantowanym pasmem w ramach jednej mikroramki.} \\
+	{\small \emph{Izochroniczny jest periodyczny, masowy nie ma zagwarantowanego pasma (wg tabelki z	prędkościami)}}
+	
+	\item \textcolor{nie}{W deskryptorze konfiguracji USB jest jakiś pole statusowe, które mówi o maksymalnym poborze prądu. Dla wartości 50 urządzenie pobiera 50mA.} \\
+	{\small \emph{Pole to jest tak skonstruowane, żeby wartość zmieściła się w jednym bajcie, ze skokiem co 2mA. Dlatego urządzenie, które zgłasza, że 50 może zasysać maksymalnie 100mA.}}
+	
+	\item \textcolor{nie}{Uszeregowanie transakcji w USB. Nie zależy od implementacji kontrolera.}
+	{\small \emph{w OHC przerwaniowe są w strukturze drzewa, a w UCH listy podwieszanej, co ma wpływ na uszeregowanie (do sprawdzenia).}}
 	
 	
 \end{itemize}
-\section{\textcolor{blue}{USB}}
 
 \section{\textcolor{blue}{IEEE 1394 Firewire}}
 
