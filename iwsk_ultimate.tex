@@ -15,6 +15,7 @@
 \usepackage{bigstrut}
 \usepackage{color}
 \usepackage[usenames,dvipsnames]{xcolor}
+\usepackage{pdfpages}
 
 
 \setlength{\textheight}{24cm}
@@ -33,6 +34,16 @@
 \definecolor{nie}{RGB}{178,34,34}
 \definecolor{tak}{RGB}{0,120,0}
 
+% === Reset inkrementacji sekcji przy nowym parcie === %
+\usepackage{titlesec}
+
+\makeatletter
+\@addtoreset{section}{part}
+\makeatother
+\titleformat{\part}[display]
+{\normalfont\LARGE\bfseries\centering}{}{0pt}{}
+
+
 \begin{document}
 \bibliographystyle{plain}
 
@@ -47,7 +58,7 @@
 %===============================================================================
 %*** PYTANIA I ODPOWIEDZI ******************************************************
 %===============================================================================
-\part*{Pytania i odpowiedzi}
+\part{Pytania i odpowiedzi}
 
 \section{\textcolor{blue}{RS-232}}
 \subsection*{Prawda/Fałsz}
@@ -255,5 +266,186 @@
 
 \section{\textcolor{blue}{IEEE-488 i SCPI}}
 
+
+\pagebreak
+\part{Opracowanie materiałów}
+
+\section{RS-232 – szeregowy port znakowy}
+	\subsection{Charakterystyka interfejsu RS-232}
+		\subsubsection{Transmisja danych}
+		Szeregowa, asynchroniczna transmisja znakowa w trybie półdupleksowym.\\Rodzaje transmisji:
+		\begin{itemize}
+			\item Szeregowa - sekwencyjne przesyłanie bitów w ustalonej kolejności (od LSD lub MSB) po jednej linii transmisyjnej.\\
+			\includegraphics[width=9cm]{./wyklady/RS232_2_1.pdf}
+			\item Równoległa - przesyłanie bitów słowa po przyporządkowanej każdemu bitowi linii transmisyjnej (bity przesyłane równolegle, słowa przesyłane szeregowo).\\
+			\includegraphics[width=9cm]{./wyklady/RS232_2_2.pdf}
+		\end{itemize}
+		\subsubsection{Jednostka informacyjna - znak}
+		Format znaku\\
+		\includegraphics[width=10cm]{./wyklady/RS232_3_2.pdf}\\
+		Bity kontrolne:
+		\begin{itemize}
+			\item \textbf{START} - znacznik początku (SOF)
+			\item \textbf{PARITY} – bit kontroli poprawnosci znaku
+			\item \textbf{STOP} – znacznik ko ca (1 lub 2 bity)
+		\end{itemize}
+		Bity danych:
+		\begin{itemize}
+			\item rozmiar pola 5, 6, 7 lub 8
+			\item jako pierwszy przesyłany najmniej znaczący bit (B0)
+		\end{itemize}
+		\subsubsection{Rodzaje transmisji}
+		\begin{itemize}
+			\item \textbf{Synchroniczna} - elementy informacji wysyłane w takt zegara nadajnika.
+			\item \textbf{Asynchroniczna} - wysyłanie elementów informacji niesynchronizowane zegarem nadajnika.
+		\end{itemize}
+		\subsubsection{Transmisja w RS-232}
+		\includegraphics[width=9cm]{./wyklady/RS232_4_1.pdf}
+		\begin{itemize}
+			\item Synchroniczne wysyłanie bitów
+			\item Asynchroniczne wysyłanie znaków
+			\begin{itemize}
+				\item Brak sygnału zegarowego określającego momenty wysyłania znaków
+				\item Odstępy między znakami nieokreślone
+			\end{itemize}
+		\end{itemize}
+		\subsubsection{Tryby transmisji}
+		\begin{itemize}
+			\item \textbf{Simpleksowa} - jednokierunkowa, z nadajnika do odbiornika
+			\item \textbf{Półdupleksowa} - dwukierunkowa, niejednoczesna (w danej chwili czasu jedno urządzenia jest nadajnikiem, a drugie odbiornikiem)
+			\item \textbf{Dupleksowa} - dwukierunkowa, jednoczesna (w danej chwili czasu oba urządzenia mogą spełniać rolę nadajnika lub odbiornika)
+		\end{itemize}
+	\subsection{Komunikacja DTE-DCE - sygnały w porcie RS-232}
+	Komunikacja dwóch stacji DTE przez komutowane łącze telefoniczne.\\
+	\includegraphics[width=12cm]{./wyklady/RS232_6_1.pdf}\\
+	\begin{table}[h]
+		\begin{tabular}{|c|c|c|}
+			\hline
+			\multicolumn{3}{|c|}{\textbf{Urządzenia}}                        \\ \hline
+			\multicolumn{1}{|c|}{DTE} & Data Terminal Equipment      & Komputer           \\ \hline
+			\multicolumn{1}{|c|}{DCE} & Data Communication Equipment & Modem              \\ \hline
+			\multicolumn{3}{|c|}{\textbf{Linie} (sygnały)}                   \\ \hline
+			TxD & Transmitted Data             & Dane nadawane      \\ \hline
+			RxD & Received Data                & Dane odbierane     \\ \hline
+			DTR & Data Terminal Ready          & Gotowość DTE       \\ \hline
+			DSR & Data Set Ready               & Gotowość DCE       \\ \hline
+			RTS & Request to Send              & Danie nadawania    \\ \hline
+			CTS & Clear To Send                & Zgoda na nadawanie \\ \hline
+			RI  & Ring Indicator               & Wskaźnik wywołania \\ \hline
+			DCD & Data Carrier Detected        & Wykrycie nośnej    \\ \hline
+			SG  & Signal Ground                & Masa sygnałowa     \\ \hline
+		\end{tabular}
+	\end{table}
+		\subsubsection{Fazy pracy układu}
+		\begin{itemize}
+			\item Nawiązanie połączenia
+			\item Transmisja danych
+		\end{itemize}
+		\subsubsection{Linie w złączu RS-232}
+		\begin{itemize}
+			\item Linie danych: TxD, RxD
+			\item Linie kontrolne: DTR, DSR, RTS, CTS, RI, DCD
+		\end{itemize}
+	\subsection{Połączenie bezmodemowe DTE-DTE}
+	Przykład połączenia dla transmisji dupleksowej.\\
+	\includegraphics[width=9cm]{./wyklady/RS232_7_1.pdf}
+	\subsection{Kontrola transmisji: handshake i protokół XON/XOFF}
+		\subsubsection{Handshake}
+		\includegraphics[width=9cm]{./wyklady/RS232_9_1.pdf}\\
+		\begin{itemize}
+			\item DTR = 1 - zgoda na nadawanie
+			\item DTR = 0 - brak zgody na nadawanie
+		\end{itemize}
+		\subsubsection{Protokół XON/XOFF}
+		\includegraphics[width=9cm]{./wyklady/RS232_9_2.pdf}\\
+		\begin{itemize}
+			\item XON – ASCII 19 (CTRL-S)
+			\item XOFF – ASCII 17 (CTRL-Q)
+		\end{itemize}
+	\subsection{Parametry elektryczne}
+	\includegraphics[width=9cm]{./wyklady/RS232_10_1.pdf}
+	\subsection{Standardy RS-423, RS-422, RS-485}
+		\subsubsection{RS-423A}
+		\includegraphics[width=9cm]{./wyklady/RS232_12_1.pdf}
+		\begin{itemize}
+			\item szybkość do 100 kbd (przy zasięgu do 30 m)
+			\item zasięg do 1200 m (przy szybkosci do 3 kbd)
+		\end{itemize}
+		\subsubsection{RS-422A}
+		\includegraphics[width=9cm]{./wyklady/RS232_12_2.pdf}
+		\begin{itemize}
+			\item szybkość do 10 Mbd (przy zasięgu do 100 m)
+			\item zasięg do 1200 m (przy szybkości 100 kbd)
+		\end{itemize}
+		\subsubsection{RS-485A}
+		\includegraphics[width=10cm]{./wyklady/RS232_13_1.pdf}
+	\subsection{Systemy komunikacyjne oparte na łączu znakowym}
+		\includegraphics[width=9cm]{./wyklady/RS232_14_1.pdf}\\
+		\textbf{Problem}: dostęp do magistrali kontrolera i urządzeń systemu\\
+		\textbf{Rozwiązanie}: Implementacja protokołu komunikacyjnego (warstwa łącza danych)\\
+		\includegraphics[width=10cm]{./wyklady/RS232_15_1.pdf}\\
+	\subsection{System MODBUS}
+		\includegraphics[width=9cm]{./wyklady/RS232_16_1.pdf}\\
+		\subsubsection{Rodzaje transakcji}
+			\begin{itemize}
+				\item adresowana
+				\item rozgłoszeniowa
+			\end{itemize}
+		\subsubsection{Rodzaje odpowiedzi}
+			\begin{itemize}
+				\item normalna
+				\item szczególna
+			\end{itemize}
+		\subsubsection{Parametry protokołu}
+			\begin{itemize}
+				\item reguła dostępu do łącza: Master-Slave
+				\item zakres adresów: 1 - 247
+				\item adres rozgłoszeniowy: 0
+				\item kontrola błędów: LRC/CRC, ograniczenie czasowe odpowiedzi
+				\item wymagana ciągłość przesyłania znaków w ramce
+			\end{itemize}
+		\subsubsection{Rodzaje transmisji ramek}
+			\begin{itemize}
+				\item ASCII
+				\item RTU
+			\end{itemize}
+			\includegraphics[width=10cm]{./wyklady/RS232_18_1.pdf}
+		\subsubsection{Warstwa fizyczna}
+		\begin{itemize}
+			\item asynchroniczna transmisja znakowa
+			\item Formaty znaków
+			\begin{itemize}
+				\item Tryb ASCII: 7E1, 7O1, 7N2
+				\item Tryb RTU: 8E1, 8O1, 8N2
+			\end{itemize}
+			\item Szybkość: od 1200 bd do 19200 bd
+			\item Rodzaj łącza:
+			\begin{itemize}
+				\item Magistrala RS-485
+				\item Multipleksowany RS-232
+			\end{itemize}
+			\item Rodzaj transmisji (zależny od łącza):
+			\begin{itemize}
+				\item różnicowa dla RS-485
+				\item odniesiona do masy dla RS-232
+			\end{itemize}
+		\end{itemize}
+			
+		
+	\subsection{Kontroler RS-232 w komputerze PC}
+	
+	
+
+
+\section{USB – Uniwersalny interfejs szeregowy}
+
+
+\section{IEEE-488 and SCPI standards}
+
+
+\section{IEEE-1394 (FireWire)}
+
+
+\section{Tłumienie zakłóceń w rozproszonych systemach komputerowych}
 
 \end{document}
