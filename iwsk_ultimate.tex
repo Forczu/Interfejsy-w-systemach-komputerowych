@@ -275,29 +275,53 @@
 	Standard RS-232 został wprowadzony w 1962 r. w celu normalizacji interfejsu pomiędzy \textit{urządzeniem końcowym dla danych} (DTE - Data Terminal Equipment), a \textit{urządzeniem komunikacyjnym} (DCE - Data Communication Equipment). Na zajęciach zajmujemy się tak naprawdę zrewindowaną wersją standardu: RS-232C, wprowadzoną w 1969 roku.\\
 	RS-232C umożliwia przesył danych na niewielkie odległości - do 15 metrów - oraz niewielką szybkość - do 20 kb/s - przez niesymetryczne łącze.
 	\subsection{Charakterystyka interfejsu RS-232}
+		Łącze szeregowe przeznaczone do asynchronicznej transmisji znakowej realizowanej zazwyczaj w trybie półdupleksowym.
 		\subsubsection{Transmisja danych}
-		Szeregowa asynchroniczna transmisja znakowa w trybie półdupleksowym.
-		\subsubsection{Rodzaje transmisji}:
+		Szeregowa asynchroniczna transmisja znakowa w trybie półdupleksowym (praktycznie tylko w tym trybie, ale mogą być inne).
+		\subsubsection{Rodzaje transmisji}
 		\begin{itemize}
 			\item Szeregowa - sekwencyjne przesyłanie bitów w ustalonej kolejności (od LSD lub MSB) po jednej linii transmisyjnej.\\
 			\includegraphics[width=9cm]{./wyklady/RS232_2_1.pdf}
 			\item Równoległa - przesyłanie bitów słowa po przyporządkowanej każdemu bitowi linii transmisyjnej (bity przesyłane równolegle, słowa przesyłane szeregowo).\\
 			\includegraphics[width=9cm]{./wyklady/RS232_2_2.pdf}
 		\end{itemize}
-		\subsubsection{Jednostka informacyjna - znak}
-		Jednostka informacji o ściśle określonym formacie.\\
-		\includegraphics[width=10cm]{./wyklady/RS232_3_2.pdf}\\
+		\subsubsection{Definicje danych}
 		\begin{itemize}
-			\item \textbf{START} - bit kontrolny, znacznik początku (SOF - Start Of Frame) - jałowy z punktu widzenia przesyłanej informacji i służący jedynie w celu synchronizacji.
+			\item "0" - 0V
+			\item "1" - 12V
+			\item Czas transmisji jednego bitu T - stały, nie większy niż czas propagacji.
+			\item $\frac{1}{T}$ - liczba bitów przesyłana w jednostce czasu. Standardowe wartości 110, 150, 300, 600, 1200, 2400 ... [b/s]
+		\end{itemize}
+		\subsubsection{Jednostka informacyjna - znak}
+		Jednostka informacji o ściśle określonym formacie. Odbiorca dysponuje impulsami próbkującymi, które rozpoznają stan sygnału (odpytują).\\
+		\includegraphics[width=10cm]{./wyklady/RS232_3_2.pdf}\\
+		\subsubsection{Przekazywanie konfiguracji}
+			Aby nadawca i odbiorca mogli się porozumieć i interpretować znaki w ten sam sposób, muszą zostać tak samo skonfigurowane. Innymi słowy, muszą posiadać ten sam takt nadawania.\\Metody:\\
+			\begin{itemize}
+				\item dodatkowe łącze
+				\item jako element konfiguracji (wykorzystanie generatorów kwarcowych, synchronizm częstotliwościowy)
+			\end{itemize}
+			Nominalne położenie impulsu = ok. $\frac{1}{2}\times{T}$ - pośrodku, największe bezpieczeństwo próbkowania. Służą do tego układy korekcji fazy impulsu - liczniki, zliczają liczbę impulsów na wejściu i dają 1 na wyjściu.
+		\subsubsection{Definicja znaku}
+		\begin{itemize}
+			\item \textbf{START} - bit kontrolny, znacznik początku (SOF - Start Of Frame) - jałowy z punktu widzenia przesyłanej informacji i służący jedynie w celu synchronizacji. START zapewnia $\frac{n}{2}$ jako stan licznika (fazy impulsu).
 			\item \textbf{DANE} - 7-8 bitów, które są treścią znaku, począwszy od bitu najmniej znaczącego (LSB - least significant bit). Tym bitem jest B0.
 			\item \textbf{PARITY} – bit kontroli poprawności znaku, służy jako zabezpieczenie informacji. Może, ale nie musi występować. Jednak decyzja o jego występowaniu ma charakter globalny - dotyczy każdego znaku w danej transmisji. Jego stan określa zasada:
 			\begin{itemize}
-				\item kontrola parzystości (even parity) - polega na sprawdzeniu liczby jedynek na polu danych i ustawieniu bitu kontrolnego na "1" w przypadku nieparzystej liczby jedynek lub na "0" w przypadku parzystej (uzupełnienie do parzystości).
-				\item kontrola nieparzystości (odd parity) - polega na sprawdzeniu liczby zer na polu danych i ustawieniu bitu kontrolnego na "1" w przypadku nieparzystej liczby zer lub na "0" w przeciwnym przypadku.
+				\item Kontrola parzystości (Even parity) - polega na sprawdzeniu liczby jedynek na polu danych i ustawieniu bitu kontrolnego na "1" w przypadku nieparzystej liczby jedynek lub na "0" w przypadku parzystej (uzupełnienie do parzystości).
+				\item Kontrola nieparzystości (Odd parity) - polega na sprawdzeniu liczby zer na polu danych i ustawieniu bitu kontrolnego na "1" w przypadku nieparzystej liczby zer lub na "0" w przeciwnym przypadku.
+				\item Brak kontroli (None)
 			\end{itemize}
 			Ten bit kontroli pozwala wykryć przekłamanie w transmisji danych pod warunkiem, ze liczba przekłamań jest nieparzysta.
 			\item \textbf{STOP} – 1 lub 2 bity kontrolne, znacznik końca znaku.
 		\end{itemize}
+		\subsubsection{Konwencja nazewnicza rodzajów transmisji}
+			[Ilość bitów danych][Rodzaj kontroli][Liczba bitów stopu]\\Przykłady:
+			\begin{itemize}
+				\item 7E2 - 7 bitów danych, kontrola parzystości, 2 bity stopu (10 bitów + START = 11 bitów)
+				\item 8O1 - 8 bitów danych, kontrola nieparzystości, 1 bit stopu (11 bitów)
+				\item 8N2 - 8 bitów danych, brak kontroli, 2 bity stopu (11 bitów)
+			\end{itemize}
 		\subsubsection{Rodzaje transmisji}
 		\begin{itemize}
 			\item \textbf{Synchroniczna} - elementy informacji wysyłane w takt zegara nadajnika. W ten sposób przesyłane są bity w ramach pojedynczej jednostki informacyjnej.
@@ -375,9 +399,10 @@
 			\item XOFF – ASCII 17 (CTRL-Q)
 		\end{itemize}
 	\subsection{Parametry elektryczne sygnałów}
-	Poniżej przestawiono schemat "obwodu stykowego" złożonego ze źródła sygnału, toru transmisyjnego i odbiornika. Parametry zdefiniowano przy założeniu, że szybkosc transmisji nie przekracza 20 kbd.
+	Poniżej przestawiono schemat "obwodu stykowego" złożonego ze źródła sygnału, toru transmisyjnego i odbiornika. Parametry zdefiniowano przy założeniu, że szybkość transmisji nie przekracza 20 kbd.
 	\includegraphics[width=9cm]{./wyklady/RS232_10_1.pdf}\\
-	Na rysunku powyżej: kiloomy oraz mikrosekundy.
+	Na rysunku powyżej: kiloomy oraz mikrosekundy.\\
+	Wada: jest to obwód represyjny, da się go silnie zakłócić poprzez różnicę potencjałów pomiędzy masami.
 	\subsection{Standardy RS-423, RS-422, RS-485}
 	Niesymetryczna przesyłanie danych w RS-232C ogranicza szybkość i odległość transmisji, a ponadto nie jest zabezpieczone przed zakłóceniami zewnętrznymi. Aby to polepszyć wymyślono inne standardy.
 		\subsubsection{RS-423A}
@@ -407,10 +432,25 @@
 		Standard RS-485A jest rozwinięciem RS-422. Łącze RS-485A jest również zrównoważone i symetryczne, przy czym dopuszcza się nie tylko wiele odbiorników, ale i wiele nadajników podłączonych do jednej linii. Nadajniki muszą być trójstanowe.\\
 		\includegraphics[width=10cm]{./wyklady/RS232_13_1.pdf}
 	\subsection{Systemy komunikacyjne oparte na łączu znakowym}
+		\subsubsection{System oparty na szeregowym łączu znakowym}
+		Podłączenie urządzenia RS-232 do portu COM z pom. int. RS-485\\
 		\includegraphics[width=9cm]{./wyklady/RS232_14_1.pdf}\\
+		Rezystory zabezpieczają przed niekorzystnym odbiciem fali.\\
 		\textbf{Problem}: dostęp do magistrali kontrolera i urządzeń systemu\\
-		\textbf{Rozwiązanie}: Implementacja protokołu komunikacyjnego (warstwa łącza danych)\\
+		\textbf{Rozwiązanie}: Implementacja protokołu komunikacyjnego (warstwa łącza danych). Komputer zarządza innymi urządzeniami w całym systemie. Do zbudowania tego wystarczają proste przejściówki do zmian sygnałów.\\
+		\textbf{Komunikacja}:
+		\begin{itemize}
+			\item Selekcja urządzenia kontrolującego (master) - generuje on rozgłoszenie (broadcast) do wszystkich urządzeń i zbiera dane.
+			\item Selekcja urządzenia odbierającego - konieczna gdy wiele urządzeń chce przesłać odpowiedź do mastera, co może powodować konflikt.
+			\begin{itemize}
+				\item nadanie identyfikatorów (adresacja urządzeń)
+				\item zastosowanie przejściówek - są inteligentne i odpowiadają za dostęp do urządzenia.
+			\end{itemize}
+		\end{itemize}
+		\subsubsection{System oparty na łączu znakowym}
 		\includegraphics[width=10cm]{./wyklady/RS232_15_1.pdf}\\
+		Koncentrator zawiera 4 klucze portu RS. Dostęp jest tylko do jednego wyjścia naraz.\\
+		\textbf{Kaskadowe połączenie} - przełącznik podłączony do przełącznika. Pojawia się problem wyboru drogi do urządzenia, która musi być znana. Koncentratory muszą mieć informacje o \textbf{mapie urządzeń}.
 	\subsection{System MODBUS}
 		Interfejs MODBUS został opracowany w firmie Modicon i jest przyjętym standardem w dla asynchronicznej, znakowej wymiany informacji pomiędzy urządzeniami systemów pomiarowo-kontrolnych.
 		\subsubsection{Charakterystyka}
@@ -423,18 +463,18 @@
 			\end{itemize}
 		\includegraphics[width=9cm]{./wyklady/RS232_16_1.pdf}\\
 		\subsubsection{Transakcja}
-		Jedno urządzenie może inicjować transakcje (master), a pozostałe (slave) odpowiadają jedynie na zapytania mastera. Transakcja składa się z polecenia (query) wysyłanego z master do slave oraz z odpowiedzi (response) przesyłanej ze slave do master. Odpowiedź zawiera dane żądane przez master lub potwierdzenie realizacji jego połączenia.\\
+		Jedno urządzenie może inicjować transakcje (master), a pozostałe (slave) odpowiadają jedynie na zapytania mastera. Transakcja składa się z polecenia (query) wysyłanego z master do slave oraz z odpowiedzi (response) przesyłanej ze slave do master. Odpowiedź zawiera dane żądane przez master lub potwierdzenie realizacji jego połączenia. Wykrycie końca kończy fazę w której następuje przekazanie łącza masterowi.\\
 		\subsubsection{Format wiadomości}
 		Dotyczy zarówno poleceń jednostki nadrzędnej, jak i odpowiedzi podrzędnych.
 		\begin{itemize}
 			\item Adres
-			\item Kod funkcji (reprezentujący rozkaz)
+			\item Kod funkcji reprezentujący rozkaz, pierwszy bit rozkazu oznacza jego rodzaj. 0 - normalny, 1 - szczególny.
 			\item Dane
-			\item Kontrola błędów
+			\item Kontrola błędów (dla pracy w warunkach przemysłowych)
 		\end{itemize}
 		W przypadku odpowiedzi odpowiednio w polach znajdują się:
 		\begin{itemize}
-			\item Adres (swój, slave'a)
+			\item Adres (swój, slave'a, do kontroli poprawności)
 			\item Pole potwierdzenia realizacji rozkazu
 			\item Dane żądane przez master
 			\item Kontrola błędów
@@ -447,12 +487,12 @@
 		\subsubsection{Rodzaje odpowiedzi}
 			\begin{itemize}
 				\item \textbf{Normalna} - w przypadku poprawnego wykonania polecenia.
-				\item \textbf{Szczególna} - jeżeli slave wykryje błąd przy odbiorze wiadomości lub nie jest w stanie wykonać polecenia, to przygotowuje specjalny komunikat o wystąpieniu błędu i przesyła jako odpowiedź.
+				\item \textbf{Szczególna} - jeżeli slave wykryje błąd przy odbiorze wiadomości lub nie jest w stanie wykonać polecenia, to przygotowuje specjalny komunikat o wystąpieniu błędu i przesyła jako odpowiedź. W przypadku tej wiadomości jest ona \textbf{powiększona} o 128 - miejsce na kod błędu.
 			\end{itemize}
 		\subsubsection{Parametry protokołu}
 			\begin{itemize}
 				\item Reguła dostępu do łącza: Master-Slave
-				\item Zakres adresów: 1 - 247
+				\item Zakres adresów: 1 - 247 (identyfikatory slave'ów)
 				\item Adres rozgłoszeniowy: 0, rozpoznawany przez wszystkie slave'y
 				\item Kontrola błędów: LRC/CRC, ograniczenie czasowe odpowiedzi
 				\item Wymagana ciągłość przesyłania znaków w ramce
@@ -473,15 +513,16 @@
 				\item Znacznikiem początku ramki jest znak dwukropka (":" - ASCII 3Ah).
 				\item Dopuszczalne znaki dla pozostałych pól (poza znacznikiem końca ramki) to 0-9, A-F.
 				\item Pole funkcji: dwa znaki w trybie ASCII
+				\item Podsumowując: wykorzystujemy 2 znaki heksadecymalne do przesyłu 1go znaku ASCII. Dzielimy ten na dwie części i przesyłamy w dwóch pakietach po 10 bitów.
 				\item Urządzenie po wykryciu znacznika początku sprawdza czy pole adresowe zawiera jego własny adres. Jeżeli tak, to odczytuje zawartość pola funkcji i pola danych.
-				\item Pole kontrolne LRC zabezpiecza część informacyjną.
+				\item Pole kontrolne LRC (1-bitowe) zabezpiecza część informacyjną. Sumuje cześć informacyjną bajtu i uzupełnia do 2.
 				\item Ramka kończy się przesłaniem dwóch znaków: CR i LF.
 				\item Ramkę kończy przerwa czasowa trwająca co najmniej $3.5\times$(długości znaku)
 				\item Ramki muszą być przesyłane w postaci ciągłej, tzn. odstęp między kolejnymi znakami tworzącymi ramkę nie może być większy niż $1.5\times$(długości znaku).
 			\end{itemize}
 			Stosowane jest zabezpieczenie części informacyjnej ramki kodem LRC (Longitudinal Redundancy Check).
 		\subsubsection{Ramka w trybie RTU}
-			\includegraphics[width=10cm]{./wyklady/RS232_18_2.pdf}
+			\includegraphics[width=10cm]{./wyklady/RS232_18_2.pdf}\\
 			W trybie RTU wiadomości zaczynają się odstępem czasowym trwającym minimum $3.5\times$(\emph{czas trwania pojedynczego znaku}), w którym panuje cisza na łączu (można to zrealizować np. przez odmierzanie czasu trwania znaku przy zadanej na łączu szybkości bodowej).
 			\begin{itemize}
 				\item Pierwszym polem informacyjnym jest adres urządzenia
@@ -492,8 +533,8 @@
 				\item W przypadku gdy nowa wiadomość pojawia się przed upływem niezbędnej przerwy to będzie ona potraktowana jako kontynuacja poprzedniej wiadomości. Doprowadzi to do błędu sumy kontrolnej.
 				\item Ramki muszą być przesyłane w postaci ciągłej, tzn. odstęp między kolejnymi znakami tworzącymi ramkę nie może być większy niż $1.5\times$(długości znaku).
 				\item Przekroczenie odstępu powoduje uznanie ramki za niekompletną i błędną.
+				\item Kontrola danych typu CRC - 2-bajtowe, silniejsze niż LRC.
 			\end{itemize}
-		
 		\subsubsection{Warstwa fizyczna}
 		\begin{itemize}
 			\item Asynchroniczna transmisja znakowa
@@ -514,22 +555,10 @@
 				\item odniesiona do masy dla RS-232
 			\end{itemize}
 		\end{itemize}
-			
-		
 	\subsection{Kontroler RS-232 w komputerze PC}
 	
-	
-
-
 \section{USB – Uniwersalny interfejs szeregowy}
-
-
 \section{IEEE-488 and SCPI standards}
-
-
 \section{IEEE-1394 (FireWire)}
-
-
 \section{Tłumienie zakłóceń w rozproszonych systemach komputerowych}
-
 \end{document}
