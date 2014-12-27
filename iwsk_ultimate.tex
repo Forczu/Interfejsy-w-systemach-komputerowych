@@ -171,13 +171,13 @@
 	{\small \emph{Tak, używamy kabelka.}}
 	
 	\item \textcolor{nie}{Kamera internetowa może przesyłać obraz do komputera za pomocą transferu izochronicznego z szybkością LowSpeed w interfejsie USB.} \\
-	{\small \emph{Z tabelk można wyczytać, że dla transferu izochronicznego nie można wykorzystać szybkości LowSpeed.}}
+	{\small \emph{Z tabelki można wyczytać, że dla transferu izochronicznego nie można wykorzystać szybkości LowSpeed.}}
 	
 	\item \textcolor{tak}{Pakiety USB przesyłane z szybkością LowSpeed muszą byd poprzedzone pakietem preambuły} \\
 	{\small \emph{Tak, jest on charakterystyczny dla pakietów przesyłanych z szybkością LowSpeed}}
 	
 	\item \textcolor{nie}{Urządzenie peryferyjne USB 2.0 może być podłączone do host kontrolera za pośrednictwem maksymalnie sześciu hubów.} \\
-	{\small \emph{Aby spełnid normę (ograniczenie czasowe oczekiwania na odpowiedź), można podłączyd za pośrednictwem maksymalnie 5 hubów.}}
+	{\small \emph{Aby spełnić normę (ograniczenie czasowe oczekiwania na odpowiedź), można podłączyd za pośrednictwem maksymalnie 5 hubów.}}
 	
 	\item \textcolor{nie}{Pole PID w pakiecie USB zabezpieczone jest 16-bitową sumą kontrolną CRC.} \\
 	{\small \emph{Pole PID zabezpieczone jest 4-bitowym polem kontroli, będącym prostą negacją bitów pola PID.}}
@@ -277,7 +277,7 @@
 	\subsection{Charakterystyka interfejsu RS-232}
 		Łącze szeregowe przeznaczone do asynchronicznej transmisji znakowej realizowanej zazwyczaj w trybie półdupleksowym.
 		\subsubsection{Transmisja danych}
-		Szeregowa asynchroniczna transmisja znakowa w trybie półdupleksowym (praktycznie tylko w tym trybie, ale mogą być inne).
+		Szeregowa asynchroniczna transmisja znakowa w trybie półdupleksowym (praktycznie tylko w tym trybie, ale mogą być inne). CIEKAWOSTKA: ma budowę dupleksową.
 		\subsubsection{Rodzaje transmisji}
 		\begin{itemize}
 			\item Szeregowa - sekwencyjne przesyłanie bitów w ustalonej kolejności (od LSD lub MSB) po jednej linii transmisyjnej.\\
@@ -291,6 +291,7 @@
 			\item "1" - 12V
 			\item Czas transmisji jednego bitu T - stały, nie większy niż czas propagacji.
 			\item $\frac{1}{T}$ - liczba bitów przesyłana w jednostce czasu. Standardowe wartości 110, 150, 300, 600, 1200, 2400 ... [b/s]
+			\item Impulsy rozeznające - sprawdzają stan bitów odebranych (następują co T, które narzuca nadawca).
 		\end{itemize}
 		\subsubsection{Jednostka informacyjna - znak}
 		Jednostka informacji o ściśle określonym formacie. Odbiorca dysponuje impulsami próbkującymi, które rozpoznają stan sygnału (odpytują).\\
@@ -305,7 +306,7 @@
 		\subsubsection{Definicja znaku}
 		\begin{itemize}
 			\item \textbf{START} - bit kontrolny, znacznik początku (SOF - Start Of Frame) - jałowy z punktu widzenia przesyłanej informacji i służący jedynie w celu synchronizacji. START zapewnia $\frac{n}{2}$ jako stan licznika (fazy impulsu).
-			\item \textbf{DANE} - 7-8 bitów, które są treścią znaku, począwszy od bitu najmniej znaczącego (LSB - least significant bit). Tym bitem jest B0.
+			\item \textbf{DANE} - 7-8 bitów (kiedyś też 5-6, obecnie już nieużywane), które są treścią znaku, począwszy od bitu najmniej znaczącego (LSB - least significant bit). Tym bitem jest B0.
 			\item \textbf{PARITY} – bit kontroli poprawności znaku, służy jako zabezpieczenie informacji. Może, ale nie musi występować. Jednak decyzja o jego występowaniu ma charakter globalny - dotyczy każdego znaku w danej transmisji. Jego stan określa zasada:
 			\begin{itemize}
 				\item Kontrola parzystości (Even parity) - polega na sprawdzeniu liczby jedynek na polu danych i ustawieniu bitu kontrolnego na "1" w przypadku nieparzystej liczby jedynek lub na "0" w przypadku parzystej (uzupełnienie do parzystości).
@@ -342,28 +343,29 @@
 		\subsubsection{Tryby transmisji}
 		\begin{itemize}
 			\item \textbf{Simpleksowa} - jednokierunkowa, z nadajnika do odbiornika.
-			\item \textbf{Półdupleksowa} (HDX) - dwukierunkowa, niejednoczesna (w danej chwili czasu jedno urządzenia jest nadajnikiem, a drugie odbiornikiem). Zakłada istnienie tylko jednej linii transmisyjnej.
+			\item \textbf{Półdupleksowa} (HDX) - dwukierunkowa, niejednoczesna (w danej chwili czasu jedno urządzenia jest nadajnikiem, a drugie odbiornikiem). Zakłada istnienie tylko jednej linii transmisyjnej. Wymaga konfiguracji (informacja, kto kiedy nadaje).
 			\item \textbf{Dupleksowa} (FDX) - dwukierunkowa, jednoczesna (w danej chwili czasu oba urządzenia mogą spełniać rolę nadajnika lub odbiornika). Brak konieczności sprawdzania czy łącze jest wolne oraz mechanizmu rezerwacji łącza.
 		\end{itemize}
 	\subsection{Komunikacja DTE-DCE - sygnały w porcie RS-232}
 	Komunikacja dwóch stacji DTE przez komutowane łącze telefoniczne.\\
 	\includegraphics[width=12cm]{./wyklady/RS232_6_1.pdf}\\
 	\begin{table}[h]
-		\begin{tabular}{|c|c|c|}
+		\begin{tabular}{|c|c|c|c|c|}
 			\hline
-			\multicolumn{3}{|c|}{\textbf{Urządzenia}}                        \\ \hline
-			\multicolumn{1}{|c|}{DTE} & Data Terminal Equipment      & Komputer           \\ \hline
-			\multicolumn{1}{|c|}{DCE} & Data Communication Equipment & Modem              \\ \hline
-			\multicolumn{3}{|c|}{\textbf{Linie} (sygnały)}                   \\ \hline
-			TxD & Transmitted Data             & Dane nadawane      \\ \hline
-			RxD & Received Data                & Dane odbierane     \\ \hline
-			DTR & Data Terminal Ready          & Gotowość DTE       \\ \hline
-			DSR & Data Set Ready               & Gotowość DCE       \\ \hline
-			RTS & Request to Send              & Danie nadawania    \\ \hline
-			CTS & Clear To Send                & Zgoda na nadawanie \\ \hline
-			RI  & Ring Indicator               & Wskaźnik wywołania \\ \hline
-			DCD & Data Carrier Detected        & Wykrycie nośnej    \\ \hline
-			SG  & Signal Ground                & Masa sygnałowa     \\ \hline
+			\multicolumn{5}{|c|}{\textbf{Urządzenia}}                        \\ \hline
+			\multicolumn{1}{|c|}{DTE} & \multicolumn{2}{|c|}{Data Terminal Equipment}      & \multicolumn{2}{|c|}{Komputer}           \\ \hline
+			\multicolumn{1}{|c|}{DCE} & \multicolumn{2}{|c|}{Data Communication Equipment} & \multicolumn{2}{|c|}{Modem}              \\ \hline
+			\multicolumn{5}{|c|}{\textbf{Linie} (sygnały)}                   \\ \hline
+			\textbf{Skrót} & \textbf{Nazwa}	   & \textbf{Znaczenie} & \textbf{Przeznaczenie} & \textbf{Kierunek} \\ \hline
+			TxD & Transmitted Data             & Dane nadawane      & Linia danych		& Wyjście	\\ \hline
+			RxD & Received Data                & Dane odbierane     & Linia danych		& Wejście	\\ \hline
+			DTR & Data Terminal Ready          & Gotowość DTE       & Linia kontrolna	& Wyjście	\\ \hline
+			DSR & Data Set Ready               & Gotowość DCE       & Linia kontrolna	& Wejście	\\ \hline
+			RTS & Request to Send              & Żądanie nadawania  & Linia kontrolna	& Wyjście	\\ \hline
+			CTS & Clear To Send                & Zgoda na nadawanie & Linia kontrolna	& Wejście	\\ \hline
+			RI  & Ring Indicator               & Wskaźnik wywołania & Linia kontrolna   & Wejście	\\ \hline
+			DCD & Data Carrier Detected        & Wykrycie nośnej    & Linia kontrolna   & Wejście	\\ \hline
+			SG  & Signal Ground                & Masa sygnałowa     & Masa				& ------	\\ \hline
 		\end{tabular}
 	\end{table}
 		\subsubsection{Fazy pracy układu}
@@ -390,6 +392,8 @@
 		\begin{itemize}
 			\item DTR = 1 - zgoda na nadawanie
 			\item DTR = 0 - brak zgody na nadawanie
+			\item DTR informuje, czy bufor jest zapełniony. DSR sprawdza go u partnera przed wysłaniem dalszych danych.
+			\item Analogiczna sytuacja, kiedy podłączone są RTS i CTS zamiast DTR i DSR. RTS wystawia informację, CTS sprawdza.
 		\end{itemize}
 		\subsubsection{Protokół XON/XOFF}
 		Występuje przy wymianie informacji w trybie dupleksowym. Umożliwia blokowanie i odblokowywanie transmisji danych. Np. drukarka - gdy skończy się papier w trakcie drukowania, przesył jest blokowany, Gdy użytkownik uzupełni papier, transmisja jest wznawiana. Taki protokół XON/OFF nazywany jest programowym (software XON/OFF). {\small Rozwiązanie hardware to transmisja półdupleksowa za pośrednictwem sygnałów w kanale wtórnym.}\\
@@ -411,7 +415,7 @@
 			\item szybkość do 100 kbd (przy zasięgu do 30 m)
 			\item zasięg do 1200 m (przy szybkosci do 3 kbd)
 		\end{itemize}
-		Standard RS-423A okresla elektryczną charakterystykę napięciowego obwodu transmisyjnego złożonego z niesymetrycznego nadajnika oraz symetrycznego (różnicowego) odbiornika. Takie obwody stosuje się do przesyłania sygnałów binarnych pomiędzy DTE i DCE, które reprezentują dane lub funkcje sterujące.\\
+		Standard RS-423A określa elektryczną charakterystykę napięciowego obwodu transmisyjnego złożonego z niesymetrycznego nadajnika oraz symetrycznego (różnicowego) odbiornika. Takie obwody stosuje się do przesyłania sygnałów binarnych pomiędzy DTE i DCE, które reprezentują dane lub funkcje sterujące.\\
 		Zastosowanie różnicowego obciążenia pozwala na znaczne zmniejszenie wpływu napięcia wspólnego $U_{G}$ powstałego na wskutek różnicy potencjałów masy nadajnika i odbiornika, jak również przesłuchów między nimi.\\
 		Standard wymaga aby dla każdego kierunku transmisji istniał przynajmniej jeden niezależny przewód powrotny.\\
 		Typowa prędkość wynosi 100 kb/s przy odległości do 30 m.
@@ -435,7 +439,7 @@
 		\subsubsection{System oparty na szeregowym łączu znakowym}
 		Podłączenie urządzenia RS-232 do portu COM z pom. int. RS-485\\
 		\includegraphics[width=9cm]{./wyklady/RS232_14_1.pdf}\\
-		Rezystory zabezpieczają przed niekorzystnym odbiciem fali.\\
+		R\tiny T\normalsize - Rezystory zabezpieczające przed niekorzystnym odbiciem fali (tzw. Terminatory).\\
 		\textbf{Problem}: dostęp do magistrali kontrolera i urządzeń systemu\\
 		\textbf{Rozwiązanie}: Implementacja protokołu komunikacyjnego (warstwa łącza danych). Komputer zarządza innymi urządzeniami w całym systemie. Do zbudowania tego wystarczają proste przejściówki do zmian sygnałów.\\
 		\textbf{Komunikacja}:
