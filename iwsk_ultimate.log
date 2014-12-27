@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9) (preloaded format=pdflatex 2014.12.22)  27 DEC 2014 14:38
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9) (preloaded format=pdflatex 2014.12.22)  27 DEC 2014 18:44
 entering extended mode
 **iwsk_ultimate.tex
 (C:\Users\Bartłomiej\Desktop\Międzytwarze\iwsk_ultimate\iwsk_ultimate.tex
@@ -690,273 +690,284 @@ LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <10> not available
 (Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 66.
  [2] [3] [4]
 [5]
-Underfull \vbox (badness 1147) has occurred while \output is active []
+Overfull \hbox (5.69856pt too wide) in paragraph at lines 280--282
+[][]\OT4/cmr/m/n/10 Urz�dzenie IE-EE 1394 b�-d�-ce kon-su-men-tem za-si-la-nia 
+mo-�e po-sia-dad co naj-wy-�ej jed-no 6-kontaktowe
+ []
 
- [6]
+
+Underfull \hbox (badness 10000) in paragraph at lines 304--306
+
+ []
+
+[6] [7]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [8]
 
 pdfTeX warning: pdflatex.exe (file C:/Users/Bartłomiej/Desktop/Międzytwarze/i
 wsk_ultimate/wyklady/RS232_2_1.pdf): PDF inclusion: found PDF version <1.7>, bu
 t at most version <1.5> allowed
-<./wyklady/RS232_2_1.pdf, id=243, 375.1114pt x 116.9397pt>
+<./wyklady/RS232_2_1.pdf, id=252, 375.1114pt x 116.9397pt>
 File: ./wyklady/RS232_2_1.pdf Graphic file (type pdf)
 
 <use ./wyklady/RS232_2_1.pdf>
-Package pdftex.def Info: ./wyklady/RS232_2_1.pdf used on input line 315.
+Package pdftex.def Info: ./wyklady/RS232_2_1.pdf used on input line 377.
 (pdftex.def)             Requested size: 256.0748pt x 79.83376pt.
 
 
 pdfTeX warning: pdflatex.exe (file C:/Users/Bartłomiej/Desktop/Międzytwarze/i
 wsk_ultimate/wyklady/RS232_2_2.pdf): PDF inclusion: found PDF version <1.7>, bu
 t at most version <1.5> allowed
-<./wyklady/RS232_2_2.pdf, id=244, 369.45024pt x 179.55759pt>
+<./wyklady/RS232_2_2.pdf, id=253, 369.45024pt x 179.55759pt>
 File: ./wyklady/RS232_2_2.pdf Graphic file (type pdf)
 
 <use ./wyklady/RS232_2_2.pdf>
-Package pdftex.def Info: ./wyklady/RS232_2_2.pdf used on input line 317.
+Package pdftex.def Info: ./wyklady/RS232_2_2.pdf used on input line 379.
 (pdftex.def)             Requested size: 256.0748pt x 124.45926pt.
- [7 <C:/Users/Bartłomiej/Desktop/Międzytwarze/iwsk_ultimate/wyklady/RS232_2_1
+ [9 <C:/Users/Bartłomiej/Desktop/Międzytwarze/iwsk_ultimate/wyklady/RS232_2_1
 .pdf, page is rotated 90 degrees> <C:/Users/Bartłomiej/Desktop/Międzytwarze/i
 wsk_ultimate/wyklady/RS232_2_2.pdf, page is rotated 90 degrees>]
 LaTeX Font Info:    External font `plex10' loaded for size
-(Font)              <10> on input line 324.
+(Font)              <10> on input line 386.
 LaTeX Font Info:    External font `plex10' loaded for size
-(Font)              <7> on input line 324.
+(Font)              <7> on input line 386.
 LaTeX Font Info:    External font `plex10' loaded for size
-(Font)              <5> on input line 324.
+(Font)              <5> on input line 386.
 
 
 pdfTeX warning: pdflatex.exe (file C:/Users/Bartłomiej/Desktop/Międzytwarze/i
 wsk_ultimate/wyklady/RS232_3_2.pdf): PDF inclusion: found PDF version <1.7>, bu
 t at most version <1.5> allowed
-<./wyklady/RS232_3_2.pdf, id=295, 693.67157pt x 169.13596pt>
+<./wyklady/RS232_3_2.pdf, id=303, 693.67157pt x 169.13596pt>
 File: ./wyklady/RS232_3_2.pdf Graphic file (type pdf)
 
 <use ./wyklady/RS232_3_2.pdf>
-Package pdftex.def Info: ./wyklady/RS232_3_2.pdf used on input line 329.
+Package pdftex.def Info: ./wyklady/RS232_3_2.pdf used on input line 391.
 (pdftex.def)             Requested size: 284.52756pt x 69.37457pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 328--330
+Underfull \hbox (badness 10000) in paragraph at lines 390--392
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 331--332
+Underfull \hbox (badness 10000) in paragraph at lines 393--394
 
  []
 
-[8 <C:/Users/Bartłomiej/Desktop/Międzytwarze/iwsk_ultimate/wyklady/RS232_3_2.
-pdf, page is rotated 90 degrees>]
+[10 <C:/Users/Bartłomiej/Desktop/Międzytwarze/iwsk_ultimate/wyklady/RS232_3_2
+.pdf, page is rotated 90 degrees>]
 
 pdfTeX warning: pdflatex.exe (file C:/Users/Bartłomiej/Desktop/Międzytwarze/i
 wsk_ultimate/wyklady/RS232_4_1.pdf): PDF inclusion: found PDF version <1.7>, bu
 t at most version <1.5> allowed
-<./wyklady/RS232_4_1.pdf, id=317, 694.43939pt x 215.45282pt>
+<./wyklady/RS232_4_1.pdf, id=325, 694.43939pt x 215.45282pt>
 File: ./wyklady/RS232_4_1.pdf Graphic file (type pdf)
 
 <use ./wyklady/RS232_4_1.pdf>
-Package pdftex.def Info: ./wyklady/RS232_4_1.pdf used on input line 364.
+Package pdftex.def Info: ./wyklady/RS232_4_1.pdf used on input line 426.
 (pdftex.def)             Requested size: 256.0748pt x 79.4467pt.
 
 
 pdfTeX warning: pdflatex.exe (file C:/Users/Bartłomiej/Desktop/Międzytwarze/i
 wsk_ultimate/wyklady/RS232_6_1.pdf): PDF inclusion: found PDF version <1.7>, bu
 t at most version <1.5> allowed
-<./wyklady/RS232_6_1.pdf, id=318, 668.28676pt x 233.32658pt>
+<./wyklady/RS232_6_1.pdf, id=326, 668.28676pt x 233.32658pt>
 File: ./wyklady/RS232_6_1.pdf Graphic file (type pdf)
 
 <use ./wyklady/RS232_6_1.pdf>
-Package pdftex.def Info: ./wyklady/RS232_6_1.pdf used on input line 382.
+Package pdftex.def Info: ./wyklady/RS232_6_1.pdf used on input line 444.
 (pdftex.def)             Requested size: 341.43306pt x 119.20859pt.
- [9 <C:/Users/Bartłomiej/Desktop/Międzytwarze/iwsk_ultimate/wyklady/RS232_4_1
-.pdf, page is rotated 90 degrees>]
+ [11 <C:/Users/Bartłomiej/Desktop/Międzytwarze/iwsk_ultimate/wyklady/RS232_4_
+1.pdf, page is rotated 90 degrees>]
 
 pdfTeX warning: pdflatex.exe (file C:/Users/Bartłomiej/Desktop/Międzytwarze/i
 wsk_ultimate/wyklady/RS232_7_1.pdf): PDF inclusion: found PDF version <1.7>, bu
 t at most version <1.5> allowed
-<./wyklady/RS232_7_1.pdf, id=340, 491.82745pt x 297.59862pt>
+<./wyklady/RS232_7_1.pdf, id=348, 491.82745pt x 297.59862pt>
 File: ./wyklady/RS232_7_1.pdf Graphic file (type pdf)
 
 <use ./wyklady/RS232_7_1.pdf>
-Package pdftex.def Info: ./wyklady/RS232_7_1.pdf used on input line 414.
+Package pdftex.def Info: ./wyklady/RS232_7_1.pdf used on input line 476.
 (pdftex.def)             Requested size: 256.0748pt x 154.95197pt.
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [10 <C:/Users/Bartłomiej/Desktop/Międzytwarze/iwsk_ultimate/wyklady/RS232_6_
+ [12 <C:/Users/Bartłomiej/Desktop/Międzytwarze/iwsk_ultimate/wyklady/RS232_6_
 1.pdf, page is rotated 90 degrees>]
 
 pdfTeX warning: pdflatex.exe (file C:/Users/Bartłomiej/Desktop/Międzytwarze/i
 wsk_ultimate/wyklady/RS232_9_1.pdf): PDF inclusion: found PDF version <1.7>, bu
 t at most version <1.5> allowed
-<./wyklady/RS232_9_1.pdf, id=359, 357.02866pt x 225.33777pt>
+<./wyklady/RS232_9_1.pdf, id=367, 357.02866pt x 225.33777pt>
 File: ./wyklady/RS232_9_1.pdf Graphic file (type pdf)
 
 <use ./wyklady/RS232_9_1.pdf>
-Package pdftex.def Info: ./wyklady/RS232_9_1.pdf used on input line 422.
+Package pdftex.def Info: ./wyklady/RS232_9_1.pdf used on input line 484.
 (pdftex.def)             Requested size: 256.0748pt x 161.63103pt.
 
 
 pdfTeX warning: pdflatex.exe (file C:/Users/Bartłomiej/Desktop/Międzytwarze/i
 wsk_ultimate/wyklady/RS232_9_2.pdf): PDF inclusion: found PDF version <1.7>, bu
 t at most version <1.5> allowed
-<./wyklady/RS232_9_2.pdf, id=360, 349.69644pt x 116.1439pt>
+<./wyklady/RS232_9_2.pdf, id=368, 349.69644pt x 116.1439pt>
 File: ./wyklady/RS232_9_2.pdf Graphic file (type pdf)
 
 <use ./wyklady/RS232_9_2.pdf>
-Package pdftex.def Info: ./wyklady/RS232_9_2.pdf used on input line 431.
+Package pdftex.def Info: ./wyklady/RS232_9_2.pdf used on input line 493.
 (pdftex.def)             Requested size: 256.0748pt x 85.05016pt.
- [11 <C:/Users/Bartłomiej/Desktop/Międzytwarze/iwsk_ultimate/wyklady/RS232_7_
+ [13 <C:/Users/Bartłomiej/Desktop/Międzytwarze/iwsk_ultimate/wyklady/RS232_7_
 1.pdf, page is rotated 90 degrees> <C:/Users/Bartłomiej/Desktop/Międzytwarze/
 iwsk_ultimate/wyklady/RS232_9_1.pdf, page is rotated 90 degrees>]
 
 pdfTeX warning: pdflatex.exe (file C:/Users/Bartłomiej/Desktop/Międzytwarze/i
 wsk_ultimate/wyklady/RS232_10_1.pdf): PDF inclusion: found PDF version <1.7>, b
 ut at most version <1.5> allowed
-<./wyklady/RS232_10_1.pdf, id=390, 494.57901pt x 595.64911pt>
+<./wyklady/RS232_10_1.pdf, id=399, 494.57901pt x 595.64911pt>
 File: ./wyklady/RS232_10_1.pdf Graphic file (type pdf)
 
 <use ./wyklady/RS232_10_1.pdf>
-Package pdftex.def Info: ./wyklady/RS232_10_1.pdf used on input line 438.
+Package pdftex.def Info: ./wyklady/RS232_10_1.pdf used on input line 500.
 (pdftex.def)             Requested size: 256.0748pt x 308.41234pt.
 
 
 pdfTeX warning: pdflatex.exe (file C:/Users/Bartłomiej/Desktop/Międzytwarze/i
 wsk_ultimate/wyklady/RS232_12_1.pdf): PDF inclusion: found PDF version <1.7>, b
 ut at most version <1.5> allowed
-<./wyklady/RS232_12_1.pdf, id=391, 625.70787pt x 178.73965pt>
+<./wyklady/RS232_12_1.pdf, id=400, 625.70787pt x 178.73965pt>
 File: ./wyklady/RS232_12_1.pdf Graphic file (type pdf)
 
 <use ./wyklady/RS232_12_1.pdf>
-Package pdftex.def Info: ./wyklady/RS232_12_1.pdf used on input line 444.
+Package pdftex.def Info: ./wyklady/RS232_12_1.pdf used on input line 506.
 (pdftex.def)             Requested size: 256.0748pt x 73.15007pt.
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [12 <C:/Users/Bartłomiej/Desktop/Międzytwarze/iwsk_ultimate/wyklady/RS232_9_
+ [14 <C:/Users/Bartłomiej/Desktop/Międzytwarze/iwsk_ultimate/wyklady/RS232_9_
 2.pdf, page is rotated 90 degrees> <C:/Users/Bartłomiej/Desktop/Międzytwarze/
 iwsk_ultimate/wyklady/RS232_10_1.pdf, page is rotated 90 degrees>]
 
 pdfTeX warning: pdflatex.exe (file C:/Users/Bartłomiej/Desktop/Międzytwarze/i
 wsk_ultimate/wyklady/RS232_12_2.pdf): PDF inclusion: found PDF version <1.7>, b
 ut at most version <1.5> allowed
-<./wyklady/RS232_12_2.pdf, id=428, 634.03789pt x 167.91414pt>
+<./wyklady/RS232_12_2.pdf, id=437, 634.03789pt x 167.91414pt>
 File: ./wyklady/RS232_12_2.pdf Graphic file (type pdf)
 
 <use ./wyklady/RS232_12_2.pdf>
-Package pdftex.def Info: ./wyklady/RS232_12_2.pdf used on input line 454.
+Package pdftex.def Info: ./wyklady/RS232_12_2.pdf used on input line 516.
 (pdftex.def)             Requested size: 256.0748pt x 67.81525pt.
 
 
 pdfTeX warning: pdflatex.exe (file C:/Users/Bartłomiej/Desktop/Międzytwarze/i
 wsk_ultimate/wyklady/RS232_13_1.pdf): PDF inclusion: found PDF version <1.7>, b
 ut at most version <1.5> allowed
-<./wyklady/RS232_13_1.pdf, id=429, 688.57018pt x 340.504pt>
+<./wyklady/RS232_13_1.pdf, id=438, 688.57018pt x 340.504pt>
 File: ./wyklady/RS232_13_1.pdf Graphic file (type pdf)
 
 <use ./wyklady/RS232_13_1.pdf>
-Package pdftex.def Info: ./wyklady/RS232_13_1.pdf used on input line 468.
+Package pdftex.def Info: ./wyklady/RS232_13_1.pdf used on input line 530.
 (pdftex.def)             Requested size: 284.52756pt x 140.69862pt.
- [13 <C:/Users/Bartłomiej/Desktop/Międzytwarze/iwsk_ultimate/wyklady/RS232_12
+ [15 <C:/Users/Bartłomiej/Desktop/Międzytwarze/iwsk_ultimate/wyklady/RS232_12
 _1.pdf, page is rotated 90 degrees> <C:/Users/Bartłomiej/Desktop/Międzytwarze
 /iwsk_ultimate/wyklady/RS232_12_2.pdf, page is rotated 90 degrees>]
 
 pdfTeX warning: pdflatex.exe (file C:/Users/Bartłomiej/Desktop/Międzytwarze/i
 wsk_ultimate/wyklady/RS232_14_1.pdf): PDF inclusion: found PDF version <1.7>, b
 ut at most version <1.5> allowed
-<./wyklady/RS232_14_1.pdf, id=465, 699.29028pt x 339.66081pt>
+<./wyklady/RS232_14_1.pdf, id=473, 699.29028pt x 339.66081pt>
 File: ./wyklady/RS232_14_1.pdf Graphic file (type pdf)
 
 <use ./wyklady/RS232_14_1.pdf>
-Package pdftex.def Info: ./wyklady/RS232_14_1.pdf used on input line 472.
+Package pdftex.def Info: ./wyklady/RS232_14_1.pdf used on input line 534.
 (pdftex.def)             Requested size: 256.0748pt x 124.382pt.
 
 
 pdfTeX warning: pdflatex.exe (file C:/Users/Bartłomiej/Desktop/Międzytwarze/i
 wsk_ultimate/wyklady/RS232_15_1.pdf): PDF inclusion: found PDF version <1.7>, b
 ut at most version <1.5> allowed
-<./wyklady/RS232_15_1.pdf, id=466, 711.33754pt x 468.02858pt>
+<./wyklady/RS232_15_1.pdf, id=474, 711.33754pt x 468.02858pt>
 File: ./wyklady/RS232_15_1.pdf Graphic file (type pdf)
 
 <use ./wyklady/RS232_15_1.pdf>
-Package pdftex.def Info: ./wyklady/RS232_15_1.pdf used on input line 486.
+Package pdftex.def Info: ./wyklady/RS232_15_1.pdf used on input line 548.
 (pdftex.def)             Requested size: 284.52756pt x 187.2081pt.
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [14 <C:/Users/Bartłomiej/Desktop/Międzytwarze/iwsk_ultimate/wyklady/RS232_13
+ [16 <C:/Users/Bartłomiej/Desktop/Międzytwarze/iwsk_ultimate/wyklady/RS232_13
 _1.pdf, page is rotated 90 degrees> <C:/Users/Bartłomiej/Desktop/Międzytwarze
 /iwsk_ultimate/wyklady/RS232_14_1.pdf, page is rotated 90 degrees>]
 
 pdfTeX warning: pdflatex.exe (file C:/Users/Bartłomiej/Desktop/Międzytwarze/i
 wsk_ultimate/wyklady/RS232_16_1.pdf): PDF inclusion: found PDF version <1.7>, b
 ut at most version <1.5> allowed
-<./wyklady/RS232_16_1.pdf, id=528, 689.97563pt x 430.92175pt>
+<./wyklady/RS232_16_1.pdf, id=536, 689.97563pt x 430.92175pt>
 File: ./wyklady/RS232_16_1.pdf Graphic file (type pdf)
 
 <use ./wyklady/RS232_16_1.pdf>
-Package pdftex.def Info: ./wyklady/RS232_16_1.pdf used on input line 499.
+Package pdftex.def Info: ./wyklady/RS232_16_1.pdf used on input line 561.
 (pdftex.def)             Requested size: 256.0748pt x 159.9317pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 499--500
+Underfull \hbox (badness 10000) in paragraph at lines 561--562
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 501--502
+Underfull \hbox (badness 10000) in paragraph at lines 563--564
 
  []
 
-[15 <C:/Users/Bartłomiej/Desktop/Międzytwarze/iwsk_ultimate/wyklady/RS232_15_
+[17 <C:/Users/Bartłomiej/Desktop/Międzytwarze/iwsk_ultimate/wyklady/RS232_15_
 1.pdf, page is rotated 90 degrees> <C:/Users/Bartłomiej/Desktop/Międzytwarze/
 iwsk_ultimate/wyklady/RS232_16_1.pdf, page is rotated 90 degrees>]
 
 pdfTeX warning: pdflatex.exe (file C:/Users/Bartłomiej/Desktop/Międzytwarze/i
 wsk_ultimate/wyklady/RS232_18_1.pdf): PDF inclusion: found PDF version <1.7>, b
 ut at most version <1.5> allowed
-<./wyklady/RS232_18_1.pdf, id=590, 613.29124pt x 183.54967pt>
+<./wyklady/RS232_18_1.pdf, id=598, 613.29124pt x 183.54967pt>
 File: ./wyklady/RS232_18_1.pdf Graphic file (type pdf)
 
 <use ./wyklady/RS232_18_1.pdf>
-Package pdftex.def Info: ./wyklady/RS232_18_1.pdf used on input line 544.
+Package pdftex.def Info: ./wyklady/RS232_18_1.pdf used on input line 606.
 (pdftex.def)             Requested size: 284.52756pt x 85.15366pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 543--545
+Underfull \hbox (badness 10000) in paragraph at lines 605--607
 
  []
 
-[16]
+[18]
 
 pdfTeX warning: pdflatex.exe (file C:/Users/Bartłomiej/Desktop/Międzytwarze/i
 wsk_ultimate/wyklady/RS232_18_2.pdf): PDF inclusion: found PDF version <1.7>, b
 ut at most version <1.5> allowed
-<./wyklady/RS232_18_2.pdf, id=595, 674.60031pt x 127.74927pt>
+<./wyklady/RS232_18_2.pdf, id=603, 674.60031pt x 127.74927pt>
 File: ./wyklady/RS232_18_2.pdf Graphic file (type pdf)
 
 <use ./wyklady/RS232_18_2.pdf>
-Package pdftex.def Info: ./wyklady/RS232_18_2.pdf used on input line 560.
+Package pdftex.def Info: ./wyklady/RS232_18_2.pdf used on input line 622.
 (pdftex.def)             Requested size: 284.52756pt x 53.88043pt.
- [17 <C:/Users/Bartłomiej/Desktop/Międzytwarze/iwsk_ultimate/wyklady/RS232_18
+ [19 <C:/Users/Bartłomiej/Desktop/Międzytwarze/iwsk_ultimate/wyklady/RS232_18
 _1.pdf, page is rotated 90 degrees> <C:/Users/Bartłomiej/Desktop/Międzytwarze
 /iwsk_ultimate/wyklady/RS232_18_2.pdf, page is rotated 90 degrees>]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 599.
- [18]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 599.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 661.
+ [20]
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 661.
 
 (C:\Users\Bartłomiej\Desktop\Międzytwarze\iwsk_ultimate\iwsk_ultimate.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 599.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 599.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 661.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 661.
 Package rerunfilecheck Info: File `iwsk_ultimate.out' has not changed.
 (rerunfilecheck)             Checksum: 9F33B63F60C8C64F2DA046D4C6089E9D;9624.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 599.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 661.
  ) 
 Here is how much of TeX's memory you used:
- 11088 strings out of 493921
- 154991 string characters out of 3144857
+ 11090 strings out of 493921
+ 155005 string characters out of 3144857
  231555 words of memory out of 3000000
  14168 multiletter control sequences out of 15000+200000
  15850 words of font info for 43 fonts, out of 3000000 for 9000
  841 hyphenation exceptions out of 8191
- 29i,10n,35p,480b,405s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 29i,10n,35p,555b,403s stack positions out of 5000i,500n,10000p,200000b,50000s
 {C:/Users/Bartłomiej/AppData/Roaming/MiKTeX/2.9/fonts/enc/dvips/pl/plsc.enc}
 {C:/Users/Bartłomiej/AppData/Roaming/MiKTeX/2.9/fonts/enc/dvips/pl/plrm.enc}{C
 :/Users/Bartłomiej/AppData/Roaming/MiKTeX/2.9/fonts/enc/dvips/pl/plmi.enc}{C:/
@@ -978,9 +989,9 @@ pl/plr9.pfb><C:/Users/Bartłomiej/AppData/Roaming/MiKTeX/2.9/fonts/type1/public
 /pl/plsy10.pfb><C:/Users/Bartłomiej/AppData/Roaming/MiKTeX/2.9/fonts/type1/pub
 lic/pl/plti10.pfb><C:/Users/Bartłomiej/AppData/Roaming/MiKTeX/2.9/fonts/type1/
 public/pl/plti9.pfb>
-Output written on iwsk_ultimate.pdf (18 pages, 867929 bytes).
+Output written on iwsk_ultimate.pdf (20 pages, 874545 bytes).
 PDF statistics:
- 711 PDF objects out of 1000 (max. 8388607)
- 71 named destinations out of 1000 (max. 500000)
+ 722 PDF objects out of 1000 (max. 8388607)
+ 73 named destinations out of 1000 (max. 500000)
  502 words of extra memory for PDF output out of 10000 (max. 10000000)
 
