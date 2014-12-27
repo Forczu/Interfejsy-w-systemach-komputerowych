@@ -257,15 +257,46 @@
 	{\small \emph{Pole to jest tak skonstruowane, żeby wartość zmieściła się w jednym bajcie, ze skokiem co 2mA. Dlatego urządzenie, które zgłasza, że 50 może zasysać maksymalnie 100mA.}}
 	
 	\item \textcolor{nie}{Uszeregowanie transakcji w USB. Nie zależy od implementacji kontrolera.}
-	{\small \emph{w OHC przerwaniowe są w strukturze drzewa, a w UCH listy podwieszanej, co ma wpływ na uszeregowanie (do sprawdzenia).}}
+	{\small \emph{W OHC przerwaniowe są w strukturze drzewa, a w UCH listy podwieszanej, co ma wpływ na uszeregowanie (do sprawdzenia).}}
 	
+	\item \textcolor{nie}{Host może zasygnalizować chęć zapisu danych do urządzenia wysyłając pakiet NYET do urządzenia USB 2.0, które z kolei odpowiada pakietem PING jeśli jest gotowe do zapisu.} \\
+	{\small \emph{To host posyła PING - zapytanie, czy urządzenie jest gotowe do zapisu. Te odsyła ACK - gotowe, lub NYET - jeszcze nie.}}
 	
 \end{itemize}
 
 \section{\textcolor{blue}{IEEE 1394 Firewire}}
 
 \section{\textcolor{blue}{IEEE-488 i SCPI}}
+\subsection*{Prawda/Fałsz}
+\begin{itemize}
+	
+	\item \textcolor{tak}{GPIB (IEEE-488) jest interfejsem równoległym, opartym na 8-bitowej, 2 kierunkowej magistrali danych i 8 sygnałach sterujących: REN, IFC, ATN, SRQ, EOI, NRFD, NDAC, DAV} \\
+	{\small \emph{Tak, bity wysyła się ósemkami, stąd m. in. podaje się prędkość w bajtach na sekundę}}
+	
+	\item \textcolor{nie}{SCPI to język programowania na bazie języka C wyposażony w biblioteki funkcji sterujących urządzeniami pomiarowo-kontrolnymi.} \\
+	{\small \emph{SCPI jest językiem kontroli urządzeo (i nie bazuje na C).}}
+	
+	\item \textcolor{tak}{Znak ':' w rozkazach SCPI reprezentuje przejście pomiędzy poziomami w rozgałęzionej strukturze subsystemu, natomiast prefiks '*' oznacza rozkaz wspólny.} \\
+	{\small \emph{Tak, dwukropek służy do precyzowania zapytania, gwiazdka jako nagłówek komunikatu wspólnego.}}
+	
+	\item \textcolor{nie}{System statusowy urządzenia SCPI składa się tylko z jednego, 8-bitowego rejestru, w którym bit B6 jest zgłoszeniem żądania obsługi.} \\
+	{\small \emph{Składa się z minimum dwóch rejestrów, których układ jest wielopoziomowy (hierarchiczny).}}
+	
+	\item \textcolor{nie}{Kontrola szeregowa I kontrola równoległa to mechanizmy automatycznego wykrywania urządzeń podłączonych do systemu IEEE 488.} \\
+	{\small \emph{Kontrola szeregowa I równoległa służą do identyfikacji urządzeń zgłaszających żadanie obsługi.}}
+	
+	\item \textcolor{nie}{Maska związana z bajtem statusowym SCPI służy do blokowania ustawiania wybranych bitów bajtu statusowego.} \\
+	{\small \emph{maską związaną z bitem statusowym jest rejestr maski żądania obsługi, który odpowiada za selekcję bitów powodujących zgłoszenie żądania, ale nie ma on wpływu na stan samych bitów w bajcie statusowym. Bajt statusowy jest rejestrem zbiorczym swoich rejestrów nadrzędnych, więc jego wartość zależy do wartości tamtych rejestrów i ich masek.}}
+	
+\end{itemize}
 
+\section{\textcolor{blue}{Inne}}
+\subsection*{Prawda/Fałsz}
+\begin{itemize}
+	\item \textcolor{nie}{Interfejsy USB, IEEE1394 oraz RS-232 udostępniają zasilanie systemowe i mają mechanizmy zarządzania zasilaniem.} \\
+	{\small \emph{USB i IEEE-1394 owszem, ale nie RS-232.}}
+	
+\end{itemize}
 
 \pagebreak
 \part{Opracowanie materiałów}
