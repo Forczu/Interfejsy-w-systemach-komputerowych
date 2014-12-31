@@ -1,5 +1,14 @@
+% !TeX spellcheck = pl_PL
+
 \section{USB – Uniwersalny interfejs szeregowy}
-	\subsection{Co to jest?}
+	\subsection{Zalety}
+	\begin{itemize}
+		\item Podłączenie dużej liczby różnorodnych urządzeń
+		\item Automatyczne wykrywanie włączenia urządzenia do systemu oraz jego odłączenia
+		\item Przeprowadzanie wszystkich operacji konfiguracyjnych, w tym instalacji sterownika, bez udziału użytkownika
+		\item Szybka transmisja
+		\item Zasilanie urządzenia bezposrednio z portu
+	\end{itemize}
 	\subsection{Parametry}
 	Dla USB 1.1 oraz 2.0
 	\begin{itemize}
@@ -10,24 +19,34 @@
 	\subsection{Charakterystyka systemu USB}
 		\subsubsection{Podstawowe właściwości interfejsu USB}
 		\begin{itemize}
-			\item \textbf{Gorące podłączenie} - włączanie/wyłączanie urządzeń bez wyłączania systemu.
-			\item \textbf{Jeden typ złącza} - złącze typu A w koncentratorze i B w urządzeniu.
-			\item \textbf{Duża liczba podłączanych urządzeń} - maksymalnie do 127
-			\item \textbf{Różne szybkości transmisji} - mała: 1,5 Mb/s, pełna: 12 Mb/s, wysoka: 480 Mb/s
-			\item \textbf{Zasilanie} - system dystrybucji zasilania: 5V/500 mA, zawieszenie, wznowienie, wake-up
-			\item \textbf{Protokół komunikacyjny, detekcja błędów} - pakietowy z kontrolą poprawności przesyłu
+			\item \textbf{Gorące podłączenie} - włączanie/wyłączanie urządzeń bez wyłączania systemu oraz konfiguracja bez udziału użytkownika.
+			\item \textbf{Jeden typ złącza} - złącze typu A w koncentratorze i B w urządzeniu (dwa kontakty linii danych oraz dwa zasilania).
+			\item \textbf{Duża liczba podłączanych urządzeń} - moduły komunikacyjne, jak hub czy koncentrator, posiadają kilka portów USB oraz umożliwiają łączenie kaskadowe w celu rozszerzenia liczby portów do podłączanie urządzeń. W ten sposób można uzyskać wielopoziomową gwieździstą strukturę.\\Ostatecznie do USB można podłączyć maksymalnie \textbf{127} urządzeń.
+			\item \textbf{Różne szybkości transmisji}
+			\begin{itemize}
+				\item Mała (\emph{low speed}): 1,5 Mb/s
+				\item Pełna (\emph{full speed}): 12 Mb/s
+				\item Wysoka (\emph{high speed}): 480 Mb/s
+			\end{itemize}
+			\item \textbf{Zasilanie} - USB posiada własny system dystrybucji zasilania: minilanie dostarcza 4.7 V/100 mA, maksymalnie 500 mA. Przy braku aktywnosci na magistrali przez 3s urządzenia przechodzą w tryb zmniejszonego poboru prądu (SUSPEND), gdzie moga pobierać maksymalnie 500 $\mu A$. Wyjscie z tego trybu jest możliwe poprzez inicjatywę hosta bądź urządzenia (\emph{remote wake-up})
+			\item \textbf{Protokół komunikacyjny, detekcja błędów} - obowiązuje złożony, pakietowy protokół k. z kontrolą poprawności przesyłu. Żądania przesłania danych (\emph{transfer}) dzielone są na transakcje , które z kolei złożone są z pakietów: kontrolnego, danych i potwierdzenia. Pakiety są zabezpieczone sumą kontrolną. W przypadku wykrycia błędu jest możliwe powtórzenie transakcji.
 			\item \textbf{Transfery USB} - 4 typy transferów:
 				\begin{itemize}
-					\item kontrolny
-					\item masowy
-					\item przerwaniowy
-					\item izochroniczny
+					\item Kontrolny (control transfer)
+					\item Masowy (interrupt transfer)
+					\item Przerwaniowy (bulk transfer)
+					\item Izochroniczny (isochronous transfer)
 				\end{itemize}
 			\item \textbf{Niski koszt} - nieduża złożoność układów interfejsowych
 			\item \textbf{Schemat blokowy systemu USB}\\
 			\includegraphics[width=10cm]{./wyklady/USB_6_1.pdf}
 		\end{itemize}
-		\subsubsection{Środowisko sygnałowe i fizyczne}
+		\subsubsection{Środowisko sygnałowe}
+		Łącze transmisyjne oparte jest na obwodzie różnicowym. Różnicowy nadajnik jest połączony z różnicowym odbiornikiem przez parę przewodów.\\
+		W przypadku transmisji wolnej wystarcza para nieskręcana i nieekranowana, natomiast transmisja pełna lub wysoka wymaga pary skręcanej i ekranowanej.\\
+		Zasilanie jest przekazywane przewodami $V_{cc} (+5V)$ oraz $GND$ (masa).\\
+		Trójstanowy nadajnik można zablokować sygnałem OE, co oznacza blokadę portu. Wówczas wyjście nieodwracające (D+) i odwracające (D-) przy zablokowanym nadajniku zostają na potencjale masy (patrz rezystory 15k).\\
+		Wzmacniacze odniesione do masy monitorują napięcie na liniach D+ i D-.\\\\
 			\textbf{Obwód transmisyjny w standardzie USB}\\
 			\includegraphics[width=10cm]{./wyklady/USB_7_1.pdf}
 			\textbf{Stany magistrali USB}\\
@@ -36,14 +55,18 @@
 				\item Logiczne „0” w obwodzie różnicowym (D+) - (D-) $<$ -200 mV
 				\item Plus 9 innych stanów
 			\end{itemize}
-			\textbf{Kodowanie NRZI ze wstawianiem bitu synchronizującego}\\
-			\includegraphics[width=15cm]{./wyklady/USB_9_1.pdf}\\\\
+			\textbf{Kodowanie bitów w systemie USB}\\
+			W systemie USB przyjęto kodowanie NRZI (\emph{Non Return to Zero Inteverted}) ze wstawianiem bitu synchronizującego (\emph{bit stuffing}). Na początku każdego bitu o wartości logicznej zero następuje zmiana sygnału, natomiast po każdych 6 kolejnych bitach o wartości jeden wstawiany jest bit o wartości zero. Umożliwia to prawidłowe poznawanie bitów w sygnale odebranym bez potrzeby przesyłania sygnału zegarowego nadajnika. Bity wstawione są usuwane po rozpoznaniu stanu bitów w odebranym sygnale.\\\\
+			\includegraphics[width=15cm]{./wyklady/USB_9_1.pdf}
+		\subsubsection{Srodowisko fizyczne}
 			\textbf{Podstawowy kabel do podłączenia urządzenia USB}\\
-			\includegraphics[width=6cm]{./wyklady/USB_10_1.pdf}
+			\includegraphics[width=6cm]{./wyklady/USB_10_1.pdf}\\
+			W standardzie USB wyróżnia się dwa rodzaje złączy
 			\begin{itemize}
-				\item Konektor A – strona portu dolnego (hub)
-				\item Konektor B – strona portu górnego (urządzenie)
+				\item Konektor A – strona portu dolnego (hub), "od strony urządzenia"
+				\item Konektor B – strona portu górnego (urządzenie), "od strony hosta"
 			\end{itemize}
+			Złącza USB posiadają 4 zaciski: po dwa dla magistrali danych i zasilania. W samym złączu kontakty zasilania są nieco wysunięte w przód przed kontakty danych, a więc po włożeniu najpierw jest podłączone zasilanie, a potem dane.
 			\begin{table}[h]
 				\begin{tabular}{|c|c|c|}
 					\hline
@@ -54,66 +77,129 @@
 					4 						& GND						& Czarny		\\ \hline
 				\end{tabular}
 			\end{table}
-			\textbf{Właściwości}
+			\textbf{Rodzaje kabli}
 			\begin{itemize}
-				\item Kabel „low speed”
+				\item Kabel przeznaczony dla urządzeń „low speed”
 				\begin{itemize}
-					\item nieekranowany
-					\item dwie, nie skręcane pary przewodów: dla danych (28 AWG) i zasilania (20-28 AWG)
+					\item Nieekranowany
+					\item Zawiera dwie, nieskręcane pary przewodów: dla danych (28 AWG) i zasilania (20-28 AWG)
 				\end{itemize}
-				\item Kabel „full speed i high speed”
+				\item Kabel przeznaczony dla urządzeń „full speed i high speed”
 				\begin{itemize}
-					\item ekranowana para skręcana (28 AWG) dla danych
-					\item nieekranowana para (20-28 AWG) dla zasilania
+					\item Zawiera ekranowaną parę skręcaną (28 AWG) dla danych
+					\item I nieekranowaną parę (20-28 AWG) dla zasilania
 				\end{itemize}
-				\item Czas propagacji sygnału w kablu: $<$ 30 ns
+				\item Czas propagacji sygnału w kablu: $<$ 30 ns przy przesyle z częstotliwością 1-16 MHz. Wymagany dla urządzeń małej i pełnej szybkości. Czas propagacji wpływa na długosc kabla:
+				\begin{itemize}
+					\item 5 m dla 6ns/m
+					\item 3 m dla 10ns/m
+				\end{itemize}
 			\end{itemize}
 		\subsubsection{Ramki i mikro ramki}
-			\textbf{Ramki i mikroramki w standardzie USB}\\
-			\includegraphics[width=10cm]{./wyklady/USB_11_1.pdf}\\
-			\textbf{Właściwości}
+			W systemie USB dane są przekazywane:
 			\begin{itemize}
+				\item W ramkach o czasie trwania 1 $ms$ dla małej i pełnej szybkości transmisji.
+				\item W mikroramkach o czasie trwania 125 $\mu s$ dla wysokiej szybkości transmisji.
+			\end{itemize}
+			\includegraphics[width=10cm]{./wyklady/USB_11_1.pdf}\\
+			\textbf{Ramka 1 ms}
+			\begin{itemize}
+				\item Czas pomiędzy dwoma kolejnymi pakietami SOF ($Start Of Frame$) nazywany jest ramką. Początek ramki wyznacza pakiet SOF zawierający 11 bitów danych i 5 bitów CRC. Dane w pakiecie SOF reprezentują kolejny numer ramki. Licznik ramek przepełnia się co 2048 ms.
 				\item Pełna szybkość transmisji
 				\begin{itemize}
-					\item Max rozmiar ramki w bitach: 1 ms x 1/12 Mhz = 12000 bitów
-					\item Max rozmiar ramki w bajtach: 12000 : 8 = 1500
+					\item Maksymalny teoretyczny rozmiar ramki w bitach: 1 ms x 1/12 Mhz = 12000 bitów
+					\item Powyższy rozmiar ramki w bajtach: 12000 : 8 = 1500.
+					\item Pakiety kontrolne zajmują ok. 300 bajtów.
+					\item Praktyczna górna granica liczby transmitowanych w ramce: 1200 bajtów.
 				\end{itemize}
 				\item Mała szybkość transmisji
 				\begin{itemize}
 					\item Max rozmiar ramki w bitach: 1 ms x 1/1,5 Mhz = 1500 bitów
 					\item Max rozmiar ramki w bajtach: 1500 : 8 = 187
 				\end{itemize}
-				\item Mikroramka 125 $\mu s$
-				\begin{itemize}
-					\item Mikroramka trwa 125 $\mu s$
-					\item Na 1 ramkę przypada 8 mikroramek
-				\end{itemize}
-				\item Wysoka prędkość transmisji - Szybkość transmisji w mikroramce wynosi 480 Mhz.
 			\end{itemize}
+			\textbf{Mikroramka 125 $\mu s$}
+			\begin{itemize}
+				\item Czas pomiędzy dwoma kolejnymi pakietami SOF wysyłanymi przez high speed huba nazywa się mikroramką.
+				\item Mikroramka trwa 125 $\mu s$
+				\item Na 1 ramkę przypada 8 mikroramek
+				\item Wysoka prędkość transmisji - szybkość transmisji w mikroramce wynosi 480 Mhz.
+			\end{itemize}
+			
 		\subsubsection{Model komunikacyjny}
-		\textbf{Warstwowy model komunikacyjny}\\
+		Warstwowy model komunikacyjny przedstawiający odpowiadające sobie elementy sprzętowo-programowe po stronie hosta i urządzenia.
 		\includegraphics[width=10cm]{./wyklady/USB_12_1.pdf}\\\\
 		\includegraphics[width=10cm]{./wyklady/USB_13_1.pdf}\\
 		\subsubsection{Transfery USB}
+		Wyróżniono 4 typy transferów przeznaczone dla rożnych urządzeń z różnymi wymaganiami komunikacyjnymi. Każdy wymaga innego kanału komunikacyjnego (\emph{pipe}).
 		\begin{itemize}
-			\item Kontrolny (control transfer) - time delivery accuracy + quality delivery accuracy
-			\item Masowy (interrupt transfer) - time delivery accuracy + quality delivery accuracy
-			\item Przerwaniowy (bulk transfer) - quality delivery accuracy
-			\item Izochroniczny (isochronous transfer) - time delivery accuracy
+			\item \textbf{Masowy} (\emph{bulk transfer}) - time delivery accuracy + quality delivery accuracy ("jak najlepiej w miarę możliwości").\\
+			Przeznaczony do komunikacji z urządzeniami, do których zapisuje się lub z których odczytuje duże ilości danych, jednak czas przekazywania danych oraz regularność ich dostarczania nie są krytyczne.\\
+			Ważna jest kontrola przekazywanych danych, błędy transmisji muszą zostać wykryte i skorygowane poprzez żadanie ponownego przesłania błędnego bloku danych.\\
+			Nie ma zagwarantowanego pasma, transmisja ta jest realizowana, jeżeli inne transfery nie wykorzystają przydzielonych im zasobów.\\
+			Może być realizowany tylko z pełną lub wysoką szybkością.\\
+			Wymagane jest, aby pakiet danych miał stałą wartość (\emph{MaxPacketSize}): 8, 16, 32 lub 64. Wszystkie kolejne pakiety danych muszą mieć tę stałą wartość z wyjątkiem ostatniego, który sygnalizuje koniec transferu.
+			Przykłady: drukarka, skaner.
+			\item \textbf{Przerwaniowy} (\emph{interrupt transfer}) - quality delivery accuracy.\\
+			Do komunikacji z urządzeniami, do których zapisuje się lub z których odczytuje się niewielkie bloki danych, jednak trzeba robić to regularnie, w ustalonych odstępach czasowych.\\
+			Parametry transferu zawarte są w deskryptorze pobieranym na etapie konfiguracji urządzenia.\\
+			Ma zagwarantowane pasmo, może być wykorzystany do obsługi urządzeń low speed i full speed.\\
+			Rozmiar pakietu danych zależy od wybranej szybkości: dla low speed jest to 8, dla full speed to maksymalnie 64. Wszystkie kolejne pakiety danych muszą mieć tę stałą wartość z wyjątkiem ostatniego, który sygnalizuje koniec transferu.\\
+			Przykłady: mysz, klawiatura.
+			\item \textbf{Izochroniczny} (\emph{isochronous transfer}) - time delivery accuracy.\\
+			Przeznaczony do komunikacji z urządzeniami, do których zapisuje się lub z których odczytuje duże ilości danych, przy czym krytyczna jest regularność dostarczania danych.\\
+			Nie jest ważna kontrola przekazywania danych, nie jest dopuszczalne ponowne wysłanie bloku danych.\\
+			Dla komunikacji w pełnej lub wysokiej szybkości. Parametry transferu USB odczytuje z deskryptora urządzenia.\\
+			Graniczna wartość parametru \emph{MaxPacketSize} to 1023 bajty na ramkę.\\
+			Przykład: odtwarzanie muzyki w aparaturze audio.
+			\item \textbf{Kontrolny} (\emph{control transfer}) - time delivery accuracy + quality delivery accuracy.\\
+			Musi być obsługiwany przez każde urządzenie USB, ponieważ jest przeznaczony do jego konfiguracji i nadzoru. W ramce zarezerwowano stosowane pasmo dla realizacji transferów kontrolnych (10\% czasu trwania ramki).\\
+			Obsługuje wszystkie 3 rodzaje prędkości transferu.\\
+			Dzieli się na 3 etapy:
+			\begin{itemize}
+				\item Przekazanie rozkazu - 8-bitowe pole danych udostępnia informację o liczbie bajtów danych przesyłanych w etapie przekazani danych, o ile ten występuje.
+				\item Przekazanie danych - pakiety danych mogą mieć rozmiar nie większy niż 64 bajty (parametr \emph{MaxPacketSize}).
+				\item Przekazanie statusu.
+			\end{itemize}
 		\end{itemize}
+		\textbf{Podział transferów}
 		\begin{itemize}
-			\item Transfery kontrolny i masowy – aperiodyczne
-			\item Transfery przerwaniowy i izochroniczny - periodyczne
+			\item Transfery aperiodyczne: kontrolny i masowy
+			\item Transfery periodyczne: przerwaniowy i izochroniczny
+			\item Transfery strumieniowe (\emph{stream transfer}), przekazywanie danych bajt po bajcie: przerwaniowy, masowy i izochroniczny
+			\item Transfery komunikatowe (\emph{message transfer}), struktura komunikatów i ich znaczenie określa standard: kontrolny
 		\end{itemize}
+		\subsubsection{Zarządzenie magistralą USB}
+		Wszystkie transfery USB są inicjowane i odbywają się pod kontrolą hosta. Host usiłuje jednocześnie realizować transfery wielu urządzeń, tak, aby jedno urządzenie nie blokowało dostępu.\\
+		Niektóre transfery mają priorytety. Transferom izochronicznym i przerwaniowym nadano 90\% pasma, a kontrolnym 10\%. Oznacza to, że transfer masowy nie jest gwarantowany - jeżeli pozostałe 3 rodzaje rezerwują maksymalny możliwy czas, to transfer masowy się nie odbędzie.\\
+		W praktyce jednak rzadko to się zdarza i 3 transfery nie wykorzystują pełnego pasma, co pozwala kontrolerowi USB na przydzielenie niewykorzystanego miejsca transferom masowym.\\
+		Kontroler dąży do jak najlepszego wykorzystania miejsca w ramce, w które może wstawić nawet wiele transakcji danego transferu masowego.\\
+		Działanie kontrolera oparte jest na zasadzie "usilnych starań" (\emph{best efforts}), aby jak najsprawniej (w jak najkrótszym czasie) zrealizować wszystkie żądane transfery. Jednak jeżeli w ramce 1 ms brakuje miejsca na transferu masowego to musi on czekać.
 		\subsubsection{Stany urządzenia USB}
+		Zanim urządzenie USB zostanie skonfigurowane i udostępnione aplikacjom musi przejść przez kilka stanów przestawionych na rysunku\\
 		\includegraphics[width=10cm]{./wyklady/USB_16_1.pdf}
 		\subsubsection{Hub w systemie USB}
+		Huby to urządzenia pośredniczące w komunikacji z urządzeniami końcowymi.
+		\begin{itemize}
+			\item Zwiększają liczbę portów dostępnych dla urządzeń oraz możliwe jest ich kaskadowe łączenie.
+			\item Port huba od strony hosta nazywa się górnym (\emph{uper stream port}), natomiast porty od strony urządzeń dolnym (\emph{down stream port}).
+			\item Hub przeważnie posiada 4 porty dolne, rzadko kiedy inną liczbę jak np. 7.
+			\item Hub nie tylko przekazuje dane, ale pośredniczy również w dystrybucji zasilania do urządzeń.
+			\item Huby zgodne ze standardem 1.x są zdolne do komunikacji z małą lub pełną szybkością. Obowiązuje zasada, że do urządzeń low speed nie wolno kierować ruchu full speed. Hub potrafi wykryć jakie urządzenie jest podłączone do danego portu dolnego i wie, kiedy należy go zablokować.
+			\item Transfery low speed są poprzedzone specjalną preambułą, których zadaniem jest odblokowanie portów dolnych do których podłączone są urządzenia low speed.
+		\end{itemize}
 		\includegraphics[width=10cm]{./wyklady/USB_17_1.pdf}
 	
 \subsection{Protokół komunikacyjny}
+	Transakcje USB zbudowane sa z pakietów, przy czym typowa transakcja zawiera:
+	\begin{itemize}
+		\item Pakiet tokena (\emph{token packet}) - jest elementem kontrolnym transakcji i informuje o jej rodzaju: kontrolna lub przeznaczona do zapisywania danych.
+		\item Pakiet danych (\emph{data packet}) - pole przeznaczone dla danych zapisywanych do urządzenia lub odczytywanych z urządzenia.
+		\item Pakiet potwierdzenia (\emph{handshake packet}) - informuje jednostkę nadającą o odebraniu danych lub instrukcji sterującej przez odbiorcę.
+	\end{itemize}
 	\subsubsection{Właściwości}
 	\begin{itemize}
-		\item Komunikacja z urządzeniami USB za pomocą ramek o długości maksymalnej 1 ms.\\
+		\item Komunikacja z urządzeniami USB za pomocą ramek o długości maksymalnie 1 ms.\\
 		\includegraphics[width=10cm]{./wyklady/USB_18_1.pdf}
 		\item Pakietowa struktura komunikatów\\
 		\includegraphics[width=10cm]{./wyklady/USB_19_1.pdf}\\
@@ -124,56 +210,74 @@
 	\subsubsection{Reakcja na błędy}
 	Wykrywanie błędów i kontrola transmisji\\
 	\begin{itemize}
-		\item Kontrola poprawności pakietów (zabezpieczenie pola PID, CRC)
+		\item Kontrola poprawności pakietów (zabezpieczenie pola PID sumą CRC)
+		\begin{itemize}
+			\item W przypadku pakietu Token - 5-bitowa suma
+			\item W przypadku pakietu Data - 16-bitowa suma
+		\end{itemize}
+		Wykrycie błędu powoduje odrzucenie pakietu.
 		\item Reakcja na fałszywy znacznik końca pakietu (\emph{false EOP})
 		\item Ograniczenie czasowe oczekiwania na odpowiedź
 		\item Przełączanie kolejnych pakietów danych (mechanizm \emph{data toogle})
 		\item Wykrywanie transakcji występujących po zakończeniu ramki (tzw. „paplanie” – \emph{babble})
 		\item Wykrywanie braku aktywności magistrali (LOA – \emph{Loss Of Activity})
 	\end{itemize}
+	Transfery kontrolny, przerwaniowy i masowy wysyłają pakiet ponownie, jeżeli jest on błędu, nie informując odbiorcy o tym. Transfer izochroniczny nie.
 	\subsubsection{Czas obiegu (\emph{round trip delay})}
-	Ograniczenie czasowe oczekiwania na odpowiedź. Poniżej połączenie urządzenia z hostem przez 5 hubów – najgorszy przypadek.\\
-	\includegraphics[width=10cm]{./wyklady/USB_23_1.pdf}
+	Ograniczenie czasowe oczekiwania na odpowiedź. To podstawowy mechanizm informowania nadawcy o niepowodzeniu w poprawnym przekazaniu pakietu. Ograniczenie czasowe nie może być mniejsze od 16*(\emph{czas trwania bitu}), ani większe od 18*(\emph{czas trwania bitu}).\\
+	Poniżej połączenie urządzenia z hostem przez 5 hubów – najgorszy przypadek.\\
+	\includegraphics[width=10cm]{./wyklady/USB_23_1.pdf}\\
+	Jest on podstawa do rozważań na temat ograniczeń tego czasu.
 	\begin{itemize}
 		\item Round trip delay: 2 x 350 ns = 700 ns
 		\item Czas trwania 1 bitu full speed: 1/12 MHz = 83 ns
 		\item Round trip delay w bitach dla full speed: 700 ns/83 ns = 8,5 bitu
-		\item Timeout oczekiwania na odpowiedź: 7,5 bitu + 8,5 bitu = 16 bitów
+		\item Timeout oczekiwania na odpowiedź: 7,5 bitu (specyfikacja) + 8,5 bitu = 16 bitów
 	\end{itemize}
 	
 \subsection{Deskryptory w urządzeniach USB}
+	W każdym urządzeniu USB znajduje się pełna informacja o sposobie komunikacji z urządzaniem, udostępniana podczas procesu enumeracji.\\
+	Informacja ta jest przechowywana w deskryptorach - tablicach o ściśle określonej strukturze.
 	\subsubsection{Hierarchiczna struktura deskryptorów w urządzeniu USB}
 	\includegraphics[width=10cm]{./wyklady/USB_24_1.pdf}
 	\subsubsection{Rodzaje deskryptorów}
 	\begin{itemize}
-		\item Deskryptor urządzenia
-		\item Deskryptor konfiguracji
-		\item Deskryptor interfejsu
-		\item Deskryptor punktu końcowego
-		\item Deskryptor łańcuchowy
+		\item Deskryptor urządzenia - m.in. liczba konfiguracji dostępnych w urządzeniu.
+		\item Deskryptor konfiguracji - opisuje każdą konfigurację z osobna. Zawiera informację o liczbie interfejsów przypisanych danej konfiguracji.
+		\item Deskryptor interfejsu - posiada go każdy interfejs, który określa m.in. liczbę punktów końcowych z nim związanych.
+		\item Deskryptor punktu końcowego - charakteryzuje każdy punkt końcowy.
+		\item Deskryptor łańcuchowy - zawiera kod określający język tekstu lub sam właściwy tekst.
 	\end{itemize}
 	
 \subsection{Wykrywanie i konfiguracja urządzeń}
+	Cechą USB jest automatyczne wykrywanie urządzeń po włączeniu zasilania w systemie lub włączeniu urządzenia do systemu. Procedura enumeracji zajmuje się rozpoznaniem urządzenia, sprawdzeniem czy komunikacja jest możliwa, przydzieleniem adresu, konfiguracją i instalacją sterownika.
 	\subsubsection{Procedura enumeracji urządzenia}
 	\begin{enumerate}
-		\item Automatyczne wykrycie urządzenia
-		\item Odblokowanie portu i generacja RESETU
-		\item Odczyt deskryptora urządzenia
-		\item Przypisanie adresu
-		\item Odczyt pozostałych deskryptorów
+		\item Automatyczne wykrycie urządzenia - powoduje ustawienie bitu w rejestrze statusu huba, który odpowiada temu portowi.
+		\item Odblokowanie portu i generacja RESETU - przejście do stanu domyślnego.
+		\item Odczyt deskryptora urządzenia - skierowanie stosownego rozkazu do punktu końcowego 0 o adresie 0. Jest tylko jedno takie urządzenie w systemie - te, które właśnie podlega procesowi enumeracji.
+		\item Przypisanie adresu - unikalny adres dla urządzenia
+		\item Odczyt pozostałych deskryptorów - jeżeli istnieją
 		\item Konfiguracja urządzenia
 		\item Instalacja sterownika klienta
 		\item Urządzenie jest dostępne dla aplikacji
 	\end{enumerate}
 	
 \subsection{Kontrola urządzenia – transfer kontrolny}
+	Transfer kontrolny służy do sterowania urządzeniem. Urządzenie USB otwiera kontrolny kanał komunikacyjny pomiędzy hostem, a punktem końcowym 0 w urządzeniu.
 	\subsubsection{Etapy transferu kontrolnego}
 	\includegraphics[width=10cm]{./wyklady/USB_31_1.pdf}
+	\begin{enumerate}
+		\item Przekazanie rozkazu (\emph{Setup Stage}) - jak w każdym pakiecie Token, następne pola zawierają adres urządzenia oraz punktu końcowego. Kolejnym elementem jest 8-bajtowy pakiet danych typu Data 0, który specyfikuje rozkaz.
+		\item Przekazanie danych (\emph{Data Stage}) - jeżeli 8 bajtów z powyższego nie wystarcza, wtedy jest ten etap. Liczbę bajtów do przekazania określa słowo Length w polu transakcji Setup. Jeżeli ta liczba nie przekracza wartości \emph{MaxPacketSize} to do przekazania danych wystarcza jedno transakcja, w przeciwnym razie odpowiednio dzieli się na więcej transakcji (sufit(Length \ MPC)).
+		\item Przekazanie statusu (\emph{Status Stage}) - potwierdzenie wykonania transferu lub poinformowanie o niepowodzeniu w realizacji. Normalnie występuje do zakończeniu transakcji, ale host może rozpocząć ją wcześniej, w Data Stage (wtedy DS jest przerywane).
+	\end{enumerate}
 	
 \subsection{Hub USB}
 	\subsubsection{Co to jest?}
-	Standard USB definiuje oddzielną klasę urządzeń: klasa HUB.
-	\subsubsection{HUB zasilany z magistarli}
+	Standard USB definiuje oddzielną klasę urządzeń: klasa HUB. Jest to tak ważna część tego systemu, że została zdefiniowana w standardzie USB, a nie we własnej oddzielnej specyfikacji.\\
+	Typowy hub posiada jeden deskryptor.
+	\subsubsection{HUB zasilany z magistrali}
 	\includegraphics[width=10cm]{./wyklady/USB_34_1.pdf}
 	\subsubsection{Proces konfiguracyjny huba}
 	\begin{itemize}
@@ -183,21 +287,26 @@
 		\item Odczyt punktu końcowego, "zmiany w hubie", w celu wykrycia urządzeń podłączonych do portów
 		\item Odblokowanie portu w celu umożliwienia dostępu do urządzenia
 	\end{itemize}
-	\subsubsection{Punkt końcowy huba}
+	\subsubsection{Punkt końcowy huba "zmiany w hubie"}
 	\begin{itemize}
+		\item Cyklicznie odczytywany, umożliwia monitorowanie zmian na portach dolnych huba, co z kolei umożliwia wykrywanie dołączania i usuwania urządzeń.
+		\item Odpytywanie odbywa się przez wykorzystanie kanału przerwaniowego.
 		\item \emph{Hub change point}: informuje o wystąpieniu:
 		\begin{itemize}
 			\item Zmiany w zasilaniu lub nadmiernym obciążeniu prądowym huba
 			\item Zmiany na jednym lub kilku portach dolnych spowodowanej dołączeniem lub odłączeniem urządzenia.
 		\end{itemize}
-		\item Odczyt \emph{Hub change point} zwraca bajt statusowy huba
+		\item Odczyt \emph{Hub change point} zwraca bajt statusowy huba. Jeżeli hub posiada więcej niż 7 portów dolnych - zwracane są dwa bajty.
+		\item Jeżeli wszystkie bity w punkcie końcowym sa ustawione na 0 (brak zmian), hub nie odsyła bajtu statusowego.
+		\item Nie mylić z punktem końcowym 0 przez który wykonywana jest konfiguracja i kontrola.
 	\end{itemize}
 	\subsubsection{Działanie}
 	\includegraphics[width=8cm]{./wyklady/USB_35_1.pdf}
 	\includegraphics[width=8cm]{./wyklady/USB_36_1.pdf}
 	
 \subsection{Zasilanie urządzeń w systemie USB}
-	\subsubsection{Rodzaje zasilania urządzeń USB}
+	USB jest również systemem dystrybucji i zarządzania zasilaniem urządzeń.
+	\subsubsection{Możliwe zasilania urządzeń USB}
 	\begin{itemize}
 		\item Urządzenie zasilane z magistrali
 		\item Urządzenie zasilane z własnego źródła
@@ -207,18 +316,25 @@
 		\includegraphics[width=11cm]{./wyklady/USB_38_1.pdf}\\
 		Dopuszczalne spadki napięcia zasilania.
 	\subsubsection{Urządzenie zasilane z magistrali}
-		\includegraphics[width=7cm]{./wyklady/USB_39_1.pdf}
+		\includegraphics[width=7cm]{./wyklady/USB_39_1.pdf}\\
+		Dla portu zasilanego z magistrali USB i podłączonego do portu o obciążalności 500 mA, 100 mA jest zarezerwowane na zasilanie jego układu. Oznacza to, że 400 mA pozostaje dla jego portów dolnych. Ponieważ każdy port musi mieć zapewnione minimum 100 mA, taki hub może mieć nie więcej niż 4 porty dolne (stąd pewnie przyjęty standard).
 	\subsubsection{Zarządzanie zasilaniem}
 	\begin{itemize}
-		\item Zawieszenie pracy systemu – \emph{SUSPEND}
+		\item Wprowadzenie w \textbf{stan zawieszenia} pracy systemu – \emph{suspend}. Pozostając w zawieszenie urządzenie zachowuje swoją konfigurację, co pozwala jego wznowienie (\emph{resume}) do normalnego działania.
 		\begin{itemize}
-			\item \textbf{Globalne} - rozkaz SetPortFeature (PORT\_SUSPEND) adresowany do huba głównego
-			\item \textbf{Częściowe} - rozkaz SetPortFeature (PORT\_SUSPEND) adresowany do huba zewnętrznego, w którym wybrany port ma zostać zawieszony.
-			\item Zawieszone porty nie propaguj ruchu „w dół” oraz nie przekazuj „w gór ” żadnych sygnałów od urządzeń do nich podłączonych.
-			\item Urządzenia w stanie zawieszenia zachowuj swój stan, co umożliwia wznowienie ich pracy bez ponownej konfiguracji.
+			\item \textbf{Globalne} (\emph{global suspend}) - rozkaz SetPortFeature (PORT\_SUSPEND) adresowany do huba głównego, zawiesza cały system
+			\item \textbf{Częściowe} (\emph{selective suspend}) - rozkaz SetPortFeature (PORT\_SUSPEND) adresowany do huba zewnętrznego, w którym wybrany port (lub część systemu) ma zostać zawieszony.
+			\item Zawieszone porty nie propaguj ruchu „w dół” oraz nie przekazują „w górę” żadnych sygnałów od urządzeń do nich podłączonych.
+			\item Urządzenia w stanie zawieszenia zachowują swój stan, co umożliwia wznowienie ich pracy bez ponownej konfiguracji.
 			\item Hub w stanie zawieszenia dodatkowo blokuje wszystkie nadajniki, zatrzymuje wewnętrzne zegary i zachowuje stan wszystkich portów dolnych.
+			\item Urządzenie w stanie zawieszenie pobiera prąd $< 500 [\mu A]$
+			\item Urządzenie automatycznie przechodzi do stanu \emph{SUSPEND} po wykryciu braku aktywności magistrali przez 3 $ms$. (USB wysyła ramki co 1 ms)
+			\begin{itemize}
+				\item Urządzenia pełnej szybkości wykorzystują pakiety SOF
+				\item Urządzenia małej szybkości wykorzystują generację przejścia ze stanu jałowego do stanu K w odstępach czasu nie większych niż 3 ms.
+			\end{itemize}
 		\end{itemize}
-		\item Wznowienie pracy systemu - \emph{RESUME} - po zawieszeniu
+		\item \textbf{Wznowienie} pracy systemu - \emph{resume}
 		\begin{itemize}
 			\item Globalne
 			\item Wake-up
@@ -229,23 +345,25 @@
 				\item Z inicjatywy urządzenia, po wystąpieniu zdarzenia wymagającego obsługi („budzenie” - \emph{Wakeup})\\
 				\includegraphics[width=7cm]{./wyklady/USB_44_1.pdf}
 			\end{itemize}
-			\item Wznowienie po zawieszeniu globalnym - rozpoczyna hub główny wykonując rozkaz wznowienia pracy systemu
+			\item Wznowienie po zawieszeniu globalnym - rozpoczyna hub główny wykonując rozkaz wznowienia pracy systemu. Oznacza gotowość wszystkich hubów i urządzeń do wykonywania transakcji.
 			\item Wznowienie po częściowym zawieszeniu - może wykonać:
 			\begin{itemize}
-				\item Host rozkazem \emph{ClearPortFeature} (PORT SUSPEND) adresowanym do huba w którym znajduje się zawieszony port
+				\item Host rozkazem \emph{ClearPortFeature} (PORT SUSPEND) adresowanym do huba w którym znajduje się zawieszony port.
 				\item Urządzenie podłączone do zawieszonego portu poprzez \emph{Wakeup}
 			\end{itemize}
 		\end{itemize}
-		\item Urządzenie pełnej szybkości (\emph{full speed}) automatycznie przechodzi do stanu \emph{SUSPEND} po wykryciu braku aktywności magistrali przez 3 $ms$.
-		\item Urządzenie w stanie zawieszenie pobiera prąd $< 500 [\mu A]$
 	\end{itemize}
+	
 \subsection{Rozwiązania host kontrolerów}
 	\subsubsection{Co to jest?}
+	Host kontrolera (\emph{Host Controller Driver}) przetwarza poszczególne IRP na transakcje, tworzy listę transakcji  w ramach ramki, przygotowuje scenariusz wykonania każdej transakcji i kontroluje jej wykonanie.
+	\subsubsection{Rozwiązania}
 	Opracowano dwa rozwiązania host kontrolera:
 	\begin{itemize}
 		\item Uniwersalny host kontroler - \emph{Universal Host Controler} (Intel)
 		\item Otwarty host kontroler – \emph{Open Host Controler} (Compaq, Microsoft, National Semiconductor)
 	\end{itemize}
+	Są do siebie bardzo podobne, różnią się tylko sposobem obsługi oraz współpracą z hubem głównym.
 	\subsubsection{Uniwersalny host kontroler (UHC)}
 	\textbf{Zasada działania kontrolera UHC}\\
 	\includegraphics[width=7cm]{./wyklady/USB_46_1.pdf}\\\\
@@ -296,6 +414,7 @@
 	\begin{itemize}
 		\item SSPLIT (\emph{Start Split} - rozpoczęcie transakcji dzielonej)
 		\item CSPLIT (\emph{Complete Split} – zakończenie transakcji dzielonej).
+		\item Pomiędzy tymi dwoma elementami transakcji dzielonej mogą być wykonywane inne transakcje z wysoką szybkością.
 	\end{itemize}
 	\subsubsection{Komunikacja z szerokopasmowym punktem izochronicznym}
 	Komunikacja z „normalnym” izochronicznym punktem końcowym zakłada jedną transakcję na ramę lub mikroramkę.\\
