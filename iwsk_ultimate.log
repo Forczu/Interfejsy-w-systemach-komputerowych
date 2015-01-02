@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9) (preloaded format=pdflatex 2014.12.5)  1 JAN 2015 08:08
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9) (preloaded format=pdflatex 2014.12.5)  2 JAN 2015 06:55
 entering extended mode
 **iwsk_ultimate.tex
 ("F:\Uczelnia\Sem 5\IwSK\iwsk_ultimate\iwsk_ultimate.tex"
@@ -745,7 +745,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 246--248
 pdfTeX warning: pdflatex.exe (file F:/Uczelnia/Sem 5/IwSK/iwsk_ultimate/wyklady
 /RS232_2_1.pdf): PDF inclusion: found PDF version <1.7>, but at most version <1
 .5> allowed
-<./wyklady/RS232_2_1.pdf, id=516, 375.1114pt x 116.9397pt>
+<./wyklady/RS232_2_1.pdf, id=684, 375.1114pt x 116.9397pt>
 File: ./wyklady/RS232_2_1.pdf Graphic file (type pdf)
 
 <use ./wyklady/RS232_2_1.pdf>
@@ -756,7 +756,7 @@ Package pdftex.def Info: ./wyklady/RS232_2_1.pdf used on input line 12.
 pdfTeX warning: pdflatex.exe (file F:/Uczelnia/Sem 5/IwSK/iwsk_ultimate/wyklady
 /RS232_2_2.pdf): PDF inclusion: found PDF version <1.7>, but at most version <1
 .5> allowed
-<./wyklady/RS232_2_2.pdf, id=517, 369.45024pt x 179.55759pt>
+<./wyklady/RS232_2_2.pdf, id=685, 369.45024pt x 179.55759pt>
 File: ./wyklady/RS232_2_2.pdf Graphic file (type pdf)
 
 <use ./wyklady/RS232_2_2.pdf>
@@ -776,7 +776,7 @@ LaTeX Font Info:    External font `plex10' loaded for size
 pdfTeX warning: pdflatex.exe (file F:/Uczelnia/Sem 5/IwSK/iwsk_ultimate/wyklady
 /RS232_3_2.pdf): PDF inclusion: found PDF version <1.7>, but at most version <1
 .5> allowed
-<./wyklady/RS232_3_2.pdf, id=567, 693.67157pt x 169.13596pt>
+<./wyklady/RS232_3_2.pdf, id=735, 693.67157pt x 169.13596pt>
 File: ./wyklady/RS232_3_2.pdf Graphic file (type pdf)
 
 <use ./wyklady/RS232_3_2.pdf>
@@ -798,7 +798,7 @@ d 90 degrees>]
 pdfTeX warning: pdflatex.exe (file F:/Uczelnia/Sem 5/IwSK/iwsk_ultimate/wyklady
 /RS232_4_1.pdf): PDF inclusion: found PDF version <1.7>, but at most version <1
 .5> allowed
-<./wyklady/RS232_4_1.pdf, id=589, 694.43939pt x 215.45282pt>
+<./wyklady/RS232_4_1.pdf, id=757, 694.43939pt x 215.45282pt>
 File: ./wyklady/RS232_4_1.pdf Graphic file (type pdf)
 
 <use ./wyklady/RS232_4_1.pdf>
@@ -809,7 +809,7 @@ Package pdftex.def Info: ./wyklady/RS232_4_1.pdf used on input line 61.
 pdfTeX warning: pdflatex.exe (file F:/Uczelnia/Sem 5/IwSK/iwsk_ultimate/wyklady
 /RS232_6_1.pdf): PDF inclusion: found PDF version <1.7>, but at most version <1
 .5> allowed
-<./wyklady/RS232_6_1.pdf, id=590, 668.28676pt x 233.32658pt>
+<./wyklady/RS232_6_1.pdf, id=758, 668.28676pt x 233.32658pt>
 File: ./wyklady/RS232_6_1.pdf Graphic file (type pdf)
 
 <use ./wyklady/RS232_6_1.pdf>
@@ -821,7 +821,7 @@ ed 90 degrees>]
 pdfTeX warning: pdflatex.exe (file F:/Uczelnia/Sem 5/IwSK/iwsk_ultimate/wyklady
 /RS232_7_1.pdf): PDF inclusion: found PDF version <1.7>, but at most version <1
 .5> allowed
-<./wyklady/RS232_7_1.pdf, id=612, 491.82745pt x 297.59862pt>
+<./wyklady/RS232_7_1.pdf, id=780, 491.82745pt x 297.59862pt>
 File: ./wyklady/RS232_7_1.pdf Graphic file (type pdf)
 
 <use ./wyklady/RS232_7_1.pdf>
@@ -836,7 +836,7 @@ ed 90 degrees>]
 pdfTeX warning: pdflatex.exe (file F:/Uczelnia/Sem 5/IwSK/iwsk_ultimate/wyklady
 /RS232_9_1.pdf): PDF inclusion: found PDF version <1.7>, but at most version <1
 .5> allowed
-<./wyklady/RS232_9_1.pdf, id=631, 357.02866pt x 225.33777pt>
+<./wyklady/RS232_9_1.pdf, id=799, 357.02866pt x 225.33777pt>
 File: ./wyklady/RS232_9_1.pdf Graphic file (type pdf)
 
 <use ./wyklady/RS232_9_1.pdf>
@@ -847,7 +847,7 @@ Package pdftex.def Info: ./wyklady/RS232_9_1.pdf used on input line 119.
 pdfTeX warning: pdflatex.exe (file F:/Uczelnia/Sem 5/IwSK/iwsk_ultimate/wyklady
 /RS232_9_2.pdf): PDF inclusion: found PDF version <1.7>, but at most version <1
 .5> allowed
-<./wyklady/RS232_9_2.pdf, id=632, 349.69644pt x 116.1439pt>
+<./wyklady/RS232_9_2.pdf, id=800, 349.69644pt x 116.1439pt>
 File: ./wyklady/RS232_9_2.pdf Graphic file (type pdf)
 
 <use ./wyklady/RS232_9_2.pdf>
@@ -860,7 +860,7 @@ e is rotated 90 degrees>]
 pdfTeX warning: pdflatex.exe (file F:/Uczelnia/Sem 5/IwSK/iwsk_ultimate/wyklady
 /RS232_10_1.pdf): PDF inclusion: found PDF version <1.7>, but at most version <
 1.5> allowed
-<./wyklady/RS232_10_1.pdf, id=663, 494.57901pt x 595.64911pt>
+<./wyklady/RS232_10_1.pdf, id=831, 494.57901pt x 595.64911pt>
 File: ./wyklady/RS232_10_1.pdf Graphic file (type pdf)
 
 <use ./wyklady/RS232_10_1.pdf>
@@ -871,7 +871,7 @@ Package pdftex.def Info: ./wyklady/RS232_10_1.pdf used on input line 135.
 pdfTeX warning: pdflatex.exe (file F:/Uczelnia/Sem 5/IwSK/iwsk_ultimate/wyklady
 /RS232_12_1.pdf): PDF inclusion: found PDF version <1.7>, but at most version <
 1.5> allowed
-<./wyklady/RS232_12_1.pdf, id=664, 625.70787pt x 178.73965pt>
+<./wyklady/RS232_12_1.pdf, id=832, 625.70787pt x 178.73965pt>
 File: ./wyklady/RS232_12_1.pdf Graphic file (type pdf)
 
 <use ./wyklady/RS232_12_1.pdf>
@@ -887,7 +887,7 @@ ge is rotated 90 degrees>]
 pdfTeX warning: pdflatex.exe (file F:/Uczelnia/Sem 5/IwSK/iwsk_ultimate/wyklady
 /RS232_12_2.pdf): PDF inclusion: found PDF version <1.7>, but at most version <
 1.5> allowed
-<./wyklady/RS232_12_2.pdf, id=701, 634.03789pt x 167.91414pt>
+<./wyklady/RS232_12_2.pdf, id=869, 634.03789pt x 167.91414pt>
 File: ./wyklady/RS232_12_2.pdf Graphic file (type pdf)
 
 <use ./wyklady/RS232_12_2.pdf>
@@ -898,7 +898,7 @@ Package pdftex.def Info: ./wyklady/RS232_12_2.pdf used on input line 151.
 pdfTeX warning: pdflatex.exe (file F:/Uczelnia/Sem 5/IwSK/iwsk_ultimate/wyklady
 /RS232_13_1.pdf): PDF inclusion: found PDF version <1.7>, but at most version <
 1.5> allowed
-<./wyklady/RS232_13_1.pdf, id=702, 688.57018pt x 340.504pt>
+<./wyklady/RS232_13_1.pdf, id=870, 688.57018pt x 340.504pt>
 File: ./wyklady/RS232_13_1.pdf Graphic file (type pdf)
 
 <use ./wyklady/RS232_13_1.pdf>
@@ -911,7 +911,7 @@ age is rotated 90 degrees>]
 pdfTeX warning: pdflatex.exe (file F:/Uczelnia/Sem 5/IwSK/iwsk_ultimate/wyklady
 /RS232_14_1.pdf): PDF inclusion: found PDF version <1.7>, but at most version <
 1.5> allowed
-<./wyklady/RS232_14_1.pdf, id=737, 699.29028pt x 339.66081pt>
+<./wyklady/RS232_14_1.pdf, id=905, 699.29028pt x 339.66081pt>
 File: ./wyklady/RS232_14_1.pdf Graphic file (type pdf)
 
 <use ./wyklady/RS232_14_1.pdf>
@@ -922,7 +922,7 @@ Package pdftex.def Info: ./wyklady/RS232_14_1.pdf used on input line 169.
 pdfTeX warning: pdflatex.exe (file F:/Uczelnia/Sem 5/IwSK/iwsk_ultimate/wyklady
 /RS232_15_1.pdf): PDF inclusion: found PDF version <1.7>, but at most version <
 1.5> allowed
-<./wyklady/RS232_15_1.pdf, id=738, 711.33754pt x 468.02858pt>
+<./wyklady/RS232_15_1.pdf, id=906, 711.33754pt x 468.02858pt>
 File: ./wyklady/RS232_15_1.pdf Graphic file (type pdf)
 
 <use ./wyklady/RS232_15_1.pdf>
@@ -938,7 +938,7 @@ age is rotated 90 degrees>]
 pdfTeX warning: pdflatex.exe (file F:/Uczelnia/Sem 5/IwSK/iwsk_ultimate/wyklady
 /RS232_16_1.pdf): PDF inclusion: found PDF version <1.7>, but at most version <
 1.5> allowed
-<./wyklady/RS232_16_1.pdf, id=800, 689.97563pt x 430.92175pt>
+<./wyklady/RS232_16_1.pdf, id=968, 689.97563pt x 430.92175pt>
 File: ./wyklady/RS232_16_1.pdf Graphic file (type pdf)
 
 <use ./wyklady/RS232_16_1.pdf>
@@ -961,7 +961,7 @@ ge is rotated 90 degrees>]
 pdfTeX warning: pdflatex.exe (file F:/Uczelnia/Sem 5/IwSK/iwsk_ultimate/wyklady
 /RS232_18_1.pdf): PDF inclusion: found PDF version <1.7>, but at most version <
 1.5> allowed
-<./wyklady/RS232_18_1.pdf, id=862, 613.29124pt x 183.54967pt>
+<./wyklady/RS232_18_1.pdf, id=1030, 613.29124pt x 183.54967pt>
 File: ./wyklady/RS232_18_1.pdf Graphic file (type pdf)
 
 <use ./wyklady/RS232_18_1.pdf>
@@ -977,7 +977,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 240--242
 pdfTeX warning: pdflatex.exe (file F:/Uczelnia/Sem 5/IwSK/iwsk_ultimate/wyklady
 /RS232_18_2.pdf): PDF inclusion: found PDF version <1.7>, but at most version <
 1.5> allowed
-<./wyklady/RS232_18_2.pdf, id=867, 674.60031pt x 127.74927pt>
+<./wyklady/RS232_18_2.pdf, id=1035, 674.60031pt x 127.74927pt>
 File: ./wyklady/RS232_18_2.pdf Graphic file (type pdf)
 
 <use ./wyklady/RS232_18_2.pdf>
@@ -991,7 +991,7 @@ age is rotated 90 degrees>])
 pdfTeX warning: pdflatex.exe (file F:/Uczelnia/Sem 5/IwSK/iwsk_ultimate/wyklady
 /USB_6_1.pdf): PDF inclusion: found PDF version <1.7>, but at most version <1.5
 > allowed
-<./wyklady/USB_6_1.pdf, id=915, 427.81836pt x 408.30542pt>
+<./wyklady/USB_6_1.pdf, id=1083, 427.81836pt x 408.30542pt>
 File: ./wyklady/USB_6_1.pdf Graphic file (type pdf)
 
 <use ./wyklady/USB_6_1.pdf>
@@ -1005,7 +1005,7 @@ Underfull \vbox (badness 7081) has occurred while \output is active []
 pdfTeX warning: pdflatex.exe (file F:/Uczelnia/Sem 5/IwSK/iwsk_ultimate/wyklady
 /USB_7_1.pdf): PDF inclusion: found PDF version <1.7>, but at most version <1.5
 > allowed
-<./wyklady/USB_7_1.pdf, id=920, 394.19273pt x 315.59909pt>
+<./wyklady/USB_7_1.pdf, id=1088, 394.19273pt x 315.59909pt>
 File: ./wyklady/USB_7_1.pdf Graphic file (type pdf)
 
 <use ./wyklady/USB_7_1.pdf>
@@ -1028,7 +1028,7 @@ rotated 90 degrees>]
 pdfTeX warning: pdflatex.exe (file F:/Uczelnia/Sem 5/IwSK/iwsk_ultimate/wyklady
 /USB_9_1.pdf): PDF inclusion: found PDF version <1.7>, but at most version <1.5
 > allowed
-<./wyklady/USB_9_1.pdf, id=945, 643.46397pt x 121.49391pt>
+<./wyklady/USB_9_1.pdf, id=1113, 643.46397pt x 121.49391pt>
 File: ./wyklady/USB_9_1.pdf Graphic file (type pdf)
 
 <use ./wyklady/USB_9_1.pdf>
@@ -1044,7 +1044,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 58--61
 pdfTeX warning: pdflatex.exe (file F:/Uczelnia/Sem 5/IwSK/iwsk_ultimate/wyklady
 /USB_10_1.pdf): PDF inclusion: found PDF version <1.7>, but at most version <1.
 5> allowed
-<./wyklady/USB_10_1.pdf, id=946, 222.25032pt x 221.46738pt>
+<./wyklady/USB_10_1.pdf, id=1114, 222.25032pt x 221.46738pt>
 File: ./wyklady/USB_10_1.pdf Graphic file (type pdf)
 
 <use ./wyklady/USB_10_1.pdf>
@@ -1057,7 +1057,7 @@ s rotated 90 degrees>]
 pdfTeX warning: pdflatex.exe (file F:/Uczelnia/Sem 5/IwSK/iwsk_ultimate/wyklady
 /USB_11_1.pdf): PDF inclusion: found PDF version <1.7>, but at most version <1.
 5> allowed
-<./wyklady/USB_11_1.pdf, id=980, 516.62009pt x 190.9936pt>
+<./wyklady/USB_11_1.pdf, id=1148, 516.62009pt x 190.9936pt>
 File: ./wyklady/USB_11_1.pdf Graphic file (type pdf)
 
 <use ./wyklady/USB_11_1.pdf>
@@ -1068,7 +1068,7 @@ Package pdftex.def Info: ./wyklady/USB_11_1.pdf used on input line 104.
 pdfTeX warning: pdflatex.exe (file F:/Uczelnia/Sem 5/IwSK/iwsk_ultimate/wyklady
 /USB_12_1.pdf): PDF inclusion: found PDF version <1.7>, but at most version <1.
 5> allowed
-<./wyklady/USB_12_1.pdf, id=981, 646.77866pt x 453.7429pt>
+<./wyklady/USB_12_1.pdf, id=1149, 646.77866pt x 453.7429pt>
 File: ./wyklady/USB_12_1.pdf Graphic file (type pdf)
 
 <use ./wyklady/USB_12_1.pdf>
@@ -1079,7 +1079,7 @@ Package pdftex.def Info: ./wyklady/USB_12_1.pdf used on input line 131.
 pdfTeX warning: pdflatex.exe (file F:/Uczelnia/Sem 5/IwSK/iwsk_ultimate/wyklady
 /USB_13_1.pdf): PDF inclusion: found PDF version <1.7>, but at most version <1.
 5> allowed
-<./wyklady/USB_13_1.pdf, id=982, 528.32906pt x 379.40746pt>
+<./wyklady/USB_13_1.pdf, id=1150, 528.32906pt x 379.40746pt>
 File: ./wyklady/USB_13_1.pdf Graphic file (type pdf)
 
 <use ./wyklady/USB_13_1.pdf>
@@ -1103,7 +1103,7 @@ _1.pdf, page is rotated 90 degrees>]
 pdfTeX warning: pdflatex.exe (file F:/Uczelnia/Sem 5/IwSK/iwsk_ultimate/wyklady
 /USB_16_1.pdf): PDF inclusion: found PDF version <1.7>, but at most version <1.
 5> allowed
-<./wyklady/USB_16_1.pdf, id=1253, 328.76831pt x 465.84038pt>
+<./wyklady/USB_16_1.pdf, id=1421, 328.76831pt x 465.84038pt>
 File: ./wyklady/USB_16_1.pdf Graphic file (type pdf)
 
 <use ./wyklady/USB_16_1.pdf>
@@ -1114,7 +1114,7 @@ Package pdftex.def Info: ./wyklady/USB_16_1.pdf used on input line 180.
 pdfTeX warning: pdflatex.exe (file F:/Uczelnia/Sem 5/IwSK/iwsk_ultimate/wyklady
 /USB_17_1.pdf): PDF inclusion: found PDF version <1.7>, but at most version <1.
 5> allowed
-<./wyklady/USB_17_1.pdf, id=1258, 619.6651pt x 455.60597pt>
+<./wyklady/USB_17_1.pdf, id=1426, 619.6651pt x 455.60597pt>
 File: ./wyklady/USB_17_1.pdf Graphic file (type pdf)
 
 <use ./wyklady/USB_17_1.pdf>
@@ -1126,7 +1126,7 @@ d 90 degrees>]
 pdfTeX warning: pdflatex.exe (file F:/Uczelnia/Sem 5/IwSK/iwsk_ultimate/wyklady
 /USB_18_1.pdf): PDF inclusion: found PDF version <1.7>, but at most version <1.
 5> allowed
-<./wyklady/USB_18_1.pdf, id=1273, 690.94096pt x 435.88339pt>
+<./wyklady/USB_18_1.pdf, id=1441, 690.94096pt x 435.88339pt>
 File: ./wyklady/USB_18_1.pdf Graphic file (type pdf)
 
 <use ./wyklady/USB_18_1.pdf>
@@ -1137,7 +1137,7 @@ Package pdftex.def Info: ./wyklady/USB_18_1.pdf used on input line 203.
 pdfTeX warning: pdflatex.exe (file F:/Uczelnia/Sem 5/IwSK/iwsk_ultimate/wyklady
 /USB_19_1.pdf): PDF inclusion: found PDF version <1.7>, but at most version <1.
 5> allowed
-<./wyklady/USB_19_1.pdf, id=1274, 685.41568pt x 421.39816pt>
+<./wyklady/USB_19_1.pdf, id=1442, 685.41568pt x 421.39816pt>
 File: ./wyklady/USB_19_1.pdf Graphic file (type pdf)
 
 <use ./wyklady/USB_19_1.pdf>
@@ -1153,7 +1153,7 @@ is rotated 90 degrees>]
 pdfTeX warning: pdflatex.exe (file F:/Uczelnia/Sem 5/IwSK/iwsk_ultimate/wyklady
 /USB_20_1.pdf): PDF inclusion: found PDF version <1.7>, but at most version <1.
 5> allowed
-<./wyklady/USB_20_1.pdf, id=1313, 668.37202pt x 447.21358pt>
+<./wyklady/USB_20_1.pdf, id=1481, 668.37202pt x 447.21358pt>
 File: ./wyklady/USB_20_1.pdf Graphic file (type pdf)
 
 <use ./wyklady/USB_20_1.pdf>
@@ -1169,7 +1169,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 211--212
 pdfTeX warning: pdflatex.exe (file F:/Uczelnia/Sem 5/IwSK/iwsk_ultimate/wyklady
 /USB_23_1.pdf): PDF inclusion: found PDF version <1.7>, but at most version <1.
 5> allowed
-<./wyklady/USB_23_1.pdf, id=1314, 682.841pt x 214.40886pt>
+<./wyklady/USB_23_1.pdf, id=1482, 682.841pt x 214.40886pt>
 File: ./wyklady/USB_23_1.pdf Graphic file (type pdf)
 
 <use ./wyklady/USB_23_1.pdf>
@@ -1182,7 +1182,7 @@ is rotated 90 degrees>]
 pdfTeX warning: pdflatex.exe (file F:/Uczelnia/Sem 5/IwSK/iwsk_ultimate/wyklady
 /USB_24_1.pdf): PDF inclusion: found PDF version <1.7>, but at most version <1.
 5> allowed
-<./wyklady/USB_24_1.pdf, id=1364, 355.96985pt x 385.72105pt>
+<./wyklady/USB_24_1.pdf, id=1532, 355.96985pt x 385.72105pt>
 File: ./wyklady/USB_24_1.pdf Graphic file (type pdf)
 
 <use ./wyklady/USB_24_1.pdf>
@@ -1195,7 +1195,7 @@ is rotated 90 degrees>]
 pdfTeX warning: pdflatex.exe (file F:/Uczelnia/Sem 5/IwSK/iwsk_ultimate/wyklady
 /USB_31_1.pdf): PDF inclusion: found PDF version <1.7>, but at most version <1.
 5> allowed
-<./wyklady/USB_31_1.pdf, id=1587, 669.93427pt x 289.66194pt>
+<./wyklady/USB_31_1.pdf, id=1755, 669.93427pt x 289.66194pt>
 File: ./wyklady/USB_31_1.pdf Graphic file (type pdf)
 
 <use ./wyklady/USB_31_1.pdf>
@@ -1207,7 +1207,7 @@ d 90 degrees>]
 pdfTeX warning: pdflatex.exe (file F:/Uczelnia/Sem 5/IwSK/iwsk_ultimate/wyklady
 /USB_34_1.pdf): PDF inclusion: found PDF version <1.7>, but at most version <1.
 5> allowed
-<./wyklady/USB_34_1.pdf, id=1621, 306.86646pt x 262.27989pt>
+<./wyklady/USB_34_1.pdf, id=1789, 306.86646pt x 262.27989pt>
 File: ./wyklady/USB_34_1.pdf Graphic file (type pdf)
 
 <use ./wyklady/USB_34_1.pdf>
@@ -1219,7 +1219,7 @@ d 90 degrees>]
 pdfTeX warning: pdflatex.exe (file F:/Uczelnia/Sem 5/IwSK/iwsk_ultimate/wyklady
 /USB_35_1.pdf): PDF inclusion: found PDF version <1.7>, but at most version <1.
 5> allowed
-<./wyklady/USB_35_1.pdf, id=1645, 609.53809pt x 406.9321pt>
+<./wyklady/USB_35_1.pdf, id=1813, 609.53809pt x 406.9321pt>
 File: ./wyklady/USB_35_1.pdf Graphic file (type pdf)
 
 <use ./wyklady/USB_35_1.pdf>
@@ -1230,7 +1230,7 @@ Package pdftex.def Info: ./wyklady/USB_35_1.pdf used on input line 304.
 pdfTeX warning: pdflatex.exe (file F:/Uczelnia/Sem 5/IwSK/iwsk_ultimate/wyklady
 /USB_36_1.pdf): PDF inclusion: found PDF version <1.7>, but at most version <1.
 5> allowed
-<./wyklady/USB_36_1.pdf, id=1646, 609.53748pt x 415.48373pt>
+<./wyklady/USB_36_1.pdf, id=1814, 609.53748pt x 415.48373pt>
 File: ./wyklady/USB_36_1.pdf Graphic file (type pdf)
 
 <use ./wyklady/USB_36_1.pdf>
@@ -1246,7 +1246,7 @@ Overfull \hbox (4.49847pt too wide) in paragraph at lines 304--306
 pdfTeX warning: pdflatex.exe (file F:/Uczelnia/Sem 5/IwSK/iwsk_ultimate/wyklady
 /USB_38_1.pdf): PDF inclusion: found PDF version <1.7>, but at most version <1.
 5> allowed
-<./wyklady/USB_38_1.pdf, id=1647, 481.74983pt x 59.45212pt>
+<./wyklady/USB_38_1.pdf, id=1815, 481.74983pt x 59.45212pt>
 File: ./wyklady/USB_38_1.pdf Graphic file (type pdf)
 
 <use ./wyklady/USB_38_1.pdf>
@@ -1257,7 +1257,7 @@ Package pdftex.def Info: ./wyklady/USB_38_1.pdf used on input line 316.
 pdfTeX warning: pdflatex.exe (file F:/Uczelnia/Sem 5/IwSK/iwsk_ultimate/wyklady
 /USB_39_1.pdf): PDF inclusion: found PDF version <1.7>, but at most version <1.
 5> allowed
-<./wyklady/USB_39_1.pdf, id=1648, 433.33896pt x 362.15298pt>
+<./wyklady/USB_39_1.pdf, id=1816, 433.33896pt x 362.15298pt>
 File: ./wyklady/USB_39_1.pdf Graphic file (type pdf)
 
 <use ./wyklady/USB_39_1.pdf>
@@ -1274,7 +1274,7 @@ df, page is rotated 90 degrees>]
 pdfTeX warning: pdflatex.exe (file F:/Uczelnia/Sem 5/IwSK/iwsk_ultimate/wyklady
 /USB_43_1.pdf): PDF inclusion: found PDF version <1.7>, but at most version <1.
 5> allowed
-<./wyklady/USB_43_1.pdf, id=1805, 409.23894pt x 280.43053pt>
+<./wyklady/USB_43_1.pdf, id=1973, 409.23894pt x 280.43053pt>
 File: ./wyklady/USB_43_1.pdf Graphic file (type pdf)
 
 <use ./wyklady/USB_43_1.pdf>
@@ -1286,7 +1286,7 @@ d 90 degrees>]
 pdfTeX warning: pdflatex.exe (file F:/Uczelnia/Sem 5/IwSK/iwsk_ultimate/wyklady
 /USB_44_1.pdf): PDF inclusion: found PDF version <1.7>, but at most version <1.
 5> allowed
-<./wyklady/USB_44_1.pdf, id=1816, 458.03574pt x 295.26993pt>
+<./wyklady/USB_44_1.pdf, id=1984, 458.03574pt x 295.26993pt>
 File: ./wyklady/USB_44_1.pdf Graphic file (type pdf)
 
 <use ./wyklady/USB_44_1.pdf>
@@ -1297,7 +1297,7 @@ Package pdftex.def Info: ./wyklady/USB_44_1.pdf used on input line 346.
 pdfTeX warning: pdflatex.exe (file F:/Uczelnia/Sem 5/IwSK/iwsk_ultimate/wyklady
 /USB_46_1.pdf): PDF inclusion: found PDF version <1.7>, but at most version <1.
 5> allowed
-<./wyklady/USB_46_1.pdf, id=1817, 711.90485pt x 427.35661pt>
+<./wyklady/USB_46_1.pdf, id=1985, 711.90485pt x 427.35661pt>
 File: ./wyklady/USB_46_1.pdf Graphic file (type pdf)
 
 <use ./wyklady/USB_46_1.pdf>
@@ -1308,7 +1308,7 @@ Package pdftex.def Info: ./wyklady/USB_46_1.pdf used on input line 369.
 pdfTeX warning: pdflatex.exe (file F:/Uczelnia/Sem 5/IwSK/iwsk_ultimate/wyklady
 /USB_47_1.pdf): PDF inclusion: found PDF version <1.7>, but at most version <1.
 5> allowed
-<./wyklady/USB_47_1.pdf, id=1818, 472.77002pt x 226.5388pt>
+<./wyklady/USB_47_1.pdf, id=1986, 472.77002pt x 226.5388pt>
 File: ./wyklady/USB_47_1.pdf Graphic file (type pdf)
 
 <use ./wyklady/USB_47_1.pdf>
@@ -1319,7 +1319,7 @@ Package pdftex.def Info: ./wyklady/USB_47_1.pdf used on input line 371.
 pdfTeX warning: pdflatex.exe (file F:/Uczelnia/Sem 5/IwSK/iwsk_ultimate/wyklady
 /USB_48_1.pdf): PDF inclusion: found PDF version <1.7>, but at most version <1.
 5> allowed
-<./wyklady/USB_48_1.pdf, id=1819, 471.97028pt x 147.17685pt>
+<./wyklady/USB_48_1.pdf, id=1987, 471.97028pt x 147.17685pt>
 File: ./wyklady/USB_48_1.pdf Graphic file (type pdf)
 
 <use ./wyklady/USB_48_1.pdf>
@@ -1345,7 +1345,7 @@ is rotated 90 degrees>]
 pdfTeX warning: pdflatex.exe (file F:/Uczelnia/Sem 5/IwSK/iwsk_ultimate/wyklady
 /USB_49_1.pdf): PDF inclusion: found PDF version <1.7>, but at most version <1.
 5> allowed
-<./wyklady/USB_49_1.pdf, id=2272, 695.95752pt x 493.72458pt>
+<./wyklady/USB_49_1.pdf, id=2440, 695.95752pt x 493.72458pt>
 File: ./wyklady/USB_49_1.pdf Graphic file (type pdf)
 
 <use ./wyklady/USB_49_1.pdf>
@@ -1356,7 +1356,7 @@ Package pdftex.def Info: ./wyklady/USB_49_1.pdf used on input line 376.
 pdfTeX warning: pdflatex.exe (file F:/Uczelnia/Sem 5/IwSK/iwsk_ultimate/wyklady
 /USB_50_1.pdf): PDF inclusion: found PDF version <1.7>, but at most version <1.
 5> allowed
-<./wyklady/USB_50_1.pdf, id=2273, 483.75009pt x 198.1963pt>
+<./wyklady/USB_50_1.pdf, id=2441, 483.75009pt x 198.1963pt>
 File: ./wyklady/USB_50_1.pdf Graphic file (type pdf)
 
 <use ./wyklady/USB_50_1.pdf>
@@ -1367,7 +1367,7 @@ Package pdftex.def Info: ./wyklady/USB_50_1.pdf used on input line 378.
 pdfTeX warning: pdflatex.exe (file F:/Uczelnia/Sem 5/IwSK/iwsk_ultimate/wyklady
 /USB_51_1.pdf): PDF inclusion: found PDF version <1.7>, but at most version <1.
 5> allowed
-<./wyklady/USB_51_1.pdf, id=2274, 479.31071pt x 180.34563pt>
+<./wyklady/USB_51_1.pdf, id=2442, 479.31071pt x 180.34563pt>
 File: ./wyklady/USB_51_1.pdf Graphic file (type pdf)
 
 <use ./wyklady/USB_51_1.pdf>
@@ -1393,7 +1393,7 @@ yklady/USB_50_1.pdf, page is rotated 90 degrees>]
 pdfTeX warning: pdflatex.exe (file F:/Uczelnia/Sem 5/IwSK/iwsk_ultimate/wyklady
 /USB_53_1.pdf): PDF inclusion: found PDF version <1.7>, but at most version <1.
 5> allowed
-<./wyklady/USB_53_1.pdf, id=2991, 518.11064pt x 143.13939pt>
+<./wyklady/USB_53_1.pdf, id=3159, 518.11064pt x 143.13939pt>
 File: ./wyklady/USB_53_1.pdf Graphic file (type pdf)
 
 <use ./wyklady/USB_53_1.pdf>
@@ -1404,7 +1404,7 @@ Package pdftex.def Info: ./wyklady/USB_53_1.pdf used on input line 393.
 pdfTeX warning: pdflatex.exe (file F:/Uczelnia/Sem 5/IwSK/iwsk_ultimate/wyklady
 /USB_56_1.pdf): PDF inclusion: found PDF version <1.7>, but at most version <1.
 5> allowed
-<./wyklady/USB_56_1.pdf, id=2992, 708.34639pt x 183.29659pt>
+<./wyklady/USB_56_1.pdf, id=3160, 708.34639pt x 183.29659pt>
 File: ./wyklady/USB_56_1.pdf Graphic file (type pdf)
 
 <use ./wyklady/USB_56_1.pdf>
@@ -1417,7 +1417,7 @@ is rotated 90 degrees>]
 pdfTeX warning: pdflatex.exe (file F:/Uczelnia/Sem 5/IwSK/iwsk_ultimate/wyklady
 /USB_57_1.pdf): PDF inclusion: found PDF version <1.7>, but at most version <1.
 5> allowed
-<./wyklady/USB_57_1.pdf, id=3054, 163.24988pt x 379.67824pt>
+<./wyklady/USB_57_1.pdf, id=3222, 163.24988pt x 379.67824pt>
 File: ./wyklady/USB_57_1.pdf Graphic file (type pdf)
 
 <use ./wyklady/USB_57_1.pdf>
@@ -1436,7 +1436,7 @@ s rotated 90 degrees>]
 pdfTeX warning: pdflatex.exe (file F:/Uczelnia/Sem 5/IwSK/iwsk_ultimate/wyklady
 /IEEE488_SCPI_17_1.pdf): PDF inclusion: found PDF version <1.7>, but at most ve
 rsion <1.5> allowed
-<./wyklady/IEEE488_SCPI_17_1.pdf, id=3081, 312.14621pt x 358.17815pt>
+<./wyklady/IEEE488_SCPI_17_1.pdf, id=3249, 312.14621pt x 358.17815pt>
 File: ./wyklady/IEEE488_SCPI_17_1.pdf Graphic file (type pdf)
 
 <use ./wyklady/IEEE488_SCPI_17_1.pdf>
@@ -1448,7 +1448,7 @@ Package pdftex.def Info: ./wyklady/IEEE488_SCPI_17_1.pdf used on input line 22.
 pdfTeX warning: pdflatex.exe (file F:/Uczelnia/Sem 5/IwSK/iwsk_ultimate/wyklady
 /IEEE488_SCPI_18_1.pdf): PDF inclusion: found PDF version <1.7>, but at most ve
 rsion <1.5> allowed
-<./wyklady/IEEE488_SCPI_18_1.pdf, id=3082, 596.0268pt x 316.34189pt>
+<./wyklady/IEEE488_SCPI_18_1.pdf, id=3250, 596.0268pt x 316.34189pt>
 File: ./wyklady/IEEE488_SCPI_18_1.pdf Graphic file (type pdf)
 
 <use ./wyklady/IEEE488_SCPI_18_1.pdf>
@@ -1465,7 +1465,7 @@ Overfull \hbox (4.49847pt too wide) in paragraph at lines 21--24
 pdfTeX warning: pdflatex.exe (file F:/Uczelnia/Sem 5/IwSK/iwsk_ultimate/wyklady
 /IEEE488_SCPI_2_1.pdf): PDF inclusion: found PDF version <1.7>, but at most ver
 sion <1.5> allowed
-<./wyklady/IEEE488_SCPI_2_1.pdf, id=3083, 536.82558pt x 153.09985pt>
+<./wyklady/IEEE488_SCPI_2_1.pdf, id=3251, 536.82558pt x 153.09985pt>
 File: ./wyklady/IEEE488_SCPI_2_1.pdf Graphic file (type pdf)
 
 <use ./wyklady/IEEE488_SCPI_2_1.pdf>
@@ -1476,7 +1476,7 @@ Package pdftex.def Info: ./wyklady/IEEE488_SCPI_2_1.pdf used on input line 45.
 pdfTeX warning: pdflatex.exe (file F:/Uczelnia/Sem 5/IwSK/iwsk_ultimate/wyklady
 /IEEE488_SCPI_2_2.pdf): PDF inclusion: found PDF version <1.7>, but at most ver
 sion <1.5> allowed
-<./wyklady/IEEE488_SCPI_2_2.pdf, id=3084, 235.27899pt x 90.61855pt>
+<./wyklady/IEEE488_SCPI_2_2.pdf, id=3252, 235.27899pt x 90.61855pt>
 File: ./wyklady/IEEE488_SCPI_2_2.pdf Graphic file (type pdf)
 
 <use ./wyklady/IEEE488_SCPI_2_2.pdf>
@@ -1489,7 +1489,7 @@ PI_18_1.pdf, page is rotated 90 degrees>]
 pdfTeX warning: pdflatex.exe (file F:/Uczelnia/Sem 5/IwSK/iwsk_ultimate/wyklady
 /IEEE488_SCPI_3_1.pdf): PDF inclusion: found PDF version <1.7>, but at most ver
 sion <1.5> allowed
-<./wyklady/IEEE488_SCPI_3_1.pdf, id=3101, 317.92776pt x 472.44507pt>
+<./wyklady/IEEE488_SCPI_3_1.pdf, id=3269, 317.92776pt x 472.44507pt>
 File: ./wyklady/IEEE488_SCPI_3_1.pdf Graphic file (type pdf)
 
 <use ./wyklady/IEEE488_SCPI_3_1.pdf>
@@ -1519,7 +1519,7 @@ lady/IEEE488_SCPI_3_1.pdf, page is rotated 90 degrees>]
 pdfTeX warning: pdflatex.exe (file F:/Uczelnia/Sem 5/IwSK/iwsk_ultimate/wyklady
 /IEEE488_SCPI_8_1.pdf): PDF inclusion: found PDF version <1.7>, but at most ver
 sion <1.5> allowed
-<./wyklady/IEEE488_SCPI_8_1.pdf, id=3142, 530.7145pt x 280.60835pt>
+<./wyklady/IEEE488_SCPI_8_1.pdf, id=3310, 530.7145pt x 280.60835pt>
 File: ./wyklady/IEEE488_SCPI_8_1.pdf Graphic file (type pdf)
 
 <use ./wyklady/IEEE488_SCPI_8_1.pdf>
@@ -1537,7 +1537,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 112--115
 pdfTeX warning: pdflatex.exe (file F:/Uczelnia/Sem 5/IwSK/iwsk_ultimate/wyklady
 /IEEE488_SCPI_11_1.pdf): PDF inclusion: found PDF version <1.7>, but at most ve
 rsion <1.5> allowed
-<./wyklady/IEEE488_SCPI_11_1.pdf, id=3162, 199.02354pt x 268.04138pt>
+<./wyklady/IEEE488_SCPI_11_1.pdf, id=3330, 199.02354pt x 268.04138pt>
 File: ./wyklady/IEEE488_SCPI_11_1.pdf Graphic file (type pdf)
 
 <use ./wyklady/IEEE488_SCPI_11_1.pdf>
@@ -1549,7 +1549,7 @@ Package pdftex.def Info: ./wyklady/IEEE488_SCPI_11_1.pdf used on input line 139
 pdfTeX warning: pdflatex.exe (file F:/Uczelnia/Sem 5/IwSK/iwsk_ultimate/wyklady
 /IEEE488_SCPI_12_1.pdf): PDF inclusion: found PDF version <1.7>, but at most ve
 rsion <1.5> allowed
-<./wyklady/IEEE488_SCPI_12_1.pdf, id=3163, 534.63742pt x 409.48987pt>
+<./wyklady/IEEE488_SCPI_12_1.pdf, id=3331, 534.63742pt x 409.48987pt>
 File: ./wyklady/IEEE488_SCPI_12_1.pdf Graphic file (type pdf)
 
 <use ./wyklady/IEEE488_SCPI_12_1.pdf>
@@ -1568,7 +1568,7 @@ I_12_1.pdf, page is rotated 90 degrees>]
 pdfTeX warning: pdflatex.exe (file F:/Uczelnia/Sem 5/IwSK/iwsk_ultimate/wyklady
 /IEEE488_SCPI_19_1.pdf): PDF inclusion: found PDF version <1.7>, but at most ve
 rsion <1.5> allowed
-<./wyklady/IEEE488_SCPI_19_1.pdf, id=3190, 453.6903pt x 393.90338pt>
+<./wyklady/IEEE488_SCPI_19_1.pdf, id=3358, 453.6903pt x 393.90338pt>
 File: ./wyklady/IEEE488_SCPI_19_1.pdf Graphic file (type pdf)
 
 <use ./wyklady/IEEE488_SCPI_19_1.pdf>
@@ -1581,7 +1581,7 @@ is rotated 90 degrees>]
 pdfTeX warning: pdflatex.exe (file F:/Uczelnia/Sem 5/IwSK/iwsk_ultimate/wyklady
 /IEEE488_SCPI_21_2.pdf): PDF inclusion: found PDF version <1.7>, but at most ve
 rsion <1.5> allowed
-<./wyklady/IEEE488_SCPI_21_2.pdf, id=3206, 635.29343pt x 272.98677pt>
+<./wyklady/IEEE488_SCPI_21_2.pdf, id=3374, 635.29343pt x 272.98677pt>
 File: ./wyklady/IEEE488_SCPI_21_2.pdf Graphic file (type pdf)
 
 <use ./wyklady/IEEE488_SCPI_21_2.pdf>
@@ -1599,7 +1599,7 @@ s rotated 90 degrees>]
 pdfTeX warning: pdflatex.exe (file F:/Uczelnia/Sem 5/IwSK/iwsk_ultimate/wyklady
 /IEEE488_SCPI_22_1.pdf): PDF inclusion: found PDF version <1.7>, but at most ve
 rsion <1.5> allowed
-<./wyklady/IEEE488_SCPI_22_1.pdf, id=3229, 530.74286pt x 326.70053pt>
+<./wyklady/IEEE488_SCPI_22_1.pdf, id=3397, 530.74286pt x 326.70053pt>
 File: ./wyklady/IEEE488_SCPI_22_1.pdf Graphic file (type pdf)
 
 <use ./wyklady/IEEE488_SCPI_22_1.pdf>
@@ -1611,7 +1611,7 @@ Package pdftex.def Info: ./wyklady/IEEE488_SCPI_22_1.pdf used on input line 225
 pdfTeX warning: pdflatex.exe (file F:/Uczelnia/Sem 5/IwSK/iwsk_ultimate/wyklady
 /IEEE488_SCPI_23_1.pdf): PDF inclusion: found PDF version <1.7>, but at most ve
 rsion <1.5> allowed
-<./wyklady/IEEE488_SCPI_23_1.pdf, id=3230, 656.1213pt x 268.22205pt>
+<./wyklady/IEEE488_SCPI_23_1.pdf, id=3398, 656.1213pt x 268.22205pt>
 File: ./wyklady/IEEE488_SCPI_23_1.pdf Graphic file (type pdf)
 
 <use ./wyklady/IEEE488_SCPI_23_1.pdf>
@@ -1631,7 +1631,7 @@ I_23_1.pdf, page is rotated 90 degrees>]
 pdfTeX warning: pdflatex.exe (file F:/Uczelnia/Sem 5/IwSK/iwsk_ultimate/wyklady
 /IEEE488_SCPI_30_1.pdf): PDF inclusion: found PDF version <1.7>, but at most ve
 rsion <1.5> allowed
-<./wyklady/IEEE488_SCPI_30_1.pdf, id=3244, 429.02287pt x 312.42729pt>
+<./wyklady/IEEE488_SCPI_30_1.pdf, id=3412, 429.02287pt x 312.42729pt>
 File: ./wyklady/IEEE488_SCPI_30_1.pdf Graphic file (type pdf)
 
 <use ./wyklady/IEEE488_SCPI_30_1.pdf>
@@ -1643,7 +1643,7 @@ Package pdftex.def Info: ./wyklady/IEEE488_SCPI_30_1.pdf used on input line 251
 pdfTeX warning: pdflatex.exe (file F:/Uczelnia/Sem 5/IwSK/iwsk_ultimate/wyklady
 /IEEE488_SCPI_16_1.pdf): PDF inclusion: found PDF version <1.7>, but at most ve
 rsion <1.5> allowed
-<./wyklady/IEEE488_SCPI_16_1.pdf, id=3245, 545.95969pt x 348.26118pt>
+<./wyklady/IEEE488_SCPI_16_1.pdf, id=3413, 545.95969pt x 348.26118pt>
 File: ./wyklady/IEEE488_SCPI_16_1.pdf Graphic file (type pdf)
 
 <use ./wyklady/IEEE488_SCPI_16_1.pdf>
@@ -1657,7 +1657,7 @@ PI_16_1.pdf, page is rotated 90 degrees>]
 pdfTeX warning: pdflatex.exe (file F:/Uczelnia/Sem 5/IwSK/iwsk_ultimate/wyklady
 /IEEE488_SCPI_32_1.pdf): PDF inclusion: found PDF version <1.7>, but at most ve
 rsion <1.5> allowed
-<./wyklady/IEEE488_SCPI_32_1.pdf, id=3271, 689.85727pt x 311.44345pt>
+<./wyklady/IEEE488_SCPI_32_1.pdf, id=3439, 689.85727pt x 311.44345pt>
 File: ./wyklady/IEEE488_SCPI_32_1.pdf Graphic file (type pdf)
 
 <use ./wyklady/IEEE488_SCPI_32_1.pdf>
@@ -1669,7 +1669,7 @@ Package pdftex.def Info: ./wyklady/IEEE488_SCPI_32_1.pdf used on input line 267
 pdfTeX warning: pdflatex.exe (file F:/Uczelnia/Sem 5/IwSK/iwsk_ultimate/wyklady
 /IEEE488_SCPI_33_1.pdf): PDF inclusion: found PDF version <1.7>, but at most ve
 rsion <1.5> allowed
-<./wyklady/IEEE488_SCPI_33_1.pdf, id=3272, 403.70827pt x 343.24234pt>
+<./wyklady/IEEE488_SCPI_33_1.pdf, id=3440, 403.70827pt x 343.24234pt>
 File: ./wyklady/IEEE488_SCPI_33_1.pdf Graphic file (type pdf)
 
 <use ./wyklady/IEEE488_SCPI_33_1.pdf>
@@ -1686,7 +1686,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 267--270
 pdfTeX warning: pdflatex.exe (file F:/Uczelnia/Sem 5/IwSK/iwsk_ultimate/wyklady
 /IEEE488_SCPI_37_1.pdf): PDF inclusion: found PDF version <1.7>, but at most ve
 rsion <1.5> allowed
-<./wyklady/IEEE488_SCPI_37_1.pdf, id=3273, 460.84169pt x 400.73723pt>
+<./wyklady/IEEE488_SCPI_37_1.pdf, id=3441, 460.84169pt x 400.73723pt>
 File: ./wyklady/IEEE488_SCPI_37_1.pdf Graphic file (type pdf)
 
 <use ./wyklady/IEEE488_SCPI_37_1.pdf>
@@ -1698,7 +1698,7 @@ Package pdftex.def Info: ./wyklady/IEEE488_SCPI_37_1.pdf used on input line 280
 pdfTeX warning: pdflatex.exe (file F:/Uczelnia/Sem 5/IwSK/iwsk_ultimate/wyklady
 /IEEE488_SCPI_38_1.pdf): PDF inclusion: found PDF version <1.7>, but at most ve
 rsion <1.5> allowed
-<./wyklady/IEEE488_SCPI_38_1.pdf, id=3274, 699.7696pt x 433.41106pt>
+<./wyklady/IEEE488_SCPI_38_1.pdf, id=3442, 699.7696pt x 433.41106pt>
 File: ./wyklady/IEEE488_SCPI_38_1.pdf Graphic file (type pdf)
 
 <use ./wyklady/IEEE488_SCPI_38_1.pdf>
@@ -1720,7 +1720,7 @@ PI_33_1.pdf, page is rotated 90 degrees>]
 pdfTeX warning: pdflatex.exe (file F:/Uczelnia/Sem 5/IwSK/iwsk_ultimate/wyklady
 /IEEE488_SCPI_39_1.pdf): PDF inclusion: found PDF version <1.7>, but at most ve
 rsion <1.5> allowed
-<./wyklady/IEEE488_SCPI_39_1.pdf, id=3302, 345.97255pt x 391.92424pt>
+<./wyklady/IEEE488_SCPI_39_1.pdf, id=3470, 345.97255pt x 391.92424pt>
 File: ./wyklady/IEEE488_SCPI_39_1.pdf Graphic file (type pdf)
 
 <use ./wyklady/IEEE488_SCPI_39_1.pdf>
@@ -1728,30 +1728,638 @@ Package pdftex.def Info: ./wyklady/IEEE488_SCPI_39_1.pdf used on input line 287
 .
 (pdftex.def)             Requested size: 199.16928pt x 225.6238pt.
 )
-("F:\Uczelnia\Sem 5\IwSK\iwsk_ultimate\tex\firewire.tex")
-("F:\Uczelnia\Sem 5\IwSK\iwsk_ultimate\tex\zaklocenia.tex")
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 86.
-
+("F:\Uczelnia\Sem 5\IwSK\iwsk_ultimate\tex\firewire.tex"
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [48 <F:/Uczelnia/Sem 5/IwSK/iwsk_ultimate/wyklady/IEEE488_SCPI_37_1.pdf, page 
 is rotated 90 degrees> <F:/Uczelnia/Sem 5/IwSK/iwsk_ultimate/wyklady/IEEE488_SC
 PI_38_1.pdf, page is rotated 90 degrees> <F:/Uczelnia/Sem 5/IwSK/iwsk_ultimate/
-wyklady/IEEE488_SCPI_39_1.pdf, page is rotated 90 degrees>] [49]
+wyklady/IEEE488_SCPI_39_1.pdf, page is rotated 90 degrees>]
+
+pdfTeX warning: pdflatex.exe (file F:/Uczelnia/Sem 5/IwSK/iwsk_ultimate/wyklady
+/FIREWIRE_2_1.pdf): PDF inclusion: found PDF version <1.7>, but at most version
+ <1.5> allowed
+<./wyklady/FIREWIRE_2_1.pdf, id=3502, 482.8339pt x 238.5462pt>
+File: ./wyklady/FIREWIRE_2_1.pdf Graphic file (type pdf)
+
+<use ./wyklady/FIREWIRE_2_1.pdf>
+Package pdftex.def Info: ./wyklady/FIREWIRE_2_1.pdf used on input line 23.
+(pdftex.def)             Requested size: 284.52756pt x 140.57722pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 22--24
+
+ []
+
+[49 <F:/Uczelnia/Sem 5/IwSK/iwsk_ultimate/wyklady/FIREWIRE_2_1.pdf, page is rot
+ated 90 degrees>]
+
+pdfTeX warning: pdflatex.exe (file F:/Uczelnia/Sem 5/IwSK/iwsk_ultimate/wyklady
+/FIREWIRE_3_1.pdf): PDF inclusion: found PDF version <1.7>, but at most version
+ <1.5> allowed
+<./wyklady/FIREWIRE_3_1.pdf, id=3527, 464.85669pt x 240.94016pt>
+File: ./wyklady/FIREWIRE_3_1.pdf Graphic file (type pdf)
+
+<use ./wyklady/FIREWIRE_3_1.pdf>
+Package pdftex.def Info: ./wyklady/FIREWIRE_3_1.pdf used on input line 37.
+(pdftex.def)             Requested size: 199.16928pt x 103.23091pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 46--47
+
+ []
+
+
+
+pdfTeX warning: pdflatex.exe (file F:/Uczelnia/Sem 5/IwSK/iwsk_ultimate/wyklady
+/FIREWIRE_4_1.pdf): PDF inclusion: found PDF version <1.7>, but at most version
+ <1.5> allowed
+<./wyklady/FIREWIRE_4_1.pdf, id=3528, 457.66896pt x 139.7221pt>
+File: ./wyklady/FIREWIRE_4_1.pdf Graphic file (type pdf)
+
+<use ./wyklady/FIREWIRE_4_1.pdf>
+Package pdftex.def Info: ./wyklady/FIREWIRE_4_1.pdf used on input line 55.
+(pdftex.def)             Requested size: 284.52756pt x 86.86559pt.
+
+
+pdfTeX warning: pdflatex.exe (file F:/Uczelnia/Sem 5/IwSK/iwsk_ultimate/wyklady
+/FIREWIRE_5_1.pdf): PDF inclusion: found PDF version <1.7>, but at most version
+ <1.5> allowed
+<./wyklady/FIREWIRE_5_1.pdf, id=3529, 468.88959pt x 280.80917pt>
+File: ./wyklady/FIREWIRE_5_1.pdf Graphic file (type pdf)
+
+<use ./wyklady/FIREWIRE_5_1.pdf>
+Package pdftex.def Info: ./wyklady/FIREWIRE_5_1.pdf used on input line 57.
+(pdftex.def)             Requested size: 284.52756pt x 170.4021pt.
+ [50 <F:/Uczelnia/Sem 5/IwSK/iwsk_ultimate/wyklady/FIREWIRE_3_1.pdf, page is ro
+tated 90 degrees> <F:/Uczelnia/Sem 5/IwSK/iwsk_ultimate/wyklady/FIREWIRE_4_1.pd
+f, page is rotated 90 degrees> <F:/Uczelnia/Sem 5/IwSK/iwsk_ultimate/wyklady/FI
+REWIRE_5_1.pdf, page is rotated 90 degrees>]
+
+pdfTeX warning: pdflatex.exe (file F:/Uczelnia/Sem 5/IwSK/iwsk_ultimate/wyklady
+/FIREWIRE_7_1.pdf): PDF inclusion: found PDF version <1.7>, but at most version
+ <1.5> allowed
+<./wyklady/FIREWIRE_7_1.pdf, id=3589, 387.38225pt x 241.62274pt>
+File: ./wyklady/FIREWIRE_7_1.pdf Graphic file (type pdf)
+
+<use ./wyklady/FIREWIRE_7_1.pdf>
+Package pdftex.def Info: ./wyklady/FIREWIRE_7_1.pdf used on input line 74.
+(pdftex.def)             Requested size: 284.52756pt x 177.47075pt.
+
+
+pdfTeX warning: pdflatex.exe (file F:/Uczelnia/Sem 5/IwSK/iwsk_ultimate/wyklady
+/FIREWIRE_8_1.pdf): PDF inclusion: found PDF version <1.7>, but at most version
+ <1.5> allowed
+<./wyklady/FIREWIRE_8_1.pdf, id=3590, 291.92056pt x 179.16435pt>
+File: ./wyklady/FIREWIRE_8_1.pdf Graphic file (type pdf)
+
+<use ./wyklady/FIREWIRE_8_1.pdf>
+Package pdftex.def Info: ./wyklady/FIREWIRE_8_1.pdf used on input line 88.
+(pdftex.def)             Requested size: 284.52756pt x 174.63394pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 88--89
+
+ []
+
+
+Underfull \vbox (badness 4036) has occurred while \output is active []
+
+ [51 <F:/Uczelnia/Sem 5/IwSK/iwsk_ultimate/wyklady/FIREWIRE_7_1.pdf, page is ro
+tated 90 degrees>]
+
+pdfTeX warning: pdflatex.exe (file F:/Uczelnia/Sem 5/IwSK/iwsk_ultimate/wyklady
+/FIREWIRE_13_1.pdf): PDF inclusion: found PDF version <1.7>, but at most versio
+n <1.5> allowed
+<./wyklady/FIREWIRE_13_1.pdf, id=3608, 450.5382pt x 213.94612pt>
+File: ./wyklady/FIREWIRE_13_1.pdf Graphic file (type pdf)
+
+<use ./wyklady/FIREWIRE_13_1.pdf>
+Package pdftex.def Info: ./wyklady/FIREWIRE_13_1.pdf used on input line 102.
+(pdftex.def)             Requested size: 284.52756pt x 135.1132pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 101--103
+
+ []
+
+[52 <F:/Uczelnia/Sem 5/IwSK/iwsk_ultimate/wyklady/FIREWIRE_8_1.pdf, page is rot
+ated 90 degrees> <F:/Uczelnia/Sem 5/IwSK/iwsk_ultimate/wyklady/FIREWIRE_13_1.pd
+f, page is rotated 90 degrees>]
+Overfull \hbox (4.35445pt too wide) in paragraph at lines 108--109
+[]\OT4/cmr/bx/n/10 Warstwa trans-ak-cji \OT4/cmr/m/n/10 - ±wiad-czy usªu-gi dla
+ trans-fe-rów asyn-chro-nicz-nych re-ali-zu-j¡c pro-to-kóª »¡danie-
+ []
+
+File: ./wyklady/FIREWIRE_13_1.pdf Graphic file (type pdf)
+<use ./wyklady/FIREWIRE_13_1.pdf>
+Package pdftex.def Info: ./wyklady/FIREWIRE_13_1.pdf used on input line 112.
+(pdftex.def)             Requested size: 284.52756pt x 135.1132pt.
+File: ./wyklady/FIREWIRE_8_1.pdf Graphic file (type pdf)
+ <use ./wyklady/FIREWIRE_8_1.pdf>
+Package pdftex.def Info: ./wyklady/FIREWIRE_8_1.pdf used on input line 134.
+(pdftex.def)             Requested size: 284.52756pt x 174.63394pt.
+ [53]
+
+pdfTeX warning: pdflatex.exe (file F:/Uczelnia/Sem 5/IwSK/iwsk_ultimate/wyklady
+/FIREWIRE_10_1.pdf): PDF inclusion: found PDF version <1.7>, but at most versio
+n <1.5> allowed
+<./wyklady/FIREWIRE_10_1.pdf, id=3635, 481.3884pt x 511.83224pt>
+File: ./wyklady/FIREWIRE_10_1.pdf Graphic file (type pdf)
+
+<use ./wyklady/FIREWIRE_10_1.pdf>
+Package pdftex.def Info: ./wyklady/FIREWIRE_10_1.pdf used on input line 149.
+(pdftex.def)             Requested size: 284.52756pt x 302.5251pt.
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [54]
+
+pdfTeX warning: pdflatex.exe (file F:/Uczelnia/Sem 5/IwSK/iwsk_ultimate/wyklady
+/FIREWIRE_11_1.pdf): PDF inclusion: found PDF version <1.7>, but at most versio
+n <1.5> allowed
+<./wyklady/FIREWIRE_11_1.pdf, id=3640, 481.26799pt x 229.85887pt>
+File: ./wyklady/FIREWIRE_11_1.pdf Graphic file (type pdf)
+
+<use ./wyklady/FIREWIRE_11_1.pdf>
+Package pdftex.def Info: ./wyklady/FIREWIRE_11_1.pdf used on input line 153.
+(pdftex.def)             Requested size: 284.52756pt x 135.89613pt.
+
+
+pdfTeX warning: pdflatex.exe (file F:/Uczelnia/Sem 5/IwSK/iwsk_ultimate/wyklady
+/FIREWIRE_15_1.pdf): PDF inclusion: found PDF version <1.7>, but at most versio
+n <1.5> allowed
+<./wyklady/FIREWIRE_15_1.pdf, id=3641, 344.40672pt x 267.16998pt>
+File: ./wyklady/FIREWIRE_15_1.pdf Graphic file (type pdf)
+
+<use ./wyklady/FIREWIRE_15_1.pdf>
+Package pdftex.def Info: ./wyklady/FIREWIRE_15_1.pdf used on input line 157.
+(pdftex.def)             Requested size: 284.52756pt x 220.73593pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 156--159
+
+ []
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [55 <F:/Uczelnia/Sem 5/IwSK/iwsk_ultimate/wyklady/FIREWIRE_10_1.pdf, page is r
+otated 90 degrees> <F:/Uczelnia/Sem 5/IwSK/iwsk_ultimate/wyklady/FIREWIRE_11_1.
+pdf, page is rotated 90 degrees>]
+
+pdfTeX warning: pdflatex.exe (file F:/Uczelnia/Sem 5/IwSK/iwsk_ultimate/wyklady
+/FIREWIRE_15_2.pdf): PDF inclusion: found PDF version <1.7>, but at most versio
+n <1.5> allowed
+<./wyklady/FIREWIRE_15_2.pdf, id=3688, 506.45528pt x 255.00446pt>
+File: ./wyklady/FIREWIRE_15_2.pdf Graphic file (type pdf)
+
+<use ./wyklady/FIREWIRE_15_2.pdf>
+Package pdftex.def Info: ./wyklady/FIREWIRE_15_2.pdf used on input line 162.
+(pdftex.def)             Requested size: 284.52756pt x 143.26454pt.
+
+
+pdfTeX warning: pdflatex.exe (file F:/Uczelnia/Sem 5/IwSK/iwsk_ultimate/wyklady
+/FIREWIRE_16_1.pdf): PDF inclusion: found PDF version <1.7>, but at most versio
+n <1.5> allowed
+<./wyklady/FIREWIRE_16_1.pdf, id=3689, 283.98093pt x 242.28525pt>
+File: ./wyklady/FIREWIRE_16_1.pdf Graphic file (type pdf)
+
+<use ./wyklady/FIREWIRE_16_1.pdf>
+Package pdftex.def Info: ./wyklady/FIREWIRE_16_1.pdf used on input line 166.
+(pdftex.def)             Requested size: 199.16928pt x 169.93124pt.
+
+
+pdfTeX warning: pdflatex.exe (file F:/Uczelnia/Sem 5/IwSK/iwsk_ultimate/wyklady
+/FIREWIRE_17_1.pdf): PDF inclusion: found PDF version <1.7>, but at most versio
+n <1.5> allowed
+<./wyklady/FIREWIRE_17_1.pdf, id=3690, 483.74265pt x 519.76863pt>
+File: ./wyklady/FIREWIRE_17_1.pdf Graphic file (type pdf)
+
+<use ./wyklady/FIREWIRE_17_1.pdf>
+Package pdftex.def Info: ./wyklady/FIREWIRE_17_1.pdf used on input line 169.
+(pdftex.def)             Requested size: 199.16928pt x 214.00272pt.
+
+
+pdfTeX warning: pdflatex.exe (file F:/Uczelnia/Sem 5/IwSK/iwsk_ultimate/wyklady
+/FIREWIRE_18_1.pdf): PDF inclusion: found PDF version <1.7>, but at most versio
+n <1.5> allowed
+<./wyklady/FIREWIRE_18_1.pdf, id=3691, 594.74191pt x 473.89047pt>
+File: ./wyklady/FIREWIRE_18_1.pdf Graphic file (type pdf)
+
+<use ./wyklady/FIREWIRE_18_1.pdf>
+Package pdftex.def Info: ./wyklady/FIREWIRE_18_1.pdf used on input line 170.
+(pdftex.def)             Requested size: 199.16928pt x 158.69824pt.
+
+
+pdfTeX warning: pdflatex.exe (file F:/Uczelnia/Sem 5/IwSK/iwsk_ultimate/wyklady
+/FIREWIRE_19_1.pdf): PDF inclusion: found PDF version <1.7>, but at most versio
+n <1.5> allowed
+<./wyklady/FIREWIRE_19_1.pdf, id=3692, 478.82893pt x 398.71634pt>
+File: ./wyklady/FIREWIRE_19_1.pdf Graphic file (type pdf)
+
+<use ./wyklady/FIREWIRE_19_1.pdf>
+Package pdftex.def Info: ./wyklady/FIREWIRE_19_1.pdf used on input line 173.
+(pdftex.def)             Requested size: 199.16928pt x 165.84747pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 165--176
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 165--176
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 165--176
+
+ []
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [56 <F:/Uczelnia/Sem 5/IwSK/iwsk_ultimate/wyklady/FIREWIRE_15_1.pdf, page is r
+otated 90 degrees> <F:/Uczelnia/Sem 5/IwSK/iwsk_ultimate/wyklady/FIREWIRE_15_2.
+pdf, page is rotated 90 degrees>]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [57 <F:/Uczelnia/Sem 5/IwSK/iwsk_ultimate/wyklady/FIREWIRE_16_1.pdf, page is r
+otated 90 degrees> <F:/Uczelnia/Sem 5/IwSK/iwsk_ultimate/wyklady/FIREWIRE_17_1.
+pdf, page is rotated 90 degrees> <F:/Uczelnia/Sem 5/IwSK/iwsk_ultimate/wyklady/
+FIREWIRE_18_1.pdf, page is rotated 90 degrees> <F:/Uczelnia/Sem 5/IwSK/iwsk_ult
+imate/wyklady/FIREWIRE_19_1.pdf, page is rotated 90 degrees>]
+
+pdfTeX warning: pdflatex.exe (file F:/Uczelnia/Sem 5/IwSK/iwsk_ultimate/wyklady
+/FIREWIRE_20_1.pdf): PDF inclusion: found PDF version <1.7>, but at most versio
+n <1.5> allowed
+<./wyklady/FIREWIRE_20_1.pdf, id=3787, 358.17818pt x 113.62463pt>
+File: ./wyklady/FIREWIRE_20_1.pdf Graphic file (type pdf)
+
+<use ./wyklady/FIREWIRE_20_1.pdf>
+Package pdftex.def Info: ./wyklady/FIREWIRE_20_1.pdf used on input line 182.
+(pdftex.def)             Requested size: 256.0748pt x 81.2375pt.
+
+
+pdfTeX warning: pdflatex.exe (file F:/Uczelnia/Sem 5/IwSK/iwsk_ultimate/wyklady
+/FIREWIRE_21_1.pdf): PDF inclusion: found PDF version <1.7>, but at most versio
+n <1.5> allowed
+<./wyklady/FIREWIRE_21_1.pdf, id=3788, 723.70375pt x 543.02875pt>
+File: ./wyklady/FIREWIRE_21_1.pdf Graphic file (type pdf)
+
+<use ./wyklady/FIREWIRE_21_1.pdf>
+Package pdftex.def Info: ./wyklady/FIREWIRE_21_1.pdf used on input line 193.
+(pdftex.def)             Requested size: 256.0748pt x 192.14267pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 192--195
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 198--200
+
+ []
+
+
+
+pdfTeX warning: pdflatex.exe (file F:/Uczelnia/Sem 5/IwSK/iwsk_ultimate/wyklady
+/FIREWIRE_28_1.pdf): PDF inclusion: found PDF version <1.7>, but at most versio
+n <1.5> allowed
+<./wyklady/FIREWIRE_28_1.pdf, id=3789, 429.09755pt x 270.4271pt>
+File: ./wyklady/FIREWIRE_28_1.pdf Graphic file (type pdf)
+
+<use ./wyklady/FIREWIRE_28_1.pdf>
+Package pdftex.def Info: ./wyklady/FIREWIRE_28_1.pdf used on input line 206.
+(pdftex.def)             Requested size: 256.0748pt x 161.3827pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 204--209
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 204--209
+
+ []
+
+[58 <F:/Uczelnia/Sem 5/IwSK/iwsk_ultimate/wyklady/FIREWIRE_20_1.pdf, page is ro
+tated 90 degrees> <F:/Uczelnia/Sem 5/IwSK/iwsk_ultimate/wyklady/FIREWIRE_21_1.p
+df, page is rotated 90 degrees>]
+
+pdfTeX warning: pdflatex.exe (file F:/Uczelnia/Sem 5/IwSK/iwsk_ultimate/wyklady
+/FIREWIRE_29_1.pdf): PDF inclusion: found PDF version <1.7>, but at most versio
+n <1.5> allowed
+<./wyklady/FIREWIRE_29_1.pdf, id=3823, 613.52185pt x 404.37752pt>
+File: ./wyklady/FIREWIRE_29_1.pdf Graphic file (type pdf)
+
+<use ./wyklady/FIREWIRE_29_1.pdf>
+Package pdftex.def Info: ./wyklady/FIREWIRE_29_1.pdf used on input line 218.
+(pdftex.def)             Requested size: 256.0748pt x 168.78227pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 217--219
+
+ []
+
+[59 <F:/Uczelnia/Sem 5/IwSK/iwsk_ultimate/wyklady/FIREWIRE_28_1.pdf, page is ro
+tated 90 degrees> <F:/Uczelnia/Sem 5/IwSK/iwsk_ultimate/wyklady/FIREWIRE_29_1.p
+df, page is rotated 90 degrees>]
+
+pdfTeX warning: pdflatex.exe (file F:/Uczelnia/Sem 5/IwSK/iwsk_ultimate/wyklady
+/FIREWIRE_31_1.pdf): PDF inclusion: found PDF version <1.7>, but at most versio
+n <1.5> allowed
+<./wyklady/FIREWIRE_31_1.pdf, id=3860, 311.1625pt x 277.66415pt>
+File: ./wyklady/FIREWIRE_31_1.pdf Graphic file (type pdf)
+
+<use ./wyklady/FIREWIRE_31_1.pdf>
+Package pdftex.def Info: ./wyklady/FIREWIRE_31_1.pdf used on input line 243.
+(pdftex.def)             Requested size: 256.0748pt x 228.50801pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 247--248
+
+ []
+
+[60 <F:/Uczelnia/Sem 5/IwSK/iwsk_ultimate/wyklady/FIREWIRE_31_1.pdf, page is ro
+tated 90 degrees>]
+
+pdfTeX warning: pdflatex.exe (file F:/Uczelnia/Sem 5/IwSK/iwsk_ultimate/wyklady
+/FIREWIRE_32_1.pdf): PDF inclusion: found PDF version <1.7>, but at most versio
+n <1.5> allowed
+<./wyklady/FIREWIRE_32_1.pdf, id=3890, 538.43591pt x 57.19359pt>
+File: ./wyklady/FIREWIRE_32_1.pdf Graphic file (type pdf)
+
+<use ./wyklady/FIREWIRE_32_1.pdf>
+Package pdftex.def Info: ./wyklady/FIREWIRE_32_1.pdf used on input line 251.
+(pdftex.def)             Requested size: 256.0748pt x 27.20126pt.
+
+
+pdfTeX warning: pdflatex.exe (file F:/Uczelnia/Sem 5/IwSK/iwsk_ultimate/wyklady
+/FIREWIRE_33_1.pdf): PDF inclusion: found PDF version <1.7>, but at most versio
+n <1.5> allowed
+<./wyklady/FIREWIRE_33_1.pdf, id=3891, 471.01428pt x 466.65517pt>
+File: ./wyklady/FIREWIRE_33_1.pdf Graphic file (type pdf)
+
+<use ./wyklady/FIREWIRE_33_1.pdf>
+Package pdftex.def Info: ./wyklady/FIREWIRE_33_1.pdf used on input line 254.
+(pdftex.def)             Requested size: 256.0748pt x 253.70609pt.
+ [61 <F:/Uczelnia/Sem 5/IwSK/iwsk_ultimate/wyklady/FIREWIRE_32_1.pdf, page is r
+otated 90 degrees> <F:/Uczelnia/Sem 5/IwSK/iwsk_ultimate/wyklady/FIREWIRE_33_1.
+pdf, page is rotated 90 degrees>]
+
+pdfTeX warning: pdflatex.exe (file F:/Uczelnia/Sem 5/IwSK/iwsk_ultimate/wyklady
+/FIREWIRE_36_1.pdf): PDF inclusion: found PDF version <1.7>, but at most versio
+n <1.5> allowed
+<./wyklady/FIREWIRE_36_1.pdf, id=3933, 381.86824pt x 341.62305pt>
+File: ./wyklady/FIREWIRE_36_1.pdf Graphic file (type pdf)
+
+<use ./wyklady/FIREWIRE_36_1.pdf>
+Package pdftex.def Info: ./wyklady/FIREWIRE_36_1.pdf used on input line 281.
+(pdftex.def)             Requested size: 256.0748pt x 229.09998pt.
+
+
+pdfTeX warning: pdflatex.exe (file F:/Uczelnia/Sem 5/IwSK/iwsk_ultimate/wyklady
+/FIREWIRE_37_1.pdf): PDF inclusion: found PDF version <1.7>, but at most versio
+n <1.5> allowed
+<./wyklady/FIREWIRE_37_1.pdf, id=3934, 404.1515pt x 342.58667pt>
+File: ./wyklady/FIREWIRE_37_1.pdf Graphic file (type pdf)
+
+<use ./wyklady/FIREWIRE_37_1.pdf>
+Package pdftex.def Info: ./wyklady/FIREWIRE_37_1.pdf used on input line 282.
+(pdftex.def)             Requested size: 256.0748pt x 217.0801pt.
+
+
+pdfTeX warning: pdflatex.exe (file F:/Uczelnia/Sem 5/IwSK/iwsk_ultimate/wyklady
+/FIREWIRE_38_1.pdf): PDF inclusion: found PDF version <1.7>, but at most versio
+n <1.5> allowed
+<./wyklady/FIREWIRE_38_1.pdf, id=3935, 430.55743pt x 368.4834pt>
+File: ./wyklady/FIREWIRE_38_1.pdf Graphic file (type pdf)
+
+<use ./wyklady/FIREWIRE_38_1.pdf>
+Package pdftex.def Info: ./wyklady/FIREWIRE_38_1.pdf used on input line 283.
+(pdftex.def)             Requested size: 256.0748pt x 219.16881pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 281--284
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 281--284
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 281--284
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 281--284
+
+ []
+
+
+Underfull \vbox (badness 3058) has occurred while \output is active []
+
+ [62 <F:/Uczelnia/Sem 5/IwSK/iwsk_ultimate/wyklady/FIREWIRE_36_1.pdf, page is r
+otated 90 degrees>] [63 <F:/Uczelnia/Sem 5/IwSK/iwsk_ultimate/wyklady/FIREWIRE_
+37_1.pdf, page is rotated 90 degrees> <F:/Uczelnia/Sem 5/IwSK/iwsk_ultimate/wyk
+lady/FIREWIRE_38_1.pdf, page is rotated 90 degrees>]
+
+pdfTeX warning: pdflatex.exe (file F:/Uczelnia/Sem 5/IwSK/iwsk_ultimate/wyklady
+/FIREWIRE_40_1.pdf): PDF inclusion: found PDF version <1.7>, but at most versio
+n <1.5> allowed
+<./wyklady/FIREWIRE_40_1.pdf, id=4001, 483.81123pt x 219.83316pt>
+File: ./wyklady/FIREWIRE_40_1.pdf Graphic file (type pdf)
+
+<use ./wyklady/FIREWIRE_40_1.pdf>
+Package pdftex.def Info: ./wyklady/FIREWIRE_40_1.pdf used on input line 296.
+(pdftex.def)             Requested size: 256.0748pt x 116.36006pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 296--298
+
+ []
+
+
+
+pdfTeX warning: pdflatex.exe (file F:/Uczelnia/Sem 5/IwSK/iwsk_ultimate/wyklady
+/FIREWIRE_43_1.pdf): PDF inclusion: found PDF version <1.7>, but at most versio
+n <1.5> allowed
+<./wyklady/FIREWIRE_43_1.pdf, id=4002, 414.04185pt x 192.74693pt>
+File: ./wyklady/FIREWIRE_43_1.pdf Graphic file (type pdf)
+
+<use ./wyklady/FIREWIRE_43_1.pdf>
+Package pdftex.def Info: ./wyklady/FIREWIRE_43_1.pdf used on input line 313.
+(pdftex.def)             Requested size: 256.0748pt x 119.2107pt.
+
+Underfull \vbox (badness 1092) has occurred while \output is active []
+
+ [64 <F:/Uczelnia/Sem 5/IwSK/iwsk_ultimate/wyklady/FIREWIRE_40_1.pdf, page is r
+otated 90 degrees>]
+
+pdfTeX warning: pdflatex.exe (file F:/Uczelnia/Sem 5/IwSK/iwsk_ultimate/wyklady
+/FIREWIRE_45_1.pdf): PDF inclusion: found PDF version <1.7>, but at most versio
+n <1.5> allowed
+<./wyklady/FIREWIRE_45_1.pdf, id=4022, 617.65215pt x 250.92422pt>
+File: ./wyklady/FIREWIRE_45_1.pdf Graphic file (type pdf)
+
+<use ./wyklady/FIREWIRE_45_1.pdf>
+Package pdftex.def Info: ./wyklady/FIREWIRE_45_1.pdf used on input line 321.
+(pdftex.def)             Requested size: 256.0748pt x 104.03589pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 321--322
+
+ []
+
+
+
+pdfTeX warning: pdflatex.exe (file F:/Uczelnia/Sem 5/IwSK/iwsk_ultimate/wyklady
+/FIREWIRE_48_1.pdf): PDF inclusion: found PDF version <1.7>, but at most versio
+n <1.5> allowed
+<./wyklady/FIREWIRE_48_1.pdf, id=4023, 414.6922pt x 330.90303pt>
+File: ./wyklady/FIREWIRE_48_1.pdf Graphic file (type pdf)
+
+<use ./wyklady/FIREWIRE_48_1.pdf>
+Package pdftex.def Info: ./wyklady/FIREWIRE_48_1.pdf used on input line 327.
+(pdftex.def)             Requested size: 199.16928pt x 158.92757pt.
+ [65 <F:/Uczelnia/Sem 5/IwSK/iwsk_ultimate/wyklady/FIREWIRE_43_1.pdf, page is r
+otated 90 degrees> <F:/Uczelnia/Sem 5/IwSK/iwsk_ultimate/wyklady/FIREWIRE_45_1.
+pdf, page is rotated 90 degrees> <F:/Uczelnia/Sem 5/IwSK/iwsk_ultimate/wyklady/
+FIREWIRE_48_1.pdf, page is rotated 90 degrees>]
+
+pdfTeX warning: pdflatex.exe (file F:/Uczelnia/Sem 5/IwSK/iwsk_ultimate/wyklady
+/FIREWIRE_53_1.pdf): PDF inclusion: found PDF version <1.7>, but at most versio
+n <1.5> allowed
+<./wyklady/FIREWIRE_53_1.pdf, id=4068, 408.03442pt x 272.12343pt>
+File: ./wyklady/FIREWIRE_53_1.pdf Graphic file (type pdf)
+
+<use ./wyklady/FIREWIRE_53_1.pdf>
+Package pdftex.def Info: ./wyklady/FIREWIRE_53_1.pdf used on input line 350.
+(pdftex.def)             Requested size: 199.16928pt x 132.82675pt.
+ [66 <F:/Uczelnia/Sem 5/IwSK/iwsk_ultimate/wyklady/FIREWIRE_53_1.pdf, page is r
+otated 90 degrees>]
+
+pdfTeX warning: pdflatex.exe (file F:/Uczelnia/Sem 5/IwSK/iwsk_ultimate/wyklady
+/FIREWIRE_58_1.pdf): PDF inclusion: found PDF version <1.7>, but at most versio
+n <1.5> allowed
+<./wyklady/FIREWIRE_58_1.pdf, id=4082, 382.37857pt x 99.27776pt>
+File: ./wyklady/FIREWIRE_58_1.pdf Graphic file (type pdf)
+
+<use ./wyklady/FIREWIRE_58_1.pdf>
+Package pdftex.def Info: ./wyklady/FIREWIRE_58_1.pdf used on input line 386.
+(pdftex.def)             Requested size: 199.16928pt x 51.71106pt.
+
+
+pdfTeX warning: pdflatex.exe (file F:/Uczelnia/Sem 5/IwSK/iwsk_ultimate/wyklady
+/FIREWIRE_60_1.pdf): PDF inclusion: found PDF version <1.7>, but at most versio
+n <1.5> allowed
+<./wyklady/FIREWIRE_60_1.pdf, id=4083, 283.69452pt x 304.07094pt>
+File: ./wyklady/FIREWIRE_60_1.pdf Graphic file (type pdf)
+
+<use ./wyklady/FIREWIRE_60_1.pdf>
+Package pdftex.def Info: ./wyklady/FIREWIRE_60_1.pdf used on input line 393.
+(pdftex.def)             Requested size: 199.16928pt x 213.4792pt.
+ [67 <F:/Uczelnia/Sem 5/IwSK/iwsk_ultimate/wyklady/FIREWIRE_58_1.pdf, page is r
+otated 90 degrees> <F:/Uczelnia/Sem 5/IwSK/iwsk_ultimate/wyklady/FIREWIRE_60_1.
+pdf, page is rotated 90 degrees>]
+
+pdfTeX warning: pdflatex.exe (file F:/Uczelnia/Sem 5/IwSK/iwsk_ultimate/wyklady
+/FIREWIRE_62_1.pdf): PDF inclusion: found PDF version <1.7>, but at most versio
+n <1.5> allowed
+<./wyklady/FIREWIRE_62_1.pdf, id=4115, 355.3827pt x 315.03197pt>
+File: ./wyklady/FIREWIRE_62_1.pdf Graphic file (type pdf)
+
+<use ./wyklady/FIREWIRE_62_1.pdf>
+Package pdftex.def Info: ./wyklady/FIREWIRE_62_1.pdf used on input line 412.
+(pdftex.def)             Requested size: 199.16928pt x 176.55609pt.
+
+
+pdfTeX warning: pdflatex.exe (file F:/Uczelnia/Sem 5/IwSK/iwsk_ultimate/wyklady
+/FIREWIRE_63_1.pdf): PDF inclusion: found PDF version <1.7>, but at most versio
+n <1.5> allowed
+<./wyklady/FIREWIRE_63_1.pdf, id=4116, 277.19563pt x 320.90569pt>
+File: ./wyklady/FIREWIRE_63_1.pdf Graphic file (type pdf)
+
+<use ./wyklady/FIREWIRE_63_1.pdf>
+Package pdftex.def Info: ./wyklady/FIREWIRE_63_1.pdf used on input line 413.
+(pdftex.def)             Requested size: 199.16928pt x 230.57693pt.
+ [68 <F:/Uczelnia/Sem 5/IwSK/iwsk_ultimate/wyklady/FIREWIRE_62_1.pdf, page is r
+otated 90 degrees> <F:/Uczelnia/Sem 5/IwSK/iwsk_ultimate/wyklady/FIREWIRE_63_1.
+pdf, page is rotated 90 degrees>]
+
+pdfTeX warning: pdflatex.exe (file F:/Uczelnia/Sem 5/IwSK/iwsk_ultimate/wyklady
+/FIREWIRE_66_1.pdf): PDF inclusion: found PDF version <1.7>, but at most versio
+n <1.5> allowed
+<./wyklady/FIREWIRE_66_1.pdf, id=4155, 331.19737pt x 280.26686pt>
+File: ./wyklady/FIREWIRE_66_1.pdf Graphic file (type pdf)
+
+<use ./wyklady/FIREWIRE_66_1.pdf>
+Package pdftex.def Info: ./wyklady/FIREWIRE_66_1.pdf used on input line 436.
+(pdftex.def)             Requested size: 199.16928pt x 168.542pt.
+
+
+pdfTeX warning: pdflatex.exe (file F:/Uczelnia/Sem 5/IwSK/iwsk_ultimate/wyklady
+/FIREWIRE_67_1.pdf): PDF inclusion: found PDF version <1.7>, but at most versio
+n <1.5> allowed
+<./wyklady/FIREWIRE_67_1.pdf, id=4156, 305.21619pt x 293.15498pt>
+File: ./wyklady/FIREWIRE_67_1.pdf Graphic file (type pdf)
+
+<use ./wyklady/FIREWIRE_67_1.pdf>
+Package pdftex.def Info: ./wyklady/FIREWIRE_67_1.pdf used on input line 444.
+(pdftex.def)             Requested size: 199.16928pt x 191.30444pt.
+
+
+pdfTeX warning: pdflatex.exe (file F:/Uczelnia/Sem 5/IwSK/iwsk_ultimate/wyklady
+/FIREWIRE_68_1.pdf): PDF inclusion: found PDF version <1.7>, but at most versio
+n <1.5> allowed
+<./wyklady/FIREWIRE_68_1.pdf, id=4157, 331.07689pt x 284.60304pt>
+File: ./wyklady/FIREWIRE_68_1.pdf Graphic file (type pdf)
+
+<use ./wyklady/FIREWIRE_68_1.pdf>
+Package pdftex.def Info: ./wyklady/FIREWIRE_68_1.pdf used on input line 450.
+(pdftex.def)             Requested size: 199.16928pt x 171.21477pt.
+
+
+pdfTeX warning: pdflatex.exe (file F:/Uczelnia/Sem 5/IwSK/iwsk_ultimate/wyklady
+/FIREWIRE_69_1.pdf): PDF inclusion: found PDF version <1.7>, but at most versio
+n <1.5> allowed
+<./wyklady/FIREWIRE_69_1.pdf, id=4158, 331.31778pt x 277.01472pt>
+File: ./wyklady/FIREWIRE_69_1.pdf Graphic file (type pdf)
+
+<use ./wyklady/FIREWIRE_69_1.pdf>
+Package pdftex.def Info: ./wyklady/FIREWIRE_69_1.pdf used on input line 453.
+(pdftex.def)             Requested size: 199.16928pt x 166.52713pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 446--454
+
+ []
+
+[69 <F:/Uczelnia/Sem 5/IwSK/iwsk_ultimate/wyklady/FIREWIRE_66_1.pdf, page is ro
+tated 90 degrees> <F:/Uczelnia/Sem 5/IwSK/iwsk_ultimate/wyklady/FIREWIRE_67_1.p
+df, page is rotated 90 degrees>]
+
+pdfTeX warning: pdflatex.exe (file F:/Uczelnia/Sem 5/IwSK/iwsk_ultimate/wyklady
+/FIREWIRE_70_1.pdf): PDF inclusion: found PDF version <1.7>, but at most versio
+n <1.5> allowed
+<./wyklady/FIREWIRE_70_1.pdf, id=4181, 373.7061pt x 314.67061pt>
+File: ./wyklady/FIREWIRE_70_1.pdf Graphic file (type pdf)
+
+<use ./wyklady/FIREWIRE_70_1.pdf>
+Package pdftex.def Info: ./wyklady/FIREWIRE_70_1.pdf used on input line 464.
+(pdftex.def)             Requested size: 199.16928pt x 167.7061pt.
+ [70 <F:/Uczelnia/Sem 5/IwSK/iwsk_ultimate/wyklady/FIREWIRE_68_1.pdf, page is r
+otated 90 degrees> <F:/Uczelnia/Sem 5/IwSK/iwsk_ultimate/wyklady/FIREWIRE_69_1.
+pdf, page is rotated 90 degrees>])
+("F:\Uczelnia\Sem 5\IwSK\iwsk_ultimate\tex\zaklocenia.tex")
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 86.
+ [71 <F:/Uczelnia/Sem 5/IwSK/iwsk_ultimate/wyklady/FIREWIRE_70_1.pdf, page is r
+otated 90 degrees>]
 Package atveryend Info: Empty hook `AfterLastShipout' on input line 86.
 
 ("F:\Uczelnia\Sem 5\IwSK\iwsk_ultimate\iwsk_ultimate.aux")
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 86.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 86.
 Package rerunfilecheck Info: File `iwsk_ultimate.out' has not changed.
-(rerunfilecheck)             Checksum: BF176DE7FFFCD803E580D1ECA478DD4A;23178.
+(rerunfilecheck)             Checksum: 315A86318EEE88E9B2E51947330A5375;31461.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 86.
  ) 
 Here is how much of TeX's memory you used:
- 11782 strings out of 493921
- 167701 string characters out of 3147285
+ 12083 strings out of 493921
+ 175169 string characters out of 3147285
  233964 words of memory out of 3000000
- 14653 multiletter control sequences out of 15000+200000
+ 14851 multiletter control sequences out of 15000+200000
  16397 words of font info for 44 fonts, out of 3000000 for 9000
  841 hyphenation exceptions out of 8191
  29i,10n,35p,582b,529s stack positions out of 5000i,500n,10000p,200000b,50000s
@@ -1772,9 +2380,9 @@ type1/public/pl/plr5.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/pl/plr
 iles/MiKTeX 2.9/fonts/type1/public/pl/plsy10.pfb><C:/Program Files/MiKTeX 2.9/f
 onts/type1/public/pl/plti10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public
 /pl/plti9.pfb>
-Output written on iwsk_ultimate.pdf (49 pages, 4909466 bytes).
+Output written on iwsk_ultimate.pdf (71 pages, 6017107 bytes).
 PDF statistics:
- 3438 PDF objects out of 3580 (max. 8388607)
- 194 named destinations out of 1000 (max. 500000)
- 1280 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 4343 PDF objects out of 5155 (max. 8388607)
+ 258 named destinations out of 1000 (max. 500000)
+ 1811 words of extra memory for PDF output out of 10000 (max. 10000000)
 
