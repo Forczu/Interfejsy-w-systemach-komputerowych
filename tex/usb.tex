@@ -7,7 +7,7 @@
 		\item Automatyczne wykrywanie włączenia urządzenia do systemu oraz jego odłączenia
 		\item Przeprowadzanie wszystkich operacji konfiguracyjnych, w tym instalacji sterownika, bez udziału użytkownika
 		\item Szybka transmisja
-		\item Zasilanie urządzenia bezposrednio z portu
+		\item Zasilanie urządzenia bezpośrednio z portu
 	\end{itemize}
 	\subsection{Parametry}
 	Dla USB 1.1 oraz 2.0
@@ -33,8 +33,8 @@
 			\item \textbf{Transfery USB} - 4 typy transferów:
 				\begin{itemize}
 					\item Kontrolny (control transfer)
-					\item Masowy (interrupt transfer)
-					\item Przerwaniowy (bulk transfer)
+					\item Masowy (bulk transfer)
+					\item Przerwaniowy (interrupt transfer)
 					\item Izochroniczny (isochronous transfer)
 				\end{itemize}
 			\item \textbf{Niski koszt} - nieduża złożoność układów interfejsowych
@@ -56,7 +56,7 @@
 				\item Plus 9 innych stanów
 			\end{itemize}
 			\textbf{Kodowanie bitów w systemie USB}\\
-			W systemie USB przyjęto kodowanie NRZI (\emph{Non Return to Zero Inteverted}) ze wstawianiem bitu synchronizującego (\emph{bit stuffing}). Na początku każdego bitu o wartości logicznej zero następuje zmiana sygnału, natomiast po każdych 6 kolejnych bitach o wartości jeden wstawiany jest bit o wartości zero. Umożliwia to prawidłowe poznawanie bitów w sygnale odebranym bez potrzeby przesyłania sygnału zegarowego nadajnika. Bity wstawione są usuwane po rozpoznaniu stanu bitów w odebranym sygnale.\\\\
+			W systemie USB przyjęto kodowanie NRZI (\emph{Non Return to Zero Inteverted}) ze wstawianiem bitu synchronizującego (tzw. \emph{bit stuffing}). Na początku każdego bitu o wartości logicznej zero następuje zmiana sygnału, natomiast po każdych 6 kolejnych bitach o wartości jeden wstawiany jest bit o wartości zero. Umożliwia to prawidłowe poznawanie bitów w sygnale odebranym bez potrzeby przesyłania sygnału zegarowego nadajnika. Bity wstawione są usuwane po rozpoznaniu stanu bitów w odebranym sygnale.\\\\
 			\includegraphics[width=15cm]{./wyklady/USB_9_1.pdf}
 		\subsubsection{Srodowisko fizyczne}
 			\textbf{Podstawowy kabel do podłączenia urządzenia USB}\\
@@ -67,7 +67,7 @@
 				\item Konektor B – strona portu górnego (urządzenie), "od strony hosta"
 			\end{itemize}
 			Złącza USB posiadają 4 zaciski: po dwa dla magistrali danych i zasilania. W samym złączu kontakty zasilania są nieco wysunięte w przód przed kontakty danych, a więc po włożeniu najpierw jest podłączone zasilanie, a potem dane.
-			\begin{table}[h]
+			\begin{table}[H]	%H z pakietu 'float' wymusza polozenie HERE  (bez tego zle ulozenie trsci)
 				\begin{tabular}{|c|c|c|}
 					\hline
 					\textbf{Nr kontaktu}	& \textbf{Nazwa sygnału}	& \textbf{Kolor przewodu w kablu} \\ \hline
@@ -170,9 +170,9 @@
 			\item Transfery komunikatowe (\emph{message transfer}), struktura komunikatów i ich znaczenie określa standard: kontrolny
 		\end{itemize}
 		\subsubsection{Zarządzenie magistralą USB}
-		Wszystkie transfery USB są inicjowane i odbywają się pod kontrolą hosta. Host usiłuje jednocześnie realizować transfery wielu urządzeń, tak, aby jedno urządzenie nie blokowało dostępu.\\
-		Niektóre transfery mają priorytety. Transferom izochronicznym i przerwaniowym nadano 90\% pasma, a kontrolnym 10\%. Oznacza to, że transfer masowy nie jest gwarantowany - jeżeli pozostałe 3 rodzaje rezerwują maksymalny możliwy czas, to transfer masowy się nie odbędzie.\\
-		W praktyce jednak rzadko to się zdarza i 3 transfery nie wykorzystują pełnego pasma, co pozwala kontrolerowi USB na przydzielenie niewykorzystanego miejsca transferom masowym.\\
+		Wszystkie transfery USB są inicjowane i kontrolowane przez hosta. Host usiłuje jednocześnie realizować transfery wielu urządzeń tak, aby jedno urządzenie nie blokowało dostępu.\\ 
+		Niektóre transfery mają priorytety. Transferom izochronicznym i przerwaniowym nadano 90\% pasma, a kontrolnym 10\%. Oznacza to, że transfer masowy nie jest gwarantowany - jeżeli pozostałe 3 rodzaje zajmą maksymalny możliwy czas, to transfer masowy się nie odbędzie.\\
+		W praktyce jednak zdarza się to rzadko i 3 transfery nie wykorzystują pełnego pasma, co pozwala kontrolerowi USB na przydzielenie niewykorzystanego miejsca transferom masowym.\\
 		Kontroler dąży do jak najlepszego wykorzystania miejsca w ramce, w które może wstawić nawet wiele transakcji danego transferu masowego.\\
 		Działanie kontrolera oparte jest na zasadzie "usilnych starań" (\emph{best efforts}), aby jak najsprawniej (w jak najkrótszym czasie) zrealizować wszystkie żądane transfery. Jednak jeżeli w ramce 1 ms brakuje miejsca na transferu masowego to musi on czekać.
 		\subsubsection{Stany urządzenia USB}
@@ -222,15 +222,15 @@
 		\item Wykrywanie transakcji występujących po zakończeniu ramki (tzw. „paplanie” – \emph{babble})
 		\item Wykrywanie braku aktywności magistrali (LOA – \emph{Loss Of Activity})
 	\end{itemize}
-	Transfery kontrolny, przerwaniowy i masowy wysyłają pakiet ponownie, jeżeli jest on błędu, nie informując odbiorcy o tym. Transfer izochroniczny nie.
+	Transfer kontrolny, przerwaniowy i masowy wysyłają pakiet ponownie, jeżeli jest on błędu, nie informując odbiorcy o tym. Transfer izochroniczny nie.
 	\subsubsection{Czas obiegu (\emph{round trip delay})}
-	Ograniczenie czasowe oczekiwania na odpowiedź. To podstawowy mechanizm informowania nadawcy o niepowodzeniu w poprawnym przekazaniu pakietu. Ograniczenie czasowe nie może być mniejsze od 16*(\emph{czas trwania bitu}), ani większe od 18*(\emph{czas trwania bitu}).\\
-	Poniżej połączenie urządzenia z hostem przez 5 hubów – najgorszy przypadek.\\
+	Ograniczenie czasowe oczekiwania na odpowiedź. Jest to podstawowy mechanizm informowania nadawcy o niepoprawnym przekazaniu pakietu. Ograniczenie czasowe nie może być mniejsze od 16*(\emph{czas trwania bitu}), ani większe od 18*(\emph{czas trwania bitu}).\\
+	Poniżej połączenie urządzenia z hostem przez 5 hubów – najgorszy przypadek pod względem czasowym.\\
 	\includegraphics[width=10cm]{./wyklady/USB_23_1.pdf}\\
 	Jest on podstawa do rozważań na temat ograniczeń tego czasu.
 	\begin{itemize}
 		\item Round trip delay: 2 x 350 ns = 700 ns
-		\item Czas trwania 1 bitu full speed: 1/12 MHz = 83 ns
+		\item Czas trwania 1 bitu dla full speed: 1/12 MHz = 83 ns
 		\item Round trip delay w bitach dla full speed: 700 ns/83 ns = 8,5 bitu
 		\item Timeout oczekiwania na odpowiedź: 7,5 bitu (specyfikacja) + 8,5 bitu = 16 bitów
 	\end{itemize}
