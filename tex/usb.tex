@@ -243,14 +243,14 @@
 	\subsubsection{Rodzaje deskryptorów}
 	\begin{itemize}
 		\item Deskryptor urządzenia - m.in. liczba konfiguracji dostępnych w urządzeniu.
-		\item Deskryptor konfiguracji - opisuje każdą konfigurację z osobna. Zawiera informację o liczbie interfejsów przypisanych danej konfiguracji.
+		\item Deskryptor konfiguracji - opisuje każdą konfigurację z osobna. Zawiera informację o liczbie interfejsów przypisanych do danej konfiguracji.
 		\item Deskryptor interfejsu - posiada go każdy interfejs, który określa m.in. liczbę punktów końcowych z nim związanych.
 		\item Deskryptor punktu końcowego - charakteryzuje każdy punkt końcowy.
 		\item Deskryptor łańcuchowy - zawiera kod określający język tekstu lub sam właściwy tekst.
 	\end{itemize}
 	
 \subsection{Wykrywanie i konfiguracja urządzeń}
-	Cechą USB jest automatyczne wykrywanie urządzeń po włączeniu zasilania w systemie lub włączeniu urządzenia do systemu. Procedura enumeracji zajmuje się rozpoznaniem urządzenia, sprawdzeniem czy komunikacja jest możliwa, przydzieleniem adresu, konfiguracją i instalacją sterownika.
+	Cechą USB jest automatyczne wykrywanie urządzeń po włączeniu zasilania w systemie lub podłączeniu urządzenia do systemu. Procedura enumeracji zajmuje się rozpoznaniem urządzenia, sprawdzeniem czy komunikacja jest możliwa, przydzieleniem adresu, konfiguracją i instalacją sterownika.
 	\subsubsection{Procedura enumeracji urządzenia}
 	\begin{enumerate}
 		\item Automatyczne wykrycie urządzenia - powoduje ustawienie bitu w rejestrze statusu huba, który odpowiada temu portowi.
@@ -264,12 +264,12 @@
 	\end{enumerate}
 	
 \subsection{Kontrola urządzenia – transfer kontrolny}
-	Transfer kontrolny służy do sterowania urządzeniem. Urządzenie USB otwiera kontrolny kanał komunikacyjny pomiędzy hostem, a punktem końcowym 0 w urządzeniu.
+	Transfer kontrolny służy do sterowania urządzeniem. Urządzenie USB otwiera kontrolny kanał komunikacyjny pomiędzy hostem a punktem końcowym 0 w urządzeniu.
 	\subsubsection{Etapy transferu kontrolnego}
 	\includegraphics[width=10cm]{./wyklady/USB_31_1.pdf}
 	\begin{enumerate}
 		\item Przekazanie rozkazu (\emph{Setup Stage}) - jak w każdym pakiecie Token, następne pola zawierają adres urządzenia oraz punktu końcowego. Kolejnym elementem jest 8-bajtowy pakiet danych typu Data 0, który specyfikuje rozkaz.
-		\item Przekazanie danych (\emph{Data Stage}) - jeżeli 8 bajtów z powyższego nie wystarcza, wtedy jest ten etap. Liczbę bajtów do przekazania określa słowo Length w polu transakcji Setup. Jeżeli ta liczba nie przekracza wartości \emph{MaxPacketSize} to do przekazania danych wystarcza jedno transakcja, w przeciwnym razie odpowiednio dzieli się na więcej transakcji (sufit(Length \ MPC)).
+		\item Przekazanie danych (\emph{Data Stage}) - jeżeli 8 bajtów z powyższego nie wystarcza, wtedy następuje etap przekazania danych. Liczbę bajtów do przesłania określa słowo \emph{Length} w polu transakcji Setup. Jeżeli ta liczba nie przekracza wartości \emph{MaxPacketSize} to do przekazania danych wystarcza jedno transakcja, w przeciwnym razie odpowiednio dzieli się na więcej transakcji (sufit(Length \ MPC)).
 		\item Przekazanie statusu (\emph{Status Stage}) - potwierdzenie wykonania transferu lub poinformowanie o niepowodzeniu w realizacji. Normalnie występuje do zakończeniu transakcji, ale host może rozpocząć ją wcześniej, w Data Stage (wtedy DS jest przerywane).
 	\end{enumerate}
 	
@@ -324,14 +324,14 @@
 		\begin{itemize}
 			\item \textbf{Globalne} (\emph{global suspend}) - rozkaz SetPortFeature (PORT\_SUSPEND) adresowany do huba głównego, zawiesza cały system
 			\item \textbf{Częściowe} (\emph{selective suspend}) - rozkaz SetPortFeature (PORT\_SUSPEND) adresowany do huba zewnętrznego, w którym wybrany port (lub część systemu) ma zostać zawieszony.
-			\item Zawieszone porty nie propaguj ruchu „w dół” oraz nie przekazują „w górę” żadnych sygnałów od urządzeń do nich podłączonych.
+			\item Zawieszone porty nie propagują ruchu „w dół” oraz nie przekazują „w górę” żadnych sygnałów od urządzeń do nich podłączonych.
 			\item Urządzenia w stanie zawieszenia zachowują swój stan, co umożliwia wznowienie ich pracy bez ponownej konfiguracji.
 			\item Hub w stanie zawieszenia dodatkowo blokuje wszystkie nadajniki, zatrzymuje wewnętrzne zegary i zachowuje stan wszystkich portów dolnych.
 			\item Urządzenie w stanie zawieszenie pobiera prąd $< 500 [\mu A]$
 			\item Urządzenie automatycznie przechodzi do stanu \emph{SUSPEND} po wykryciu braku aktywności magistrali przez 3 $ms$. (USB wysyła ramki co 1 ms)
 			\begin{itemize}
 				\item Urządzenia pełnej szybkości wykorzystują pakiety SOF
-				\item Urządzenia małej szybkości wykorzystują generację przejścia ze stanu jałowego do stanu K w odstępach czasu nie większych niż 3 ms.
+				\item Urządzenia małej szybkości wykorzystują generację przejścia ze stanu jałowego do stanu K w odstępach czasu nie większych niż 3 $ms$.
 			\end{itemize}
 		\end{itemize}
 		\item \textbf{Wznowienie} pracy systemu - \emph{resume}
@@ -340,9 +340,9 @@
 			\item Wake-up
 			\item Wznowienie pracy urządzenia można nastąpić
 			\begin{itemize}
-				\item Z inicjatywy kontrolera, jako wznowienie po zawieszeniu globalnym lub częściowym\\
+				\item Z inicjatywy kontrolera - jako wznowienie po zawieszeniu globalnym lub częściowym\\
 				\includegraphics[width=7cm]{./wyklady/USB_43_1.pdf}
-				\item Z inicjatywy urządzenia, po wystąpieniu zdarzenia wymagającego obsługi („budzenie” - \emph{Wakeup})\\
+				\item Z inicjatywy urządzenia - po wystąpieniu zdarzenia wymagającego obsługi („budzenie” - \emph{Wakeup})\\
 				\includegraphics[width=7cm]{./wyklady/USB_44_1.pdf}
 			\end{itemize}
 			\item Wznowienie po zawieszeniu globalnym - rozpoczyna hub główny wykonując rozkaz wznowienia pracy systemu. Oznacza gotowość wszystkich hubów i urządzeń do wykonywania transakcji.
