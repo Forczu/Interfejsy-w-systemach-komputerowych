@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9) (preloaded format=pdflatex 2014.12.22)  5 JAN 2015 18:57
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9) (preloaded format=pdflatex 2014.12.22)  5 JAN 2015 21:15
 entering extended mode
 **iwsk_ultimate.tex
 (C:\Users\Bartłomiej\Desktop\Międzytwarze\iwsk_ultimate\iwsk_ultimate.tex
@@ -1603,30 +1603,29 @@ Underfull \hbox (badness 1077) in paragraph at lines 161--162
 \OT4/cmr/m/n/10 kon-tro-le-rem, a urz�-dze-niem na po-zio-mie
  []
 
+[43pdfTeX warning (ext4): destination with the same identifier (name{figure.2})
+ has been already used, duplicate ignored
 
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.165 \end{itemize}
+                    <C:/Users/Bartłomiej/Desktop/Międzytwarze/iwsk_ultimate/w
+yklady/IEEE488_SCPI_11_1.pdf, page is rotated 90 degrees> <C:/Users/Bartłomiej
+/Desktop/Międzytwarze/iwsk_ultimate/wyklady/IEEE488_SCPI_12_1.pdf, page is rot
+ated 90 degrees>]
 
 pdfTeX warning: pdflatex.exe (file C:/Users/Bartłomiej/Desktop/Międzytwarze/i
 wsk_ultimate/wyklady/IEEE488_SCPI_19_1.pdf): PDF inclusion: found PDF version <
 1.7>, but at most version <1.5> allowed
-<./wyklady/IEEE488_SCPI_19_1.pdf, id=3336, 453.6903pt x 393.90338pt>
+<./wyklady/IEEE488_SCPI_19_1.pdf, id=3363, 453.6903pt x 393.90338pt>
 File: ./wyklady/IEEE488_SCPI_19_1.pdf Graphic file (type pdf)
 
 <use ./wyklady/IEEE488_SCPI_19_1.pdf>
 Package pdftex.def Info: ./wyklady/IEEE488_SCPI_19_1.pdf used on input line 169
 .
 (pdftex.def)             Requested size: 256.0748pt x 222.32741pt.
- [43pdfTeX warning (ext4): destination with the same identifier (name{figure.2}
-) has been already used, duplicate ignored
-
-\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
-                                                  \fi \fi 
-l.171 ...bsection{Protokół wymiany komunikatów}
-                                                   <C:/Users/Bartłomiej/Deskto
-p/Międzytwarze/iwsk_ultimate/wyklady/IEEE488_SCPI_11_1.pdf, page is rotated 90
- degrees> <C:/Users/Bartłomiej/Desktop/Międzytwarze/iwsk_ultimate/wyklady/IEE
-E488_SCPI_12_1.pdf, page is rotated 90 degrees>] [44 <C:/Users/Bartłomiej/Desk
-top/Międzytwarze/iwsk_ultimate/wyklady/IEEE488_SCPI_19_1.pdf, page is rotated 
-90 degrees>]
+ [44 <C:/Users/Bartłomiej/Desktop/Międzytwarze/iwsk_ultimate/wyklady/IEEE488_
+SCPI_19_1.pdf, page is rotated 90 degrees>]
 
 pdfTeX warning: pdflatex.exe (file C:/Users/Bartłomiej/Desktop/Międzytwarze/i
 wsk_ultimate/wyklady/IEEE488_SCPI_21_2.pdf): PDF inclusion: found PDF version <
@@ -1683,7 +1682,7 @@ wsk_ultimate/wyklady/IEEE488_SCPI_30_1.pdf): PDF inclusion: found PDF version <
 File: ./wyklady/IEEE488_SCPI_30_1.pdf Graphic file (type pdf)
 
 <use ./wyklady/IEEE488_SCPI_30_1.pdf>
-Package pdftex.def Info: ./wyklady/IEEE488_SCPI_30_1.pdf used on input line 251
+Package pdftex.def Info: ./wyklady/IEEE488_SCPI_30_1.pdf used on input line 253
 .
 (pdftex.def)             Requested size: 256.0748pt x 186.49007pt.
  [46 <C:/Users/Bartłomiej/Desktop/Międzytwarze/iwsk_ultimate/wyklady/IEEE488_
@@ -1698,7 +1697,7 @@ wsk_ultimate/wyklady/IEEE488_SCPI_16_1.pdf): PDF inclusion: found PDF version <
 File: ./wyklady/IEEE488_SCPI_16_1.pdf Graphic file (type pdf)
 
 <use ./wyklady/IEEE488_SCPI_16_1.pdf>
-Package pdftex.def Info: ./wyklady/IEEE488_SCPI_16_1.pdf used on input line 255
+Package pdftex.def Info: ./wyklady/IEEE488_SCPI_16_1.pdf used on input line 257
 .
 (pdftex.def)             Requested size: 284.52756pt x 181.50072pt.
 
@@ -1710,7 +1709,7 @@ wsk_ultimate/wyklady/IEEE488_SCPI_32_1.pdf): PDF inclusion: found PDF version <
 File: ./wyklady/IEEE488_SCPI_32_1.pdf Graphic file (type pdf)
 
 <use ./wyklady/IEEE488_SCPI_32_1.pdf>
-Package pdftex.def Info: ./wyklady/IEEE488_SCPI_32_1.pdf used on input line 267
+Package pdftex.def Info: ./wyklady/IEEE488_SCPI_32_1.pdf used on input line 269
 .
 (pdftex.def)             Requested size: 256.0748pt x 115.6077pt.
 
@@ -1722,11 +1721,11 @@ wsk_ultimate/wyklady/IEEE488_SCPI_33_1.pdf): PDF inclusion: found PDF version <
 File: ./wyklady/IEEE488_SCPI_33_1.pdf Graphic file (type pdf)
 
 <use ./wyklady/IEEE488_SCPI_33_1.pdf>
-Package pdftex.def Info: ./wyklady/IEEE488_SCPI_33_1.pdf used on input line 269
+Package pdftex.def Info: ./wyklady/IEEE488_SCPI_33_1.pdf used on input line 271
 .
 (pdftex.def)             Requested size: 256.0748pt x 217.73125pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 267--270
+Underfull \hbox (badness 10000) in paragraph at lines 269--272
 
  []
 
@@ -1742,7 +1741,7 @@ wsk_ultimate/wyklady/IEEE488_SCPI_37_1.pdf): PDF inclusion: found PDF version <
 File: ./wyklady/IEEE488_SCPI_37_1.pdf Graphic file (type pdf)
 
 <use ./wyklady/IEEE488_SCPI_37_1.pdf>
-Package pdftex.def Info: ./wyklady/IEEE488_SCPI_37_1.pdf used on input line 280
+Package pdftex.def Info: ./wyklady/IEEE488_SCPI_37_1.pdf used on input line 282
 .
 (pdftex.def)             Requested size: 199.16928pt x 173.19417pt.
 
@@ -1754,11 +1753,11 @@ wsk_ultimate/wyklady/IEEE488_SCPI_38_1.pdf): PDF inclusion: found PDF version <
 File: ./wyklady/IEEE488_SCPI_38_1.pdf Graphic file (type pdf)
 
 <use ./wyklady/IEEE488_SCPI_38_1.pdf>
-Package pdftex.def Info: ./wyklady/IEEE488_SCPI_38_1.pdf used on input line 282
+Package pdftex.def Info: ./wyklady/IEEE488_SCPI_38_1.pdf used on input line 284
 .
 (pdftex.def)             Requested size: 199.16928pt x 123.3581pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 280--283
+Underfull \hbox (badness 10000) in paragraph at lines 282--285
 
  []
 
@@ -1775,7 +1774,7 @@ wsk_ultimate/wyklady/IEEE488_SCPI_39_1.pdf): PDF inclusion: found PDF version <
 File: ./wyklady/IEEE488_SCPI_39_1.pdf Graphic file (type pdf)
 
 <use ./wyklady/IEEE488_SCPI_39_1.pdf>
-Package pdftex.def Info: ./wyklady/IEEE488_SCPI_39_1.pdf used on input line 287
+Package pdftex.def Info: ./wyklady/IEEE488_SCPI_39_1.pdf used on input line 289
 .
 (pdftex.def)             Requested size: 199.16928pt x 225.6238pt.
 )
@@ -1977,7 +1976,7 @@ wsk_ultimate/wyklady/FIREWIRE_17_1.pdf): PDF inclusion: found PDF version <1.7>
 File: ./wyklady/FIREWIRE_17_1.pdf Graphic file (type pdf)
 
 <use ./wyklady/FIREWIRE_17_1.pdf>
-Package pdftex.def Info: ./wyklady/FIREWIRE_17_1.pdf used on input line 169.
+Package pdftex.def Info: ./wyklady/FIREWIRE_17_1.pdf used on input line 171.
 (pdftex.def)             Requested size: 199.16928pt x 214.00272pt.
 
 
@@ -1988,7 +1987,7 @@ wsk_ultimate/wyklady/FIREWIRE_18_1.pdf): PDF inclusion: found PDF version <1.7>
 File: ./wyklady/FIREWIRE_18_1.pdf Graphic file (type pdf)
 
 <use ./wyklady/FIREWIRE_18_1.pdf>
-Package pdftex.def Info: ./wyklady/FIREWIRE_18_1.pdf used on input line 170.
+Package pdftex.def Info: ./wyklady/FIREWIRE_18_1.pdf used on input line 172.
 (pdftex.def)             Requested size: 199.16928pt x 158.69824pt.
 
 
@@ -1999,20 +1998,20 @@ wsk_ultimate/wyklady/FIREWIRE_19_1.pdf): PDF inclusion: found PDF version <1.7>
 File: ./wyklady/FIREWIRE_19_1.pdf Graphic file (type pdf)
 
 <use ./wyklady/FIREWIRE_19_1.pdf>
-Package pdftex.def Info: ./wyklady/FIREWIRE_19_1.pdf used on input line 173.
+Package pdftex.def Info: ./wyklady/FIREWIRE_19_1.pdf used on input line 175.
 (pdftex.def)             Requested size: 199.16928pt x 165.84747pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 165--176
+Underfull \hbox (badness 10000) in paragraph at lines 165--178
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 165--176
+Underfull \hbox (badness 10000) in paragraph at lines 165--178
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 165--176
+Underfull \hbox (badness 10000) in paragraph at lines 165--178
 
  []
 
@@ -2038,7 +2037,7 @@ wsk_ultimate/wyklady/FIREWIRE_20_1.pdf): PDF inclusion: found PDF version <1.7>
 File: ./wyklady/FIREWIRE_20_1.pdf Graphic file (type pdf)
 
 <use ./wyklady/FIREWIRE_20_1.pdf>
-Package pdftex.def Info: ./wyklady/FIREWIRE_20_1.pdf used on input line 182.
+Package pdftex.def Info: ./wyklady/FIREWIRE_20_1.pdf used on input line 184.
 (pdftex.def)             Requested size: 256.0748pt x 81.2375pt.
 
 
@@ -2049,36 +2048,15 @@ wsk_ultimate/wyklady/FIREWIRE_21_1.pdf): PDF inclusion: found PDF version <1.7>
 File: ./wyklady/FIREWIRE_21_1.pdf Graphic file (type pdf)
 
 <use ./wyklady/FIREWIRE_21_1.pdf>
-Package pdftex.def Info: ./wyklady/FIREWIRE_21_1.pdf used on input line 193.
+Package pdftex.def Info: ./wyklady/FIREWIRE_21_1.pdf used on input line 195.
 (pdftex.def)             Requested size: 256.0748pt x 192.14267pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 192--195
+Underfull \hbox (badness 10000) in paragraph at lines 194--197
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 198--200
-
- []
-
-
-
-pdfTeX warning: pdflatex.exe (file C:/Users/Bartłomiej/Desktop/Międzytwarze/i
-wsk_ultimate/wyklady/FIREWIRE_28_1.pdf): PDF inclusion: found PDF version <1.7>
-, but at most version <1.5> allowed
-<./wyklady/FIREWIRE_28_1.pdf, id=3789, 429.09755pt x 270.4271pt>
-File: ./wyklady/FIREWIRE_28_1.pdf Graphic file (type pdf)
-
-<use ./wyklady/FIREWIRE_28_1.pdf>
-Package pdftex.def Info: ./wyklady/FIREWIRE_28_1.pdf used on input line 206.
-(pdftex.def)             Requested size: 256.0748pt x 161.3827pt.
-
-Underfull \hbox (badness 10000) in paragraph at lines 204--209
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 204--209
+Underfull \hbox (badness 10000) in paragraph at lines 200--202
 
  []
 
@@ -2087,16 +2065,37 @@ Underfull \hbox (badness 10000) in paragraph at lines 204--209
 ze/iwsk_ultimate/wyklady/FIREWIRE_21_1.pdf, page is rotated 90 degrees>]
 
 pdfTeX warning: pdflatex.exe (file C:/Users/Bartłomiej/Desktop/Międzytwarze/i
+wsk_ultimate/wyklady/FIREWIRE_28_1.pdf): PDF inclusion: found PDF version <1.7>
+, but at most version <1.5> allowed
+<./wyklady/FIREWIRE_28_1.pdf, id=3822, 429.09755pt x 270.4271pt>
+File: ./wyklady/FIREWIRE_28_1.pdf Graphic file (type pdf)
+
+<use ./wyklady/FIREWIRE_28_1.pdf>
+Package pdftex.def Info: ./wyklady/FIREWIRE_28_1.pdf used on input line 208.
+(pdftex.def)             Requested size: 256.0748pt x 161.3827pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 206--211
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 206--211
+
+ []
+
+
+
+pdfTeX warning: pdflatex.exe (file C:/Users/Bartłomiej/Desktop/Międzytwarze/i
 wsk_ultimate/wyklady/FIREWIRE_29_1.pdf): PDF inclusion: found PDF version <1.7>
 , but at most version <1.5> allowed
 <./wyklady/FIREWIRE_29_1.pdf, id=3823, 613.52185pt x 404.37752pt>
 File: ./wyklady/FIREWIRE_29_1.pdf Graphic file (type pdf)
 
 <use ./wyklady/FIREWIRE_29_1.pdf>
-Package pdftex.def Info: ./wyklady/FIREWIRE_29_1.pdf used on input line 218.
+Package pdftex.def Info: ./wyklady/FIREWIRE_29_1.pdf used on input line 220.
 (pdftex.def)             Requested size: 256.0748pt x 168.78227pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 217--219
+Underfull \hbox (badness 10000) in paragraph at lines 219--221
 
  []
 
@@ -2111,10 +2110,10 @@ wsk_ultimate/wyklady/FIREWIRE_31_1.pdf): PDF inclusion: found PDF version <1.7>
 File: ./wyklady/FIREWIRE_31_1.pdf Graphic file (type pdf)
 
 <use ./wyklady/FIREWIRE_31_1.pdf>
-Package pdftex.def Info: ./wyklady/FIREWIRE_31_1.pdf used on input line 243.
+Package pdftex.def Info: ./wyklady/FIREWIRE_31_1.pdf used on input line 245.
 (pdftex.def)             Requested size: 256.0748pt x 228.50801pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 247--248
+Underfull \hbox (badness 10000) in paragraph at lines 249--250
 
  []
 
@@ -2128,7 +2127,7 @@ wsk_ultimate/wyklady/FIREWIRE_32_1.pdf): PDF inclusion: found PDF version <1.7>
 File: ./wyklady/FIREWIRE_32_1.pdf Graphic file (type pdf)
 
 <use ./wyklady/FIREWIRE_32_1.pdf>
-Package pdftex.def Info: ./wyklady/FIREWIRE_32_1.pdf used on input line 251.
+Package pdftex.def Info: ./wyklady/FIREWIRE_32_1.pdf used on input line 253.
 (pdftex.def)             Requested size: 256.0748pt x 27.20126pt.
 
 
@@ -2139,7 +2138,7 @@ wsk_ultimate/wyklady/FIREWIRE_33_1.pdf): PDF inclusion: found PDF version <1.7>
 File: ./wyklady/FIREWIRE_33_1.pdf Graphic file (type pdf)
 
 <use ./wyklady/FIREWIRE_33_1.pdf>
-Package pdftex.def Info: ./wyklady/FIREWIRE_33_1.pdf used on input line 254.
+Package pdftex.def Info: ./wyklady/FIREWIRE_33_1.pdf used on input line 256.
 (pdftex.def)             Requested size: 256.0748pt x 253.70609pt.
  [61 <C:/Users/Bartłomiej/Desktop/Międzytwarze/iwsk_ultimate/wyklady/FIREWIRE
 _32_1.pdf, page is rotated 90 degrees> <C:/Users/Bartłomiej/Desktop/Międzytwa
@@ -2152,7 +2151,7 @@ wsk_ultimate/wyklady/FIREWIRE_36_1.pdf): PDF inclusion: found PDF version <1.7>
 File: ./wyklady/FIREWIRE_36_1.pdf Graphic file (type pdf)
 
 <use ./wyklady/FIREWIRE_36_1.pdf>
-Package pdftex.def Info: ./wyklady/FIREWIRE_36_1.pdf used on input line 281.
+Package pdftex.def Info: ./wyklady/FIREWIRE_36_1.pdf used on input line 283.
 (pdftex.def)             Requested size: 256.0748pt x 229.09998pt.
 
 
@@ -2163,7 +2162,7 @@ wsk_ultimate/wyklady/FIREWIRE_37_1.pdf): PDF inclusion: found PDF version <1.7>
 File: ./wyklady/FIREWIRE_37_1.pdf Graphic file (type pdf)
 
 <use ./wyklady/FIREWIRE_37_1.pdf>
-Package pdftex.def Info: ./wyklady/FIREWIRE_37_1.pdf used on input line 282.
+Package pdftex.def Info: ./wyklady/FIREWIRE_37_1.pdf used on input line 284.
 (pdftex.def)             Requested size: 256.0748pt x 217.0801pt.
 
 
@@ -2174,25 +2173,25 @@ wsk_ultimate/wyklady/FIREWIRE_38_1.pdf): PDF inclusion: found PDF version <1.7>
 File: ./wyklady/FIREWIRE_38_1.pdf Graphic file (type pdf)
 
 <use ./wyklady/FIREWIRE_38_1.pdf>
-Package pdftex.def Info: ./wyklady/FIREWIRE_38_1.pdf used on input line 283.
+Package pdftex.def Info: ./wyklady/FIREWIRE_38_1.pdf used on input line 285.
 (pdftex.def)             Requested size: 256.0748pt x 219.16881pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 281--284
+Underfull \hbox (badness 10000) in paragraph at lines 283--286
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 281--284
+Underfull \hbox (badness 10000) in paragraph at lines 283--286
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 281--284
+Underfull \hbox (badness 10000) in paragraph at lines 283--286
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 281--284
+Underfull \hbox (badness 10000) in paragraph at lines 283--286
 
  []
 
@@ -2212,10 +2211,10 @@ wsk_ultimate/wyklady/FIREWIRE_40_1.pdf): PDF inclusion: found PDF version <1.7>
 File: ./wyklady/FIREWIRE_40_1.pdf Graphic file (type pdf)
 
 <use ./wyklady/FIREWIRE_40_1.pdf>
-Package pdftex.def Info: ./wyklady/FIREWIRE_40_1.pdf used on input line 296.
+Package pdftex.def Info: ./wyklady/FIREWIRE_40_1.pdf used on input line 298.
 (pdftex.def)             Requested size: 256.0748pt x 116.36006pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 296--298
+Underfull \hbox (badness 10000) in paragraph at lines 298--300
 
  []
 
@@ -2228,7 +2227,7 @@ wsk_ultimate/wyklady/FIREWIRE_43_1.pdf): PDF inclusion: found PDF version <1.7>
 File: ./wyklady/FIREWIRE_43_1.pdf Graphic file (type pdf)
 
 <use ./wyklady/FIREWIRE_43_1.pdf>
-Package pdftex.def Info: ./wyklady/FIREWIRE_43_1.pdf used on input line 313.
+Package pdftex.def Info: ./wyklady/FIREWIRE_43_1.pdf used on input line 315.
 (pdftex.def)             Requested size: 256.0748pt x 119.2107pt.
 
 Underfull \vbox (badness 1092) has occurred while \output is active []
@@ -2243,10 +2242,10 @@ wsk_ultimate/wyklady/FIREWIRE_45_1.pdf): PDF inclusion: found PDF version <1.7>
 File: ./wyklady/FIREWIRE_45_1.pdf Graphic file (type pdf)
 
 <use ./wyklady/FIREWIRE_45_1.pdf>
-Package pdftex.def Info: ./wyklady/FIREWIRE_45_1.pdf used on input line 321.
+Package pdftex.def Info: ./wyklady/FIREWIRE_45_1.pdf used on input line 323.
 (pdftex.def)             Requested size: 256.0748pt x 104.03589pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 321--322
+Underfull \hbox (badness 10000) in paragraph at lines 323--324
 
  []
 
@@ -2259,7 +2258,7 @@ wsk_ultimate/wyklady/FIREWIRE_48_1.pdf): PDF inclusion: found PDF version <1.7>
 File: ./wyklady/FIREWIRE_48_1.pdf Graphic file (type pdf)
 
 <use ./wyklady/FIREWIRE_48_1.pdf>
-Package pdftex.def Info: ./wyklady/FIREWIRE_48_1.pdf used on input line 327.
+Package pdftex.def Info: ./wyklady/FIREWIRE_48_1.pdf used on input line 329.
 (pdftex.def)             Requested size: 199.16928pt x 158.92757pt.
  [65 <C:/Users/Bartłomiej/Desktop/Międzytwarze/iwsk_ultimate/wyklady/FIREWIRE
 _43_1.pdf, page is rotated 90 degrees> <C:/Users/Bartłomiej/Desktop/Międzytwa
@@ -2274,7 +2273,7 @@ wsk_ultimate/wyklady/FIREWIRE_53_1.pdf): PDF inclusion: found PDF version <1.7>
 File: ./wyklady/FIREWIRE_53_1.pdf Graphic file (type pdf)
 
 <use ./wyklady/FIREWIRE_53_1.pdf>
-Package pdftex.def Info: ./wyklady/FIREWIRE_53_1.pdf used on input line 350.
+Package pdftex.def Info: ./wyklady/FIREWIRE_53_1.pdf used on input line 352.
 (pdftex.def)             Requested size: 199.16928pt x 132.82675pt.
  [66 <C:/Users/Bartłomiej/Desktop/Międzytwarze/iwsk_ultimate/wyklady/FIREWIRE
 _53_1.pdf, page is rotated 90 degrees>]
@@ -2286,7 +2285,7 @@ wsk_ultimate/wyklady/FIREWIRE_58_1.pdf): PDF inclusion: found PDF version <1.7>
 File: ./wyklady/FIREWIRE_58_1.pdf Graphic file (type pdf)
 
 <use ./wyklady/FIREWIRE_58_1.pdf>
-Package pdftex.def Info: ./wyklady/FIREWIRE_58_1.pdf used on input line 386.
+Package pdftex.def Info: ./wyklady/FIREWIRE_58_1.pdf used on input line 388.
 (pdftex.def)             Requested size: 199.16928pt x 51.71106pt.
 
 
@@ -2297,7 +2296,7 @@ wsk_ultimate/wyklady/FIREWIRE_60_1.pdf): PDF inclusion: found PDF version <1.7>
 File: ./wyklady/FIREWIRE_60_1.pdf Graphic file (type pdf)
 
 <use ./wyklady/FIREWIRE_60_1.pdf>
-Package pdftex.def Info: ./wyklady/FIREWIRE_60_1.pdf used on input line 393.
+Package pdftex.def Info: ./wyklady/FIREWIRE_60_1.pdf used on input line 395.
 (pdftex.def)             Requested size: 199.16928pt x 213.4792pt.
  [67 <C:/Users/Bartłomiej/Desktop/Międzytwarze/iwsk_ultimate/wyklady/FIREWIRE
 _58_1.pdf, page is rotated 90 degrees> <C:/Users/Bartłomiej/Desktop/Międzytwa
@@ -2310,7 +2309,7 @@ wsk_ultimate/wyklady/FIREWIRE_62_1.pdf): PDF inclusion: found PDF version <1.7>
 File: ./wyklady/FIREWIRE_62_1.pdf Graphic file (type pdf)
 
 <use ./wyklady/FIREWIRE_62_1.pdf>
-Package pdftex.def Info: ./wyklady/FIREWIRE_62_1.pdf used on input line 412.
+Package pdftex.def Info: ./wyklady/FIREWIRE_62_1.pdf used on input line 414.
 (pdftex.def)             Requested size: 199.16928pt x 176.55609pt.
 
 
@@ -2321,7 +2320,7 @@ wsk_ultimate/wyklady/FIREWIRE_63_1.pdf): PDF inclusion: found PDF version <1.7>
 File: ./wyklady/FIREWIRE_63_1.pdf Graphic file (type pdf)
 
 <use ./wyklady/FIREWIRE_63_1.pdf>
-Package pdftex.def Info: ./wyklady/FIREWIRE_63_1.pdf used on input line 413.
+Package pdftex.def Info: ./wyklady/FIREWIRE_63_1.pdf used on input line 415.
 (pdftex.def)             Requested size: 199.16928pt x 230.57693pt.
  [68 <C:/Users/Bartłomiej/Desktop/Międzytwarze/iwsk_ultimate/wyklady/FIREWIRE
 _62_1.pdf, page is rotated 90 degrees> <C:/Users/Bartłomiej/Desktop/Międzytwa
@@ -2334,7 +2333,7 @@ wsk_ultimate/wyklady/FIREWIRE_66_1.pdf): PDF inclusion: found PDF version <1.7>
 File: ./wyklady/FIREWIRE_66_1.pdf Graphic file (type pdf)
 
 <use ./wyklady/FIREWIRE_66_1.pdf>
-Package pdftex.def Info: ./wyklady/FIREWIRE_66_1.pdf used on input line 436.
+Package pdftex.def Info: ./wyklady/FIREWIRE_66_1.pdf used on input line 438.
 (pdftex.def)             Requested size: 199.16928pt x 168.542pt.
 
 
@@ -2345,7 +2344,7 @@ wsk_ultimate/wyklady/FIREWIRE_67_1.pdf): PDF inclusion: found PDF version <1.7>
 File: ./wyklady/FIREWIRE_67_1.pdf Graphic file (type pdf)
 
 <use ./wyklady/FIREWIRE_67_1.pdf>
-Package pdftex.def Info: ./wyklady/FIREWIRE_67_1.pdf used on input line 444.
+Package pdftex.def Info: ./wyklady/FIREWIRE_67_1.pdf used on input line 446.
 (pdftex.def)             Requested size: 199.16928pt x 191.30444pt.
 
 
@@ -2356,7 +2355,7 @@ wsk_ultimate/wyklady/FIREWIRE_68_1.pdf): PDF inclusion: found PDF version <1.7>
 File: ./wyklady/FIREWIRE_68_1.pdf Graphic file (type pdf)
 
 <use ./wyklady/FIREWIRE_68_1.pdf>
-Package pdftex.def Info: ./wyklady/FIREWIRE_68_1.pdf used on input line 450.
+Package pdftex.def Info: ./wyklady/FIREWIRE_68_1.pdf used on input line 452.
 (pdftex.def)             Requested size: 199.16928pt x 171.21477pt.
 
 
@@ -2367,10 +2366,10 @@ wsk_ultimate/wyklady/FIREWIRE_69_1.pdf): PDF inclusion: found PDF version <1.7>
 File: ./wyklady/FIREWIRE_69_1.pdf Graphic file (type pdf)
 
 <use ./wyklady/FIREWIRE_69_1.pdf>
-Package pdftex.def Info: ./wyklady/FIREWIRE_69_1.pdf used on input line 453.
+Package pdftex.def Info: ./wyklady/FIREWIRE_69_1.pdf used on input line 455.
 (pdftex.def)             Requested size: 199.16928pt x 166.52713pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 446--454
+Underfull \hbox (badness 10000) in paragraph at lines 448--456
 
  []
 
@@ -2385,7 +2384,7 @@ wsk_ultimate/wyklady/FIREWIRE_70_1.pdf): PDF inclusion: found PDF version <1.7>
 File: ./wyklady/FIREWIRE_70_1.pdf Graphic file (type pdf)
 
 <use ./wyklady/FIREWIRE_70_1.pdf>
-Package pdftex.def Info: ./wyklady/FIREWIRE_70_1.pdf used on input line 464.
+Package pdftex.def Info: ./wyklady/FIREWIRE_70_1.pdf used on input line 466.
 (pdftex.def)             Requested size: 199.16928pt x 167.7061pt.
  [70 <C:/Users/Bartłomiej/Desktop/Międzytwarze/iwsk_ultimate/wyklady/FIREWIRE
 _68_1.pdf, page is rotated 90 degrees> <C:/Users/Bartłomiej/Desktop/Międzytwa
@@ -2434,7 +2433,7 @@ blic/pl/plr9.pfb><C:/Users/Bartłomiej/AppData/Roaming/MiKTeX/2.9/fonts/type1/p
 ublic/pl/plsy10.pfb><C:/Users/Bartłomiej/AppData/Roaming/MiKTeX/2.9/fonts/type
 1/public/pl/plti10.pfb><C:/Users/Bartłomiej/AppData/Roaming/MiKTeX/2.9/fonts/t
 ype1/public/pl/plti9.pfb>
-Output written on iwsk_ultimate.pdf (71 pages, 6023348 bytes).
+Output written on iwsk_ultimate.pdf (71 pages, 6023819 bytes).
 PDF statistics:
  4348 PDF objects out of 5155 (max. 8388607)
  262 named destinations out of 1000 (max. 500000)
