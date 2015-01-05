@@ -162,13 +162,26 @@
 				\item Przekazanie statusu.
 			\end{itemize}
 		\end{itemize}
-		\textbf{Podział transferów}
-		\begin{itemize}
-			\item Transfery aperiodyczne: kontrolny i masowy
-			\item Transfery periodyczne: przerwaniowy i izochroniczny
-			\item Transfery strumieniowe (\emph{stream transfer}), przekazywanie danych bajt po bajcie: przerwaniowy, masowy i izochroniczny
-			\item Transfery komunikatowe (\emph{message transfer}), struktura komunikatów i ich znaczenie określa standard: kontrolny
-		\end{itemize}
+		\textbf{Podział i podsumownie transferów}
+		\begin{table}[h]
+			\begin{tabular}{|p{4cm}|p{3cm}|p{3cm}|p{3cm}|p{3cm}|}
+				\hline
+				\textbf{Cechy i paranetry} & \textbf{Kontrolny}	   & \textbf{Masowy} & \textbf{Przerwaniowy} & \textbf{Izochroniczny} \\ \hline
+				Low speed (bajt/ms)  & 24 (3 transkacje 8 B)        & Nie dozwolony      			& 0,8 (8 B na 10 ms)		& nie dozwolony						\\ \hline
+				Full speed (bajt/ms) & 832 (13 tr. 64 B na ramkę)   & 1216 (19 tr. 64 B na ramkę)   & 64 (1 tr 64 B na ramkę)	& 1023 (1 tr. 1023 B na ramkę)		\\ \hline
+				High speed (bajt/ms) & 15872 (31 tr. 64 B na mikroramkę) & 53248 (13 tr. 512 B na mikroramkę) & 24576 (3 tr. 64 na mikroramkę)	& 24576 (3 tr. 64 B na mikroramkę)	\\ \hline
+				Kierunek przepływu danych & Odczyt/zapis            & Odczyt/zapis       			& Odczyt/zapis		& Odczyt/zapis					\\ \hline
+				Zarezerwowane pasmo  dla transferów w ramach ramki & 10\% dla low i full, 20\% dla high   & Brak rezerwacji  & 90\% dla low i full, 80\% dla high	& 90\% dla low i full, 80\% dla high	\\ \hline
+				Kontrola błędów transmisji & Tak                	& Tak & Tak	& Nie	\\ \hline
+				Komunikat/Strumień  & Komunikat		               & Strumień & Strumień   & Strumień	\\ \hline
+				Określony rytm (periodyczność) & Aperiodyczny        & Aperiodyczny    & Periodyczny   & Periodyczny	\\ \hline
+				\end{tabular}
+		\end{table}
+				\begin{itemize}
+					\item Transfery strumieniowe (\emph{stream transfer}), przekazywanie danych bajt po bajcie.
+					\item Transfery komunikatowe (\emph{message transfer}), struktura komunikatów i ich znaczenie określa standard.
+				\end{itemize}
+				
 		\subsubsection{Zarządzenie magistralą USB}
 		Wszystkie transfery USB są inicjowane i kontrolowane przez hosta. Host usiłuje jednocześnie realizować transfery wielu urządzeń tak, aby jedno urządzenie nie blokowało dostępu.\\ 
 		Niektóre transfery mają priorytety. Transferom izochronicznym i przerwaniowym nadano 90\% pasma, a kontrolnym 10\%. Oznacza to, że transfer masowy nie jest gwarantowany - jeżeli pozostałe 3 rodzaje zajmą maksymalny możliwy czas, to transfer masowy się nie odbędzie.\\
@@ -203,7 +216,7 @@
 		\includegraphics[width=10cm]{./wyklady/USB_18_1.pdf}
 		\item Pakietowa struktura komunikatów\\
 		\includegraphics[width=10cm]{./wyklady/USB_19_1.pdf}\\
-		Struktura bloków komunikacyjnych w USB
+		Struktura bloków komunikacyjnych w USB (kolejkowanie odbywa się na poziomie sterownika host kontrolera)
 	\end{itemize}
 	\subsubsection{Format i typy pakietów USB}
 	\includegraphics[width=10cm]{./wyklady/USB_20_1.pdf}
@@ -248,6 +261,8 @@
 		\item Deskryptor punktu końcowego - charakteryzuje każdy punkt końcowy.
 		\item Deskryptor łańcuchowy - zawiera kod określający język tekstu lub sam właściwy tekst.
 	\end{itemize}
+	
+	W danym urządzeniu może wystąpować maksymalnie jeden deskryptor urządzenia, oraz wiele deksryptorów innych rodzajów. Każdy deskryptor może posiadać parę pomniejszych deskryptorów.
 	
 \subsection{Wykrywanie i konfiguracja urządzeń}
 	Cechą USB jest automatyczne wykrywanie urządzeń po włączeniu zasilania w systemie lub podłączeniu urządzenia do systemu. Procedura enumeracji zajmuje się rozpoznaniem urządzenia, sprawdzeniem czy komunikacja jest możliwa, przydzieleniem adresu, konfiguracją i instalacją sterownika.
@@ -323,7 +338,7 @@
 		\item Wprowadzenie w \textbf{stan zawieszenia} pracy systemu – \emph{suspend}. Pozostając w zawieszenie urządzenie zachowuje swoją konfigurację, co pozwala jego wznowienie (\emph{resume}) do normalnego działania.
 		\begin{itemize}
 			\item \textbf{Globalne} (\emph{global suspend}) - rozkaz SetPortFeature (PORT\_SUSPEND) adresowany do huba głównego, zawiesza cały system
-			\item \textbf{Częściowe} (\emph{selective suspend}) - rozkaz SetPortFeature (PORT\_SUSPEND) adresowany do huba zewnętrznego, w którym wybrany port (lub część systemu) ma zostać zawieszony.
+			\item \textbf{Częściowe} (\emph{selective suspend}) - rozkaz SetPortFeature (PORT\_SUSPEND) adresowany do huba zewnętrznego, w którym wybrany port (lub część systemu) ma zostać zawieszony. W ten sposób HUB zawiesza tylko siebie i poniższe HUBy/urządzenia.
 			\item Zawieszone porty nie propagują ruchu „w dół” oraz nie przekazują „w górę” żadnych sygnałów od urządzeń do nich podłączonych.
 			\item Urządzenia w stanie zawieszenia zachowują swój stan, co umożliwia wznowienie ich pracy bez ponownej konfiguracji.
 			\item Hub w stanie zawieszenia dodatkowo blokuje wszystkie nadajniki, zatrzymuje wewnętrzne zegary i zachowuje stan wszystkich portów dolnych.
