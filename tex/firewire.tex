@@ -28,7 +28,7 @@ Układem umożliwiającym podłączenie komputera opartego na PCI do magistrali 
 	\item \textbf{Urządzenia z jednym portem stanowią zakończenie gałęzi} (liście), urządzenia z wieloma portami umożliwiają rozbudowę gałęzi przez podłączenie kolejnego urządzenia. Liściem może też być urządzenie wieloportowe , w którym wykorzystany jest tylko jeden port.
 	\item \textbf{Komunikacja pomiędzy portami oparta jest na zasadzie punkt-punkt} (\emph{point to point}), co dla urządzenia wieloportowego oznacza odbiór i detekcję całego pakietu przez jeden port, a następnie jego resynchronizację do lokalnego zegara i retransmisję do pozostałych portów.
 	\item \textbf{System nie posiada hosta}, komunikacja pomiędzy urządzeniami odbywa się bez interwencji stacji nadrzędnej. Ten rodzaj komunikacji określamy jako P2P (\emph{peer to peer})
-	\item \textbf{Konfiguracja urządzeń następuje dynamicznie}, bez wykorzystania kontrolera systemu. Interfejsy urządzeń mają wbudowane funkcje konfiguracyjne, które umożliwiają określenie topologii systemu, parametryzację portów urządzeń oraz przekazanie informacji o urządzeniu.
+	\item \textbf{Konfiguracja urządzeń następuje dynamicznie}, bez wykorzystania kontrolera systemu. Interfejsy urządzeń mają wbudowane funkcje konfiguracyjne, które umożliwiają określenie topologii systemu, parametryzację portów urządzeń oraz przekazanie informacji o urządzeniu. Odbywa się po każdym resecie.
 \end{itemize}
 
 
@@ -163,7 +163,9 @@ Podstawowe funkcje warstw protokołu komunikacyjnego:
 		\item Przesył danych - prawo tego urządzenia, kto wywalczyło dostęp do magistrali. Dane kodowane są w zapisie NRZ (\emph{Non Return to Zero}).
 	\end{itemize}
 	\textbf{Szybkość transmisji}\\
-	\includegraphics[width=7cm]{./wyklady/FIREWIRE_16_1.pdf}\\\\
+	\includegraphics[width=7cm]{./wyklady/FIREWIRE_16_1.pdf}\\
+	Minimum musi być spełnione! Szybkość transmisji może być większa, ale nie musi.
+	\\\\
 	\textbf{Transakcja asynchroniczna}\\
 	Jest to transakcja odczytu pomiędzy węzłami A i B (aplikacja w węźle B udostępnia dane tej w A).\\
 	\includegraphics[width=7cm]{./wyklady/FIREWIRE_17_1.pdf}

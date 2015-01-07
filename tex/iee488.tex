@@ -4,7 +4,7 @@
 \section{IEEE-488 and SCPI standards}
 Standard IEEE-488, ogłoszony w 1973 roku, określa organizację systemów ATE (\emph{Automatic Test Equipment}), przeznaczonych do akwizycji danych i sterowania urządzeń w obiektach skupionych lub rozproszonych. Te mają zastosowanie w testowaniu wyborów, pomiarach laboratoryjnych, sterowaniu procesami przemysłowymi itp.\\
 Urządzenia systemu ATE wyposażone są w układ komunikacyjny (interfejs), który umożliwia wymianę danych za pomocą łącza interfejsowego. Pracą systemu zarządza kontroler, który jest nadrzędny w stosunku do pozostałych urządzeń, które pełnią rolę przyrządów wykonawczych.\\
-Standard IEEE-488 znany jest również jako GPID (\emph{General Purpose Interface Bus}). Określa on dokładnie własności elektryczne i mechaniczne interfejsu, jego protokoły i funkcje, jednak nie normuje przesyłanych treści. Tym zajmuje się uzupełnienie standardu w postaci IEEE-488.2 (1973) oraz SCPI (1900).\\\\
+Standard IEEE-488 znany jest również jako GPID (\emph{General Purpose Interface Bus}). Określa on dokładnie własności elektryczne i mechaniczne interfejsu, jego protokoły i funkcje, jednak nie normuje przesyłanych treści. Tym zajmuje się uzupełnienie standardu w postaci IEEE-488.2 (1973) oraz SCPI (1990).\\\\
 Protokół systemu ATE można podzielić na 3 poziomy:
 \begin{itemize}
 	\item Poziom 1, złożony z
@@ -44,7 +44,7 @@ Komunikacją zarządza kontroler, który konfiguruje system do komunikacji, obs�
 \textbf{Dwie podstawowe konfiguracje systemu GPIB}\\
 \includegraphics[width=10cm]{./wyklady/IEEE488_SCPI_2_1.pdf}\\
 \textbf{Podział urządzenia systemowego na cześć interfejsową i urządzenie właściwe}\\
-Można tak podzielić każde urządzenie wykonawcze. Częsc interfejsowa to zdolność urządzenia do wymiany komunikatów z innymi elementami systemu, a urządzenie właściwe wykonuje podstawowe funkcje urządzenia.\\
+Można tak podzielić każde urządzenie wykonawcze. Część interfejsowa to zdolność urządzenia do wymiany komunikatów z innymi elementami systemu, a urządzenie właściwe wykonuje podstawowe funkcje urządzenia.\\
 \includegraphics[width=8cm]{./wyklady/IEEE488_SCPI_2_2.pdf}
 
 
@@ -104,7 +104,7 @@ Ciekawostka: każda funkcja implementowana jest tylko w tych urządzeniach, któ
 	\item DC (\emph{Device Clear}) - zerowanie urządzenia, umożliwienie zdalnego zerowania (reset)
 	\item DT (\emph{Device Trigger}) - wyzwalanie urządzenia, umożliwienie zdalnego wyzwolenia operacji (pomiaru)
 	\item RL (\emph{Remote/Local}) - zdalne / lokalne, umożliwienie przełączania trybu urządzenia
-	\item PP (\emph{Parallel Poll}) - kontrola równoległa
+	\item PP (\emph{Parallel Poll}) - kontrola równoległa, wszystkie linie danych mogą odbierać żądania. Każde urządzenie ma przypisaną linię danych. 
 	\item C (\emph{Controller}) - kontroler, umożliwienie zdalnego zarządzania systemem GBIB i przekazywanie zarządzania innym kontrolerom - w systemie może być wiele kontrolerów, jednak tylko jeden może być aktywny, reszta musi być uśpiona.
 \end{itemize}
 
@@ -245,6 +245,8 @@ Owych podsystemów jest kilkanaście, tutaj są przedstawione najistotniejsze:
 	\item \textbf{SOURce} - kontrola modułu generacji sygnału
 	\item \textbf{SYSTem} - podsystem umożliwiający "utrzymanie" przyrządu (kontrolę pomocniczych parametrów)
 \end{itemize}
+
+Wyżej wymienione słowa kluczowe mogą występować zarówno w postaci rozwiniętej (np. \textbf{Calculate}), jak i skróconej (\textbf{CALC}).
 
 \subsubsection{Parametry}
 Typy parametrów w komunikatach programowych i odpowiedziach zostały określone w standardzie IEEE-488.2, natomiast w SCPI wyróżniono kilka klas parametrów w ramach wybranych typów IEEE-488.2.\\
