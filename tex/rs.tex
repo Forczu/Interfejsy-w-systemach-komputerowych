@@ -23,7 +23,7 @@
 		\end{itemize}
 		\subsubsection{Jednostka informacyjna - znak}
 		Jednostka informacji o ściśle określonym formacie. Odbiorca dysponuje impulsami próbkującymi, które rozpoznają stan sygnału (odpytują).\\
-		\includegraphics[width=10cm]{./wyklady/RS232_3_2.pdf}\\
+		\includegraphics[width=10cm]{./wyklady/RS232_3_2.jpg}\\
 		\subsubsection{Przekazywanie konfiguracji}
 			Aby nadawca i odbiorca mogli się porozumieć i interpretować znaki w ten sam sposób, muszą zostać tak samo skonfigurowane. Innymi słowy, muszą posiadać ten sam takt nadawania.\\Metody:\\
 			\begin{itemize}
@@ -58,7 +58,7 @@
 			Czas trwania bitu nazywa się \emph{odstępem jednostkowym} i oznaczamy go $t_{b}$. Jego odwrotność ($f=\frac{1}{t_{b}}$) określa szybkość transmisji w bodach, gdzie 1 [bd] = 1 [bit/s].
 		\end{itemize}
 		\subsubsection{Transmisja w RS-232}
-		\includegraphics[width=9cm]{./wyklady/RS232_4_1.pdf}
+		\includegraphics[width=9cm]{./wyklady/RS232_4_1.jpg}
 		\begin{itemize}
 			\item Synchroniczne wysyłanie bitów
 			\item Asynchroniczne wysyłanie znaków
@@ -132,7 +132,7 @@
 		\end{itemize}
 	\subsection{Parametry elektryczne sygnałów}
 	Poniżej przestawiono schemat "obwodu stykowego" złożonego ze źródła sygnału, toru transmisyjnego i odbiornika. Parametry zdefiniowano przy założeniu, że szybkość transmisji nie przekracza 20 kbd.
-	\includegraphics[width=9cm]{./wyklady/RS232_10_1.pdf}\\
+	\includegraphics[width=9cm]{./wyklady/RS232_10_1.jpg}\\
 	Na rysunku powyżej: kiloomy oraz mikrosekundy.\\
 	Wada: jest to obwód represyjny, da się go silnie zakłócić poprzez różnicę potencjałów pomiędzy masami.
 	\subsection{Standardy RS-423, RS-422, RS-485}
@@ -162,11 +162,11 @@
 		Standard RS-422A nie wprowadza ograniczeń na minimalną i maksymalną częstotliwość, a jedynie na zależność między szybkością zmian sygnału, a czasem trwania bitu.
 		\subsubsection{RS-485A}
 		Standard RS-485A jest rozwinięciem RS-422. Łącze RS-485A jest również zrównoważone i symetryczne, przy czym dopuszcza się nie tylko wiele odbiorników, ale i wiele nadajników podłączonych do jednej linii. Nadajniki muszą być trójstanowe.\\
-		\includegraphics[width=10cm]{./wyklady/RS232_13_1.pdf}
+		\includegraphics[width=10cm]{./wyklady/RS232_13_1.jpg}
 	\subsection{Systemy komunikacyjne oparte na łączu znakowym}
 		\subsubsection{System oparty na szeregowym łączu znakowym}
 		Podłączenie urządzenia RS-232 do portu COM z pom. int. RS-485\\
-		\includegraphics[width=9cm]{./wyklady/RS232_14_1.pdf}\\
+		\includegraphics[width=9cm]{./wyklady/RS232_14_1.jpg}\\
 		R\tiny T\normalsize - Rezystory zabezpieczające przed niekorzystnym odbiciem fali (tzw. Terminatory).\\
 		\textbf{Problem}: dostęp do magistrali kontrolera i urządzeń systemu\\
 		\textbf{Rozwiązanie}: Implementacja protokołu komunikacyjnego (warstwa łącza danych). Komputer zarządza innymi urządzeniami w całym systemie. Do zbudowania tego wystarczają proste przejściówki do zmian sygnałów.\\
@@ -180,7 +180,7 @@
 			\end{itemize}
 		\end{itemize}
 		\subsubsection{System oparty na łączu znakowym}
-		\includegraphics[width=10cm]{./wyklady/RS232_15_1.pdf}\\
+		\includegraphics[width=10cm]{./wyklady/RS232_15_1.jpg}\\
 		Koncentrator zawiera 4 klucze portu RS. Dostęp jest tylko do jednego wyjścia naraz.\\
 		\textbf{Kaskadowe połączenie} - przełącznik podłączony do przełącznika. Pojawia się problem wyboru drogi do urządzenia, która musi być znana. Koncentratory muszą mieć informacje o \textbf{mapie urządzeń}.
 	\subsection{System MODBUS}
@@ -193,7 +193,7 @@
 				\item Mechanizmy zabezpieczające przed zawieszeniem systemu
 				\item Wykorzystanie asynchronicznej transmisji znakowej zgodnej z RS-232C
 			\end{itemize}
-		\includegraphics[width=9cm]{./wyklady/RS232_16_1.pdf}\\
+		\includegraphics[width=9cm]{./wyklady/RS232_16_1.jpg}\\
 		\subsubsection{Transakcja}
 		Jedno urządzenie może inicjować transakcje (master), a pozostałe (slave) odpowiadają jedynie na zapytania mastera. Transakcja składa się z polecenia (query) wysyłanego z master do slave oraz z odpowiedzi (response) przesyłanej ze slave do master. Odpowiedź zawiera dane żądane przez master lub potwierdzenie realizacji jego połączenia. Wykrycie końca kończy fazę w której następuje przekazanie łącza masterowi.\\
 		\subsubsection{Format wiadomości}

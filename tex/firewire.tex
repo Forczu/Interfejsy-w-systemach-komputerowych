@@ -165,7 +165,13 @@ Podstawowe funkcje warstw protokołu komunikacyjnego:
 	\textbf{Szybkość transmisji}\\
 	\includegraphics[width=7cm]{./wyklady/FIREWIRE_16_1.pdf}\\
 	Minimum musi być spełnione! Szybkość transmisji może być większa, ale nie musi.
-	\\\\
+	Prędkości dla omawianych standardów:
+	\begin{itemize}
+		\item Dla IEEE 1394: S100
+		\item Dla IEEE 1394a: S100, S200, S400
+		\item Większe szybkości istnieją dla nowszych standardów
+	\end{itemize}
+	
 	\textbf{Transakcja asynchroniczna}\\
 	Jest to transakcja odczytu pomiędzy węzłami A i B (aplikacja w węźle B udostępnia dane tej w A).\\
 	\includegraphics[width=7cm]{./wyklady/FIREWIRE_17_1.pdf}
@@ -195,10 +201,25 @@ W skład interfejsu fizycznego wchodzi również układ dystrybucji zasilania (u
 \includegraphics[width=9cm]{./wyklady/FIREWIRE_21_1.pdf}\\\\
 W złączach zaciski zasilania są trochę wysunięte do przodu, co sprawia, że przy wdzióbywaniu najpierw doprowadzane jest zasilanie, a potem pojawia się kontakt na liniach sygnałowych.
 
-
 \subsection{Interfejs sygnałowy}
 Interfejs sygnałowy jest bardzo rozbudowy, ponieważ służy nie tylko do transmisji i odbioru danych, ale także do realizacji funkcji arbitrażowych.\\
 \textbf{Sygnał różnicowy} - napięcie pomiędzy TPA/TPB, a TPA*/TPB*.\\
+\textbf{Stan z} - oznacza stan trufny do wykrycia (nieokreślony). Jego pojawienie się na linii odczytywane jest jako cisza. \\
+
+\textbf{Odczytywanie stanu na linii połączeniowej} \\
+\begin{tabular}{|c|c|c|}
+	\hline Stan nadajnika nr 1 & Stan nadajnika nr 2 & Stan odczytywany na linii \\ 
+	\hline 1 & 1 & 1 \\ 
+	\hline 1 & 0 & Z \\ 
+	\hline 1 & Z & 1 \\ 
+	\hline 0 & 1 & Z \\ 
+	\hline 0 & 0 & 0 \\ 
+	\hline 0 & Z & 0 \\ 
+	\hline Z & 1 & 1 \\ 
+	\hline Z & 0 & 0 \\ 
+	\hline Z & Z & Z \\ 
+	\hline 
+\end{tabular} 
 \begin{itemize}
 	\item TPA/TPA* - linia do przekazywania Strobe
 	\item TPB/TBP* - linia do transmisji danych

@@ -101,7 +101,7 @@
 				\item W ramkach o czasie trwania 1 $ms$ dla małej i pełnej szybkości transmisji.
 				\item W mikroramkach o czasie trwania 125 $\mu s$ dla wysokiej szybkości transmisji.
 			\end{itemize}
-			\includegraphics[width=10cm]{./wyklady/USB_11_1.pdf}\\
+			\includegraphics[width=10cm]{./wyklady/USB_11_1.jpg}\\
 			\textbf{Ramka 1 ms}
 			\begin{itemize}
 				\item Czas pomiędzy dwoma kolejnymi pakietami SOF ($Start Of Frame$) nazywany jest ramką. Początek ramki wyznacza pakiet SOF zawierający 11 bitów danych i 5 bitów CRC. Dane w pakiecie SOF reprezentują kolejny numer ramki. Licznik ramek przepełnia się co 2048 ms.
@@ -128,8 +128,8 @@
 			
 		\subsubsection{Model komunikacyjny}
 		Warstwowy model komunikacyjny przedstawiający odpowiadające sobie elementy sprzętowo-programowe po stronie hosta i urządzenia.
-		\includegraphics[width=10cm]{./wyklady/USB_12_1.pdf}\\\\
-		\includegraphics[width=10cm]{./wyklady/USB_13_1.pdf}\\
+		\includegraphics[width=10cm]{./wyklady/USB_12_1.jpg}\\\\
+		\includegraphics[width=10cm]{./wyklady/USB_13_1.jpg}\\
 		\subsubsection{Transfery USB}
 		Wyróżniono 4 typy transferów przeznaczone dla rożnych urządzeń z różnymi wymaganiami komunikacyjnymi. Każdy wymaga innego kanału komunikacyjnego (\emph{pipe}).
 		\begin{itemize}
@@ -201,7 +201,7 @@
 			\item Huby zgodne ze standardem 1.x są zdolne do komunikacji z małą lub pełną szybkością. Obowiązuje zasada, że do urządzeń low speed nie wolno kierować ruchu full speed. Hub potrafi wykryć jakie urządzenie jest podłączone do danego portu dolnego i wie, kiedy należy go zablokować.
 			\item Transfery low speed są poprzedzone specjalną preambułą, których zadaniem jest odblokowanie portów dolnych do których podłączone są urządzenia low speed.
 		\end{itemize}
-		\includegraphics[width=10cm]{./wyklady/USB_17_1.pdf}
+		\includegraphics[width=10cm]{./wyklady/USB_17_1.jpg}
 	
 \subsection{Protokół komunikacyjny}
 	Transakcje USB zbudowane sa z pakietów, przy czym typowa transakcja zawiera:
@@ -213,13 +213,13 @@
 	\subsubsection{Właściwości}
 	\begin{itemize}
 		\item Komunikacja z urządzeniami USB za pomocą ramek o długości maksymalnie 1 ms.\\
-		\includegraphics[width=10cm]{./wyklady/USB_18_1.pdf}
+		\includegraphics[width=10cm]{./wyklady/USB_18_1.jpg}
 		\item Pakietowa struktura komunikatów\\
-		\includegraphics[width=10cm]{./wyklady/USB_19_1.pdf}\\
+		\includegraphics[width=10cm]{./wyklady/USB_19_1.jpg}\\
 		Struktura bloków komunikacyjnych w USB (kolejkowanie odbywa się na poziomie sterownika host kontrolera)
 	\end{itemize}
 	\subsubsection{Format i typy pakietów USB}
-	\includegraphics[width=10cm]{./wyklady/USB_20_1.pdf}
+	\includegraphics[width=10cm]{./wyklady/USB_20_1.jpg}
 	\subsubsection{Reakcja na błędy}
 	Wykrywanie błędów i kontrola transmisji\\
 	\begin{itemize}
@@ -316,8 +316,8 @@
 		\item Nie mylić z punktem końcowym 0 przez który wykonywana jest konfiguracja i kontrola.
 	\end{itemize}
 	\subsubsection{Działanie}
-	\includegraphics[width=8cm]{./wyklady/USB_35_1.pdf}
-	\includegraphics[width=8cm]{./wyklady/USB_36_1.pdf}
+	\includegraphics[width=8cm]{./wyklady/USB_35_1.jpg}
+	\includegraphics[width=8cm]{./wyklady/USB_36_1.jpg}
 	
 \subsection{Zasilanie urządzeń w systemie USB}
 	USB jest również systemem dystrybucji i zarządzania zasilaniem urządzeń.
@@ -328,7 +328,7 @@
 		\item Urządzenie zasilane częściowo z magistrali i własnego źródła
 	\end{itemize}
 	\subsubsection{Zasilanie hubów i pozostałych urządzeń}
-		\includegraphics[width=11cm]{./wyklady/USB_38_1.pdf}\\
+		\includegraphics[width=11cm]{./wyklady/USB_38_1.jpg}\\
 		Dopuszczalne spadki napięcia zasilania.
 	\subsubsection{Urządzenie zasilane z magistrali}
 		\includegraphics[width=7cm]{./wyklady/USB_39_1.pdf}\\
@@ -356,9 +356,9 @@
 			\item Wznowienie pracy urządzenia można nastąpić
 			\begin{itemize}
 				\item Z inicjatywy kontrolera - jako wznowienie po zawieszeniu globalnym lub częściowym\\
-				\includegraphics[width=7cm]{./wyklady/USB_43_1.pdf}
+				\includegraphics[width=7cm]{./wyklady/USB_43_1.jpg}
 				\item Z inicjatywy urządzenia - po wystąpieniu zdarzenia wymagającego obsługi („budzenie” - \emph{Wakeup})\\
-				\includegraphics[width=7cm]{./wyklady/USB_44_1.pdf}
+				\includegraphics[width=7cm]{./wyklady/USB_44_1.jpg}
 			\end{itemize}
 			\item Wznowienie po zawieszeniu globalnym - rozpoczyna hub główny wykonując rozkaz wznowienia pracy systemu. Oznacza gotowość wszystkich hubów i urządzeń do wykonywania transakcji.
 			\item Wznowienie po częściowym zawieszeniu - może wykonać:
@@ -381,18 +381,18 @@
 	Są do siebie bardzo podobne, różnią się tylko sposobem obsługi oraz współpracą z hubem głównym.
 	\subsubsection{Uniwersalny host kontroler (UHC)}
 	\textbf{Zasada działania kontrolera UHC}\\
-	\includegraphics[width=7cm]{./wyklady/USB_46_1.pdf}\\\\
+	\includegraphics[width=7cm]{./wyklady/USB_46_1.jpg}\\\\
 	\textbf{Ogólna postać deskryptora transferu (TD)}\\
-	\includegraphics[width=7cm]{./wyklady/USB_47_1.pdf}\\\\
+	\includegraphics[width=7cm]{./wyklady/USB_47_1.jpg}\\\\
 	\textbf{Ogólna postać nagłówka kolejki (QH)}\\
 	\includegraphics[width=7cm]{./wyklady/USB_48_1.pdf}
 	\subsubsection{Otwarty host kontroler (OHC)}
 	\textbf{Zasada działania kontrolera OHC}\\
 	\includegraphics[width=7cm]{./wyklady/USB_49_1.pdf}\\\\
 	\textbf{Format deskryptora punktu końcowego (ED)}\\
-	\includegraphics[width=7cm]{./wyklady/USB_50_1.pdf}\\\\
+	\includegraphics[width=7cm]{./wyklady/USB_50_1.jpg}\\\\
 	\textbf{Ogólna postać deskryptora transferu (TD)}\\
-	\includegraphics[width=7cm]{./wyklady/USB_51_1.pdf}
+	\includegraphics[width=7cm]{./wyklady/USB_51_1.jpg}
 	
 \subsection{USB 2.0 - rozszerzenie standardu}
 	\subsubsection{Ważniejsze elementy wprowadzone w USB 2.0}
@@ -405,7 +405,7 @@
 	\end{itemize}
 	\subsubsection{Wysoka szybkość transmisji}
 	Podział ramki na 8 mikroramek wysokiej szybkości\\
-	\includegraphics[width=7cm]{./wyklady/USB_53_1.pdf}
+	\includegraphics[width=7cm]{./wyklady/USB_53_1.jpg}
 	\begin{itemize}
 		\item Mikroramka trwa 125 $\mu s$
 		\item Na 1 ramkę przypada 8 mikroramek
