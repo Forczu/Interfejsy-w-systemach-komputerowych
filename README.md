@@ -1,4 +1,4 @@
-iwsk_ultimate
+iwsk
 =============
 
-Interfejsy w systemach komputerowych ultimate
+Interfejsy w systemach komputerowych
