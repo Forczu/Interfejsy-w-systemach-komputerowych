@@ -203,8 +203,8 @@ W złączach zaciski zasilania są trochę wysunięte do przodu, co sprawia, że
 
 \subsection{Interfejs sygnałowy}
 Interfejs sygnałowy jest bardzo rozbudowy, ponieważ służy nie tylko do transmisji i odbioru danych, ale także do realizacji funkcji arbitrażowych.\\
-\textbf{Sygnał różnicowy} - napięcie pomiędzy TPA/TPB, a TPA*/TPB*.\\
-\textbf{Stan z} - oznacza stan trufny do wykrycia (nieokreślony). Jego pojawienie się na linii odczytywane jest jako cisza. \\
+\textbf{Sygnał różnicowy} - napięcie pomiędzy TPA/TPA*, a TPB/TPB*.\\
+\textbf{Stan z} - oznacza stan trafny do wykrycia (nieokreślony). Jego pojawienie się na linii odczytywane jest jako cisza. \\
 
 \textbf{Uproszczony schemat układów interfejsowych}\\
 \includegraphics[width=9cm]{./wyklady/Rysunek01.pdf}
@@ -240,7 +240,7 @@ Zasada: w wyniku sumowania XOR bitów Data i Strobe uzyskać ciąg występujący
 	\item pakiety startowy i końcowy
 	\item sterowanie stanem portu (od wersji 1394a)
 \end{itemize}
-textbf{Przerwy czasowe} - pomiędzy poszczególnymi fazami składającymi się na transakcję potrzebne są przerwy czasowe podczas których magistrala pozostaje w stanie jałowym.\\
+\textbf{Przerwy czasowe} - pomiędzy poszczególnymi fazami składającymi się na transakcję potrzebne są przerwy czasowe podczas których magistrala pozostaje w stanie jałowym.\\
 \includegraphics[width=9cm]{./wyklady/FIREWIRE_29_1.pdf}\\
 \begin{itemize}
 	\item \textbf{Przerwa przed potwierdzeniem} - czas pomiędzy zakończeniem asynchronicznego pakietu (żądania lub odpowiedzi), a rozpoczęciem transmisji pakietu potwierdzenia.
