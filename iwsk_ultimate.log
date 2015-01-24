@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9) (preloaded format=pdflatex 2014.6.5)  23 JAN 2015 13:12
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9) (preloaded format=pdflatex 2014.6.5)  24 JAN 2015 12:54
 entering extended mode
 **iwsk_ultimate.tex
 (F:\LaTeX\Ultimate\iwsk\iwsk_ultimate.tex
@@ -2092,7 +2092,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 119--121
 
  []
 
-<./wyklady/Rysunek03.pdf, id=1863, 434.76717pt x 92.91856pt>
+[73] <./wyklady/Rysunek03.pdf, id=1867, 434.76717pt x 92.91856pt>
 File: ./wyklady/Rysunek03.pdf Graphic file (type pdf)
 
 <use ./wyklady/Rysunek03.pdf>
@@ -2103,19 +2103,18 @@ Underfull \hbox (badness 10000) in paragraph at lines 122--124
 
  []
 
-[73 <F:/LaTeX/Ultimate/iwsk/wyklady/Rysunek02.pdf>]
-<./wyklady/Rysunek04.pdf, id=1879, 582.175pt x 225.98715pt>
+<./wyklady/Rysunek04.pdf, id=1868, 582.175pt x 225.98715pt>
 File: ./wyklady/Rysunek04.pdf Graphic file (type pdf)
 
 <use ./wyklady/Rysunek04.pdf>
 Package pdftex.def Info: ./wyklady/Rysunek04.pdf used on input line 153.
 (pdftex.def)             Requested size: 256.0748pt x 99.40361pt.
- [74 <F:/LaTeX/Ultimate/iwsk/wyklady/Rysunek03.pdf> <F:/LaTeX/Ultimate/iwsk/wyk
-lady/Rysunek04.pdf
+ [74 <F:/LaTeX/Ultimate/iwsk/wyklady/Rysunek02.pdf> <F:/LaTeX/Ultimate/iwsk/wyk
+lady/Rysunek03.pdf
 
-pdfTeX warning: pdflatex.exe (file F:/LaTeX/Ultimate/iwsk/wyklady/Rysunek04.pdf
+pdfTeX warning: pdflatex.exe (file F:/LaTeX/Ultimate/iwsk/wyklady/Rysunek03.pdf
 ): PDF inclusion: multiple pdfs with page group included in a single page
->] <./wyklady/Rysunek05.pdf, id=1911, 476.1465pt x 256.3242pt>
+>] <./wyklady/Rysunek05.pdf, id=1893, 476.1465pt x 256.3242pt>
 File: ./wyklady/Rysunek05.pdf Graphic file (type pdf)
 
 <use ./wyklady/Rysunek05.pdf>
@@ -2126,28 +2125,33 @@ Underfull \hbox (badness 10000) in paragraph at lines 171--172
 
  []
 
-<./wyklady/Rysunek06.pdf, id=1912, 529.68262pt x 256.32417pt>
+[75 <F:/LaTeX/Ultimate/iwsk/wyklady/Rysunek04.pdf> <F:/LaTeX/Ultimate/iwsk/wykl
+ady/Rysunek05.pdf
+
+pdfTeX warning: pdflatex.exe (file F:/LaTeX/Ultimate/iwsk/wyklady/Rysunek05.pdf
+): PDF inclusion: multiple pdfs with page group included in a single page
+>] <./wyklady/Rysunek06.pdf, id=1935, 529.68262pt x 256.32417pt>
 File: ./wyklady/Rysunek06.pdf Graphic file (type pdf)
 
 <use ./wyklady/Rysunek06.pdf>
 Package pdftex.def Info: ./wyklady/Rysunek06.pdf used on input line 190.
 (pdftex.def)             Requested size: 227.62204pt x 110.15074pt.
 
-<./wyklady/Rysunek07.pdf, id=1913, 529.68262pt x 256.32417pt>
+<./wyklady/Rysunek07.pdf, id=1936, 529.68262pt x 256.32417pt>
 File: ./wyklady/Rysunek07.pdf Graphic file (type pdf)
 
 <use ./wyklady/Rysunek07.pdf>
 Package pdftex.def Info: ./wyklady/Rysunek07.pdf used on input line 191.
 (pdftex.def)             Requested size: 227.62204pt x 110.15074pt.
 
-<./wyklady/Rysunek08.pdf, id=1914, 529.68262pt x 256.32417pt>
+<./wyklady/Rysunek08.pdf, id=1937, 529.68262pt x 256.32417pt>
 File: ./wyklady/Rysunek08.pdf Graphic file (type pdf)
 
 <use ./wyklady/Rysunek08.pdf>
 Package pdftex.def Info: ./wyklady/Rysunek08.pdf used on input line 192.
 (pdftex.def)             Requested size: 227.62204pt x 110.15074pt.
 
-<./wyklady/Rysunek09.pdf, id=1915, 529.68262pt x 256.32417pt>
+<./wyklady/Rysunek09.pdf, id=1938, 529.68262pt x 256.32417pt>
 File: ./wyklady/Rysunek09.pdf Graphic file (type pdf)
 
 <use ./wyklady/Rysunek09.pdf>
@@ -2168,7 +2172,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 190--197
 
  []
 
-[75 <F:/LaTeX/Ultimate/iwsk/wyklady/Rysunek05.pdf>]
+
 Underfull \hbox (badness 10000) in paragraph at lines 198--199
 
  []
@@ -2214,9 +2218,9 @@ rogram Files (x86)/MiKTeX 2.9/fonts/type1/public/pl/plr9.pfb><G:/Program Files
 (x86)/MiKTeX 2.9/fonts/type1/public/pl/plsy10.pfb><G:/Program Files (x86)/MiKTe
 X 2.9/fonts/type1/public/pl/plti10.pfb><G:/Program Files (x86)/MiKTeX 2.9/fonts
 /type1/public/pl/plti9.pfb>
-Output written on iwsk_ultimate.pdf (76 pages, 6693458 bytes).
+Output written on iwsk_ultimate.pdf (76 pages, 6694533 bytes).
 PDF statistics:
- 2171 PDF objects out of 2487 (max. 8388607)
+ 2170 PDF objects out of 2487 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
  576 words of extra memory for PDF output out of 10000 (max. 10000000)
 

@@ -31,8 +31,8 @@ Pikonet - rysunek z innymi urządzeniami i zasięgiem.
 \begin{enumerate}
 	\item Wyszukiwanie urządzeń (\emph{inquiry})
 	\begin{itemize}
-		\item Master cyklicznie wysyła komunikat \emph{inquiry}
-		\item Urządzenia wykrywalne po rozpoznaniu \emph{inquiry} odsyłają kilkakrotnie unikatowy adres BT, ale dopiero po odczekaniu losowego czasu.
+		\item Master cyklicznie wysyła komunikat \emph{inquiry}. Istnieje możliwość wyszukiwania urządzeń tylko określonego typu.
+		\item Urządzenia wykrywalne po rozpoznaniu \emph{inquiry} odsyłają kilkakrotnie unikatowy adres BT, ale dopiero po odczekaniu losowego czasu. Niewykrywalne po prostu ignorują ten komunikat.
 		\item Format:
 		\begin{itemize}
 			\item MASTER $ Inquiry\:B \rightarrow $ urządzenie BT - rozgłoszenie (\emph{broadcast})
@@ -42,7 +42,7 @@ Pikonet - rysunek z innymi urządzeniami i zasięgiem.
 	\end{itemize}
 	\item Podłączenia urządzeń (\emph{paging})
 	\begin{itemize}
-		\item \emph{Paging} wykonywany jest sekwencyjnie na wyznaczonych do tego urzadzeniach.
+		\item \emph{Paging} wykonywany jest sekwencyjnie na wyznaczonych do tego urzadzeniach. Służy m.in. do synchronizacji urządzeń w zakresie \textbf{czsu}, \textbf{fazy}, \textbf{aktualnego przeskoku częstotliwości}.
 		\item Urządzenie po wykonaniu pagingu jest w stanie CONNECTION (podłączenie do mastera) i staje się członkiem pikonetu.
 		\item Format:
 		\begin{itemize}
@@ -162,13 +162,13 @@ Przedział czasowy obejmuje więcej niż 1 pakiet, maksymalnie do 5 pakietów.
 \end{itemize}
 \subsection{Adaptacyjne przeskoki częstotliwości}
 \begin{itemize}
-	\item Polega na wykluczaniu częstotliwości (zakresów pasm) urządzeń uszkodzonych, takich, które bardzo często przekłamują pakiety.
+	\item Polega na wykluczaniu częstotliwości (zakresów pasm) urządzeń uszkodzonych, takich, które bardzo często przekłamują pakiety. Np. zakłócanych przez inną pobliską sieć \textit{pikonet}, albo źródło sygnału wi-fi.
 \end{itemize}
 
 \section{Pakiety}
 \includegraphics[width=9cm]{./wyklady/Rysunek05.pdf}
 \subsection{Nagłówek}
-Zabezpieczony przez x3 FEC1/3, czyli bity są trzykrotnie duplikowane.\\
+Zabezpieczony przez x3 FEC1/3, czyli bity są trzykrotnie duplikowane. \textit{(tryplikowane? XD)}\\
 \subsection{Kod dostępu}
 Preambuła: 0101 lub 1010\\
 Słowo synchronizacyjne:
