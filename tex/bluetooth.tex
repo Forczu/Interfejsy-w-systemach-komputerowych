@@ -1,7 +1,6 @@
 % !TeX spellcheck = pl_PL
-\part{Bluetooth}
-\section{Postawy BT}
-Pikonet - rysunek z innymi urządzeniami i zasięgiem.
+\newpage
+\section{Bluetooth}
 \subsection{Właściwości}
 \begin{itemize}
 	\item Bezprzewodowy system komunikacyjny
@@ -52,7 +51,7 @@ Pikonet - rysunek z innymi urządzeniami i zasięgiem.
 		\item Niewykryte urządzenie pozostaje poza zasięgiem.
 	\end{itemize}
 \end{enumerate}
-\section{Przeskoki częstotliwości}
+\subsection{Przeskoki częstotliwości}
 \begin{itemize}
 	\item Łącze zostaje podzielone na sloty o czasie trwania $ 625 \mu s $
 	\item Przesyłanie informacji parami:
@@ -71,20 +70,20 @@ Pikonet - rysunek z innymi urządzeniami i zasięgiem.
 	\item Ograniczone dostępne moce: 1; 2.5; 100 [mW].
 \end{itemize}
 
-\section{Parametry}
-\subsection{Moc nadajników BT}
+\subsection{Parametry}
+\subsubsection{Moc nadajników BT}
 \begin{itemize}
 	\item Klasa 1: 100 mW (20 dBm), zasięg $ \approx 100 $ m
 	\item Klasa 2: 2.5 mW (4 dBm), zasięg $ \approx 10 $ m
 	\item Klasa 3: 1 mW (0 dBm), zasięg $ \approx 1 $ m
 \end{itemize}
-\subsection{Modulacja}
+\subsubsection{Modulacja}
 GFSK (Gaussian Frequency Shift Keying)\\
 \begin{itemize}
 	\item Stan logiczny 1 - przesunięcie częstotliwości o 115 kHz w górę względem nośnej
 	\item Stan logiczny 0 - przesunięcie częstotliwości o 115 kHz w dół względem nośnej
 \end{itemize}
-\subsection{Szybkość bitowa}
+\subsubsection{Szybkość bitowa}
 \begin{itemize}
 	\item 1 Mb/s dla GFSK (możliwa do osiągnięcia szybkość „średnia”: 723,4 kb/s)
 	\item 2 Mb/s dla pi/4-QPSK
@@ -92,15 +91,15 @@ GFSK (Gaussian Frequency Shift Keying)\\
 \end{itemize}
 
 
-\section{Adres urządzenia}
-\subsection{Format}
+\subsection{Adres urządzenia}
+\subsubsection{Format}
 \begin{tabular}{|c|c|c|}
 	\hline Lower Address Part & Non-significant Address Part & Upper Address Part \\ 
 	\hline 24 bity & 16 bity & 8 bitów \\ 
 	\hline 
 \end{tabular}\\
 Łączenie 48 bitów.
-\subsection{Właściwości}
+\subsubsection{Właściwości}
 \begin{itemize}
 	\item Adres BT jest unikalny globalnie
 	\item Oprócz adresu BT wyróżnia się:
@@ -114,22 +113,22 @@ GFSK (Gaussian Frequency Shift Keying)\\
 	\end{itemize}
 \end{itemize}
 
-\section{Transmisja}
-\subsection{Transmisja synchroniczna}
+\subsection{Transmisja}
+\subsubsection{Transmisja synchroniczna}
 \includegraphics[width=9cm]{./wyklady/Rysunek02.pdf}\\\\
 Dla każdego pakietu jest przewidziany dokładnie taki sam przedział czasu
-\subsection{Transmisja asynchroniczna}
+\subsubsection{Transmisja asynchroniczna}
 \includegraphics[width=9cm]{./wyklady/Rysunek03.pdf}\\\\
 Przedział czasowy obejmuje więcej niż 1 pakiet, maksymalnie do 5 pakietów.
 
-\section{Rodzaje danych i łącz}
-\subsection{Rodzaje danych transmitowanych w BT}
+\subsection{Rodzaje danych i łącz}
+\subsubsection{Rodzaje danych transmitowanych w BT}
 \begin{itemize}
 	\item Asynchroniczne
 	\item Synchroniczne
 	\item Izochroniczne
 \end{itemize}
-\subsection{Rodzaje łącz}
+\subsubsection{Rodzaje łącz}
 \begin{itemize}
 	\item Łącze ACL (bezpołączeniowe - \emph{Connectionless})
 	\begin{itemize}
@@ -148,10 +147,10 @@ Przedział czasowy obejmuje więcej niż 1 pakiet, maksymalnie do 5 pakietów.
 	\end{itemize}
 \end{itemize}
 
-\section{Przeskoki częstotliwości}
+\subsection{Przeskoki częstotliwości}
 \emph{Frequency Hopping}
 \includegraphics[width=9cm]{./wyklady/Rysunek04.pdf}
-\subsection{Właściwości}
+\subsubsection{Właściwości}
 \begin{itemize}
 	\item Występują pomiędzy szczelinami czasowymi
 	\item Sekwencja przeskoków musi być znana wszystkim urządzeniom w zasięgu pikonetu
@@ -160,16 +159,16 @@ Przedział czasowy obejmuje więcej niż 1 pakiet, maksymalnie do 5 pakietów.
 	\item Zastosowanie pesudo-losowych sekwencji przeskoków - zmniejsza to ryzyko zakłóceń.
 	\item Im krótsze tym szybsza jest retransmisja informacji.
 \end{itemize}
-\subsection{Adaptacyjne przeskoki częstotliwości}
+\subsubsection{Adaptacyjne przeskoki częstotliwości}
 \begin{itemize}
 	\item Polega na wykluczaniu częstotliwości (zakresów pasm) urządzeń uszkodzonych, takich, które bardzo często przekłamują pakiety. Np. zakłócanych przez inną pobliską sieć \textit{pikonet}, albo źródło sygnału wi-fi.
 \end{itemize}
 
-\section{Pakiety}
+\subsection{Pakiety}
 \includegraphics[width=9cm]{./wyklady/Rysunek05.pdf}
-\subsection{Nagłówek}
+\subsubsection{Nagłówek}
 Zabezpieczony przez x3 FEC1/3, czyli bity są trzykrotnie duplikowane. \textit{(tryplikowane? XD)}\\
-\subsection{Kod dostępu}
+\subsubsection{Kod dostępu}
 Preambuła: 0101 lub 1010\\
 Słowo synchronizacyjne:
 \begin{itemize}
@@ -179,14 +178,14 @@ Słowo synchronizacyjne:
 Postambuła: 0101 lub 1010\\
 Pakiety ID nie mają pola postambuły
 
-\section{Zegar}
+\subsection{Zegar}
 \begin{itemize}
 	\item CLKN - natywny (własny) urządzenia (\emph{native clock})
 	\item CLKE - przybliżony (\emph{estimated clock})
 	\item CLK - systemowy oparty na zegarze natywnym mastera (\emph{master clock})
 \end{itemize}
 
-\section{Inquiry i Paging}
+\subsection{Inquiry i Paging}
 \includegraphics[width=8cm]{./wyklady/Rysunek06.pdf}
 \includegraphics[width=8cm]{./wyklady/Rysunek07.pdf}\\
 \includegraphics[width=8cm]{./wyklady/Rysunek08.pdf}

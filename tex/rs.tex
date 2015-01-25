@@ -13,19 +13,20 @@
 			\item Równoległa - przesyłanie bitów słowa po przyporządkowanej każdemu bitowi linii transmisyjnej (bity przesyłane równolegle, słowa przesyłane szeregowo).\\
 			\includegraphics[width=9cm]{./wyklady/RS232_2_2.pdf}
 		\end{itemize}
+	\newpage
 		\subsubsection{Definicje danych}
 		\begin{itemize}
 			\item "0" - 0V
 			\item "1" - 12V
 			\item Czas transmisji jednego bitu T - stały, nie większy niż czas propagacji.
-			\item $\frac{1}{T}$ - liczba bitów przesyłana w jednostce czasu. Standardowe wartości 110, 150, 300, 600, 1200, 2400 ... [b/s]
+			\item $\frac{1}{T}$ - liczba bitów przesyłana w jednostce czasu. Standardowe wartości 110, 150, 300, 600, 1200, 2400 ... 19200 [b/s]
 			\item Impulsy rozeznające - sprawdzają stan bitów odebranych (następują co T, które narzuca nadawca).
 		\end{itemize}
 		\subsubsection{Jednostka informacyjna - znak}
 		Jednostka informacji o ściśle określonym formacie. Odbiorca dysponuje impulsami próbkującymi, które rozpoznają stan sygnału (odpytują).\\
 		\includegraphics[width=10cm]{./wyklady/RS232_3_2.jpg}\\
 		\subsubsection{Przekazywanie konfiguracji}
-			Aby nadawca i odbiorca mogli się porozumieć i interpretować znaki w ten sam sposób, muszą zostać tak samo skonfigurowane. Innymi słowy, muszą posiadać ten sam takt nadawania.\\Metody:\\
+			Aby nadawca i odbiorca mogli się porozumieć i interpretować znaki w ten sam sposób, muszą zostać tak samo skonfigurowane. Innymi słowy, muszą posiadać ten sam takt nadawania.\\Metody:
 			\begin{itemize}
 				\item dodatkowe łącze
 				\item jako element konfiguracji (wykorzystanie generatorów kwarcowych, synchronizm częstotliwościowy)
@@ -34,12 +35,12 @@
 		\subsubsection{Definicja znaku}
 		\begin{itemize}
 			\item \textbf{START} - bit kontrolny, znacznik początku (SOF - Start Of Frame) - jałowy z punktu widzenia przesyłanej informacji i służący jedynie w celu synchronizacji. START zapewnia $\frac{n}{2}$ jako stan licznika (fazy impulsu).
-			\item \textbf{DANE} - 7-8 bitów (kiedyś też 5-6, obecnie już nieużywane), które są treścią znaku, począwszy od bitu najmniej znaczącego (LSB - least significant bit). Tym bitem jest B0.
+			\item \textbf{DANE} - 7-8 bitów (kiedyś też 5-6, obecnie już nieużywane), które są treścią znaku, począwszy od bitu najmniej znaczącego (LSB - \emph{least significant bit }). Tym bitem jest B0.
 			\item \textbf{PARITY} – bit kontroli poprawności znaku, służy jako zabezpieczenie informacji. Może, ale nie musi występować. Jednak decyzja o jego występowaniu ma charakter globalny - dotyczy każdego znaku w danej transmisji. Jego stan określa zasada:
 			\begin{itemize}
-				\item Kontrola parzystości (Even parity) - polega na sprawdzeniu liczby jedynek na polu danych i ustawieniu bitu kontrolnego na "1" w przypadku nieparzystej liczby jedynek lub na "0" w przypadku parzystej (uzupełnienie do parzystości).
-				\item Kontrola nieparzystości (Odd parity) - polega na sprawdzeniu liczby zer na polu danych i ustawieniu bitu kontrolnego na "1" w przypadku nieparzystej liczby zer lub na "0" w przeciwnym przypadku.
-				\item Brak kontroli (None)
+				\item Kontrola parzystości (\emph{Even parity}) - polega na sprawdzeniu liczby jedynek na polu danych i ustawieniu bitu kontrolnego na "1" w przypadku nieparzystej liczby jedynek lub na "0" w przypadku parzystej (uzupełnienie do parzystości).
+				\item Kontrola nieparzystości (\emph{Odd parity}) - polega na sprawdzeniu liczby zer na polu danych i ustawieniu bitu kontrolnego na "1" w przypadku nieparzystej liczby zer lub na "0" w przeciwnym przypadku.
+				\item Brak kontroli (\emph{None})
 			\end{itemize}
 			Ten bit kontroli pozwala wykryć przekłamanie w transmisji danych pod warunkiem, ze liczba przekłamań jest nieparzysta.
 			\item \textbf{STOP} – 1 lub 2 bity kontrolne, znacznik końca znaku.
@@ -74,10 +75,10 @@
 			\item \textbf{Półdupleksowa} (HDX) - dwukierunkowa, niejednoczesna (w danej chwili czasu jedno urządzenia jest nadajnikiem, a drugie odbiornikiem). Zakłada istnienie tylko jednej linii transmisyjnej. Wymaga konfiguracji (informacja, kto kiedy nadaje).
 			\item \textbf{Dupleksowa} (FDX) - dwukierunkowa, jednoczesna (w danej chwili czasu oba urządzenia mogą spełniać rolę nadajnika lub odbiornika). Brak konieczności sprawdzania czy łącze jest wolne oraz mechanizmu rezerwacji łącza.
 		\end{itemize}
+	\newpage
 	\subsection{Komunikacja DTE-DCE - sygnały w porcie RS-232}
 	Komunikacja dwóch stacji DTE przez komutowane łącze telefoniczne.\\
 	\includegraphics[width=12cm]{./wyklady/RS232_6_1.pdf}\\
-	\begin{table}[h]
 		\begin{tabular}{|c|c|c|c|c|}
 			\hline
 			\multicolumn{5}{|c|}{\textbf{Urządzenia}}                        \\ \hline
@@ -95,7 +96,6 @@
 			DCD & Data Carrier Detected        & Wykrycie nośnej    & Linia kontrolna   & Wejście	\\ \hline
 			SG  & Signal Ground                & Masa sygnałowa     & Masa				& ------	\\ \hline
 		\end{tabular}
-	\end{table}
 		\subsubsection{Fazy pracy układu}
 		\begin{itemize}
 			\item Tryb nawiązywania połączenia
@@ -106,9 +106,12 @@
 			\item Linie danych: TxD, RxD
 			\item Linie kontrolne: DTR, DSR, RTS, CTS, RI, DCD
 		\end{itemize}
+	
+	\newpage
 	\subsection{Połączenie bezmodemowe DTE-DTE}
 	Przykład połączenia dla transmisji dupleksowej.\\
 	\includegraphics[width=9cm]{./wyklady/RS232_7_1.pdf}
+	\vspace{-40pt}
 	\begin{itemize}
 		\item PG, SG - masa
 		\item TxD, RxD - dane
@@ -116,7 +119,7 @@
 	\end{itemize}
 	\subsection{Kontrola transmisji: handshake i protokół XON/XOFF}
 		\subsubsection{Handshake}
-		\includegraphics[width=9cm]{./wyklady/RS232_9_1.pdf}
+		\includegraphics[width=9cm]{./wyklady/RS232_9_1.pdf}\vspace{-10pt}
 		\begin{itemize}
 			\item DTR = 1 - zgoda na nadawanie
 			\item DTR = 0 - brak zgody na nadawanie
@@ -124,15 +127,19 @@
 			\item Analogiczna sytuacja, kiedy podłączone są RTS i CTS zamiast DTR i DSR. RTS wystawia informację, CTS sprawdza.
 		\end{itemize}
 		\subsubsection{Protokół XON/XOFF}
-		Występuje przy wymianie informacji w trybie dupleksowym. Umożliwia blokowanie i odblokowywanie transmisji danych. Np. drukarka - gdy skończy się papier w trakcie drukowania, przesył jest blokowany, Gdy użytkownik uzupełni papier, transmisja jest wznawiana. Taki protokół XON/OFF nazywany jest programowym (software XON/OFF). {\small Rozwiązanie hardware to transmisja półdupleksowa za pośrednictwem sygnałów w kanale wtórnym.}\\
-		\includegraphics[width=9cm]{./wyklady/RS232_9_2.pdf}
-		\begin{itemize}
-			\item XON – ASCII 19 (CTRL-S)
-			\item XOFF – ASCII 17 (CTRL-Q)
-		\end{itemize}
+			Występuje przy wymianie informacji w trybie dupleksowym. Umożliwia blokowanie i odblokowywanie transmisji danych. Np. drukarka - gdy skończy się papier w trakcie drukowania, przesył jest blokowany, Gdy użytkownik uzupełni papier, transmisja jest wznawiana. Taki protokół XON/OFF nazywany jest programowym (software XON/OFF). {\small Rozwiązanie hardware to transmisja półdupleksowa za pośrednictwem sygnałów w kanale wtórnym.}\\
+			\begin{wrapfigure}{l}{9cm}
+				\vspace{-20pt}
+				\includegraphics[width=9cm]{./wyklady/RS232_9_2.pdf}
+			\end{wrapfigure}
+			\begin{itemize}
+				\item XON – ASCII 19 (CTRL-S)
+				\item XOFF – ASCII 17 (CTRL-Q)
+			\end{itemize}
+	\clearpage
 	\subsection{Parametry elektryczne sygnałów}
 	Poniżej przestawiono schemat "obwodu stykowego" złożonego ze źródła sygnału, toru transmisyjnego i odbiornika. Parametry zdefiniowano przy założeniu, że szybkość transmisji nie przekracza 20 kbd.
-	\includegraphics[width=9cm]{./wyklady/RS232_10_1.jpg}\\
+	\includegraphics[width=9cm]{./wyklady/Rysunek02.pdf}\\
 	Na rysunku powyżej: kiloomy oraz mikrosekundy.\\
 	Wada: jest to obwód represyjny, da się go silnie zakłócić poprzez różnicę potencjałów pomiędzy masami.
 	\subsection{Standardy RS-423, RS-422, RS-485}
@@ -153,7 +160,7 @@
 			\item szybkość do 10 Mbd (przy zasięgu do 100 m)
 			\item zasięg do 1200 m (przy szybkości 100 kbd)
 		\end{itemize}
-		Wykorzystuje pełną symetryzację łącza, zapewnia szybka transmisję w obecności zakłóceń. Standardy RS-423 oraz RS-485 określają symetryczny, zrównoważony system transmisji danych złożony z:
+		Wykorzystuje pełną symetryzację łącza, zapewnia szybką transmisję w obecności zakłóceń. Standardy RS-423 oraz RS-485 określają symetryczny, zrównoważony system transmisji danych złożony z:
 		\begin{itemize}
 			\item różnicowego nadajnika
 			\item dwuprzewodowego zrównoważonego toru przesyłowego
@@ -165,14 +172,14 @@
 		\includegraphics[width=10cm]{./wyklady/RS232_13_1.jpg}
 	\subsection{Systemy komunikacyjne oparte na łączu znakowym}
 		\subsubsection{System oparty na szeregowym łączu znakowym}
-		Podłączenie urządzenia RS-232 do portu COM z pom. int. RS-485\\
+		Podłączenie urządzenia RS-232 do portu COM z pom. int. RS-485\\\\
 		\includegraphics[width=9cm]{./wyklady/RS232_14_1.jpg}\\
-		R\tiny T\normalsize - Rezystory zabezpieczające przed niekorzystnym odbiciem fali (tzw. Terminatory).\\
+		$ R_T $ - Rezystory zabezpieczające przed niekorzystnym odbiciem fali (tzw. Terminatory).\\
 		\textbf{Problem}: dostęp do magistrali kontrolera i urządzeń systemu\\
 		\textbf{Rozwiązanie}: Implementacja protokołu komunikacyjnego (warstwa łącza danych). Komputer zarządza innymi urządzeniami w całym systemie. Do zbudowania tego wystarczają proste przejściówki do zmian sygnałów.\\
 		\textbf{Komunikacja}:
 		\begin{itemize}
-			\item Selekcja urządzenia kontrolującego (master) - generuje on rozgłoszenie (broadcast) do wszystkich urządzeń i zbiera dane.
+			\item Selekcja urządzenia kontrolującego (\emph{master}) - generuje on rozgłoszenie (\emph{broadcast}) do wszystkich urządzeń i zbiera dane.
 			\item Selekcja urządzenia odbierającego - konieczna gdy wiele urządzeń chce przesłać odpowiedź do mastera, co może powodować konflikt.
 			\begin{itemize}
 				\item nadanie identyfikatorów (adresacja urządzeń)
@@ -184,7 +191,7 @@
 		Koncentrator zawiera 4 klucze portu RS. Dostęp jest tylko do jednego wyjścia naraz.\\
 		\textbf{Kaskadowe połączenie} - przełącznik podłączony do przełącznika. Pojawia się problem wyboru drogi do urządzenia, która musi być znana. Koncentratory muszą mieć informacje o \textbf{mapie urządzeń}.
 	\subsection{System MODBUS}
-		Interfejs MODBUS został opracowany w firmie Modicon i jest przyjętym standardem w dla asynchronicznej, znakowej wymiany informacji pomiędzy urządzeniami systemów pomiarowo-kontrolnych.
+		Interfejs MODBUS został opracowany w firmie Modicon i jest przyjętym standardem dla asynchronicznej, znakowej wymiany informacji pomiędzy urządzeniami systemów pomiarowo-kontrolnych.
 		\subsubsection{Charakterystyka}
 			\begin{itemize}
 				\item Reguła dostępu do łącza na zasadzie Master-Slave. 
@@ -195,7 +202,7 @@
 			\end{itemize}
 		\includegraphics[width=9cm]{./wyklady/RS232_16_1.jpg}\\
 		\subsubsection{Transakcja}
-		Jedno urządzenie może inicjować transakcje (master), a pozostałe (slave) odpowiadają jedynie na zapytania mastera. Transakcja składa się z polecenia (query) wysyłanego z master do slave oraz z odpowiedzi (response) przesyłanej ze slave do master. Odpowiedź zawiera dane żądane przez master lub potwierdzenie realizacji jego połączenia. Wykrycie końca kończy fazę w której następuje przekazanie łącza masterowi.\\
+		Jedno urządzenie może inicjować transakcje (\emph{master}), a pozostałe (\emph{slave}) odpowiadają jedynie na zapytania mastera. Transakcja składa się z polecenia (\emph{query}) wysyłanego z master do slave oraz z odpowiedzi (\emph{response}) przesyłanej ze slave do master. Odpowiedź zawiera dane żądane przez master lub potwierdzenie realizacji jego połączenia. Wykrycie końca kończy fazę w której następuje przekazanie łącza masterowi.\\
 		\subsubsection{Format wiadomości}
 		Dotyczy zarówno poleceń jednostki nadrzędnej, jak i odpowiedzi podrzędnych.
 		\begin{itemize}
@@ -214,7 +221,7 @@
 		\subsubsection{Rodzaje transakcji}
 			\begin{itemize}
 				\item \textbf{Adresowana} - przeznaczona dla pojedynczej jednostki slave
-				\item \textbf{Rozgłoszeniowa} (broadcast) - wysyłana do wszystkich jednostek podrzędnych. Na ten rodzaj polecenia jednostki nie przesyłają odpowiedzi.
+				\item \textbf{Rozgłoszeniowa} (\emph{broadcast}) - wysyłana do wszystkich jednostek podrzędnych. Na ten rodzaj polecenia jednostki nie przesyłają odpowiedzi.
 			\end{itemize}
 		\subsubsection{Rodzaje odpowiedzi}
 			\begin{itemize}
@@ -247,12 +254,11 @@
 				\item Pole funkcji: dwa znaki w trybie ASCII
 				\item Podsumowując: wykorzystujemy 2 znaki heksadecymalne do przesyłu 1go znaku ASCII. Dzielimy ten na dwie części i przesyłamy w dwóch pakietach po 10 bitów.
 				\item Urządzenie po wykryciu znacznika początku sprawdza czy pole adresowe zawiera jego własny adres. Jeżeli tak, to odczytuje zawartość pola funkcji i pola danych.
-				\item Pole kontrolne LRC (1-bitowe) zabezpiecza część informacyjną. Sumuje cześć informacyjną bajtu i uzupełnia do 2.
+				\item Pole kontrolne LRC (\emph{Longitudinal Redundancy Check}), 1-bajtowe, zabezpiecza część informacyjną. Sumuje cześć informacyjną bajtu i uzupełnia do 2.
 				\item Ramka kończy się przesłaniem dwóch znaków: CR i LF.
-				\item Ramkę kończy przerwa czasowa trwająca co najmniej $3.5\times$(długości znaku)
-				\item Ramki muszą być przesyłane w postaci ciągłej, tzn. odstęp między kolejnymi znakami tworzącymi ramkę nie może być większy niż $1.5\times$(długości znaku).
+				\item Ramki muszą być przesyłane w postaci ciągłej, tzn. odstęp między kolejnymi znakami tworzącymi ramkę nie może być większy niż $1\;s$. W przeciwym razie urządzenie sygnalizuje błąd.
 			\end{itemize}
-			Stosowane jest zabezpieczenie części informacyjnej ramki kodem LRC (Longitudinal Redundancy Check).
+			Stosowane jest zabezpieczenie części informacyjnej ramki kodem LRC .
 		\subsubsection{Ramka w trybie RTU}
 			\includegraphics[width=10cm]{./wyklady/RS232_18_2.pdf}\\
 			W trybie RTU wiadomości zaczynają się odstępem czasowym trwającym minimum $3.5\times$(\emph{czas trwania pojedynczego znaku}), w którym panuje cisza na łączu (można to zrealizować np. przez odmierzanie czasu trwania znaku przy zadanej na łączu szybkości bodowej).
@@ -287,4 +293,3 @@
 				\item odniesiona do masy dla RS-232
 			\end{itemize}
 		\end{itemize}
-	\subsection{Kontroler RS-232 w komputerze PC}

@@ -1,6 +1,7 @@
 % !TeX spellcheck = pl_PL
-\newcommand\XOR{\mathbin{\char`\^}}
 
+\newcommand\XOR{\mathbin{\char`\^}}
+\newpage
 \section{IEEE-488 and SCPI standards}
 Standard IEEE-488, ogłoszony w 1973 roku, określa organizację systemów ATE (\emph{Automatic Test Equipment}), przeznaczonych do akwizycji danych i sterowania urządzeń w obiektach skupionych lub rozproszonych. Te mają zastosowanie w testowaniu wyborów, pomiarach laboratoryjnych, sterowaniu procesami przemysłowymi itp.\\
 Urządzenia systemu ATE wyposażone są w układ komunikacyjny (interfejs), który umożliwia wymianę danych za pomocą łącza interfejsowego. Pracą systemu zarządza kontroler, który jest nadrzędny w stosunku do pozostałych urządzeń, które pełnią rolę przyrządów wykonawczych.\\
@@ -25,6 +26,7 @@ Protokół systemu ATE można podzielić na 3 poziomy:
 % ==============================================================
 % --- Standard IEEE-488
 % ==============================================================
+\newpage
 \subsection{IEEE-488 (GPIB)}
 Standard GPIB ogłoszono w 1979 roku, jest definicją warstwy fizycznej oraz łącza danych dla systemów pomiarowo-kontrolnych, przeznaczonych do:
 \begin{itemize}
@@ -47,7 +49,7 @@ Komunikacją zarządza kontroler, który konfiguruje system do komunikacji, obs�
 Można tak podzielić każde urządzenie wykonawcze. Część interfejsowa to zdolność urządzenia do wymiany komunikatów z innymi elementami systemu, a urządzenie właściwe wykonuje podstawowe funkcje urządzenia.\\
 \includegraphics[width=8cm]{./wyklady/IEEE488_SCPI_2_2.pdf}
 
-
+\newpage
 \subsubsection{Magistrala}
 \begin{wrapfigure}{r}{0.5\textwidth}
 	\vspace{0pt}
@@ -91,7 +93,7 @@ Można tak podzielić każde urządzenie wykonawcze. Część interfejsowa to zd
 		\item NDAC (\emph{Not Data Accepted} – wyjście or wejście) - przyjęcia bajtu na magistrali nie zostało potwierdzone przez wszystkich odbiorców
 	\end{itemize}
 \end{itemize}
-
+\newpage
 \subsubsection{Funkcje interfejsowe}
 Każda funkcja reprezentuje pewną określoną zdolność urządzenia jako jednostki systemu GPIB.\\
 Ciekawostka: każda funkcja implementowana jest tylko w tych urządzeniach, które jej potrzebują.
@@ -120,7 +122,7 @@ Komunikaty zdalne dzielimy na:
 	\end{itemize}
 	\item jednoliniowe: przenoszone przez wydzieloną linię sterującą
 \end{itemize}
-
+\newpage
 \textbf{Podział funkcjonalny komunikatów}:
 \begin{itemize}
 	\item UC (\emph{Universal Commands}) - rozkazy uniwersalne, przeznaczone dla wszystkich urządzeń w systemie
@@ -181,6 +183,7 @@ Ogółem komunikacja pomiędzy kontrolerem a urządzeniem polega na:
 	\item Urządzenie jest zobowiązane odesłać odpowiedź tylko na wcześniej odebrane zapytanie (przez kontroler)
 	\item Odpowiedzi na zapytania są odsyłane w kolejności odpowiadającej odebranym zapytaniom
 \end{enumerate}
+\newpage
 \textbf{Reguły protokołu komunikacyjnego (\emph{Controller responsibility})}
 \begin{enumerate}
 	\item Kontroler nie może odebrać odpowiedzi na zadane zapytanie, zanim nie zakończy rozpoczętego komunikatu programowego.
@@ -256,7 +259,7 @@ Typy parametrów w komunikatach programowych i odpowiedziach zostały określone
 Urządzenie kontrolowane przez rozkazy SCPI\\
 \includegraphics[width=10cm]{./wyklady/IEEE488_SCPI_16_1.pdf}
 
-
+\newpage
 \subsubsection{System rejestrów statusu}
 Urządzenie przechowuje informację o stanie w tzw. SRS, który ma strukturę hierarchiczną, złożoną z 5 grup rejestrowych. Każda z nich składa się z rejestru zdarzeń i rejestru maski.
 \begin{enumerate}
@@ -269,7 +272,7 @@ Urządzenie przechowuje informację o stanie w tzw. SRS, który ma strukturę hi
 \includegraphics[width=9cm]{./wyklady/IEEE488_SCPI_32_1.pdf}\\\\
 Minimal SCPI status system\\
 \includegraphics[width=9cm]{./wyklady/IEEE488_SCPI_33_1.pdf}
-
+\newpage
 \subsubsection{Synchronizacja urządzeń z aplikacją w standardzie SCPI}
 Zadaniem synchronizacji jest zapewnienie właściwej sekwencji operacji urządzeń w systemie.\\
 W urządzeniach SCPI synchronizacja aplikacji sterującej z operacjami wykonywanymi przez urządzenie oparta jest na rozkazach *OPC, *OPC? oraz *WAI.\\
@@ -279,11 +282,11 @@ Dzielimy je na:
 	\item Sekwencyjne - wykonywane jeden po drugim w kolejności wprowadzania ich do przyrządu.
 	\item Nakładające się - możliwe wykonywanie wielu rozkazów jednocześnie.
 \end{itemize}
-\includegraphics[width=7cm]{./wyklady/IEEE488_SCPI_37_1.pdf}\\\\
+\includegraphics[width=11cm]{./wyklady/IEEE488_SCPI_37_1.pdf}\\\\
 \textbf{Rozkazy *OPC, *OPC? oraz *WAI}\\
-\includegraphics[width=7cm]{./wyklady/IEEE488_SCPI_38_1.pdf}
-
+\includegraphics[width=11cm]{./wyklady/IEEE488_SCPI_38_1.pdf}
+\newpage
 \subsubsection{Wyzwalanie operacji (device trigger)}
 Standard SCPI umożliwia uzależnienie wyzwolenia od spełnienie szeregu warunków i wystąpienia róznych zdarzeń (elastyczność).\\
 Typowy układ wyzwalania operacji (trigger circuit in HP-34401A multimeter)\\
-\includegraphics[width=7cm]{./wyklady/IEEE488_SCPI_39_1.pdf}
+\includegraphics[width=10cm]{./wyklady/IEEE488_SCPI_39_1.pdf}

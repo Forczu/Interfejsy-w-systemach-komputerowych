@@ -92,10 +92,11 @@
 	{\small \emph{Transakcje izochroniczne nie są powtarzane w przypadku błędu transmisji.}}
 	
 	\item \textcolor{tak}{Hub nie dopuszcza ruchu full speed do portów, do których są podłączone urządzenia low speed.} \\
-	{\small \emph{Tak, urządzenie lowspeed blokuje możliwość włączenia fullspeed na całym porcie.}}
+	{\small \emph{Tak, urządzenie lowspeed blokuje możliwość włączenia fullspeed na swoim porcie.\\ Urządzenie lowspeed jest obsługiwane z prędkością lowspeed, ale nie ma to wpływu na prędkość pozostałych urządzeń w hubie. Pakiety wysyłane do takiego urządzenia są po prostu poprzedzane specjalną preambułą}}
 	
 	\item \textcolor{nie}{Reset portu USB polega na rekonfiguracji hosta, po której host zapisuje tablicę deskryptorów do urządzenia podłączonego do tego portu.} \\
-	{\small \emph{Reset portu USB polega na rekonfiguracji urządzenia. W następującej procedurze enumeracji między innymi dochodzi do odczytu tablicy deskryptorów z urządzenia przez host.}}
+	{\small \emph{Reset portu USB polega na rekonfiguracji urządzenia. W następującej procedurze enumeracji między innymi dochodzi do odczytu tablicy deskryptorów z urządzenia przez host.\\
+	Reset polega na przywróceniu urządzenia do stanu domyślnego. Potem host rozpoczyna konfigurację urządzenia, najpierw odczytując deskryptor urządzenia, potem nadając mu unikatowy adres, a następnie odczytując tablicę deskryptorów, dzięki którym wie, jak ma to urządzenie skonfigurować.}}
 	
 	\item \textcolor{nie}{Typowa transakcja USB składa się z pakietów żądania i odpowiedzi, z których każdy potwierdzany jest osobnym potwierdzeniem.} \\
 	{\small \emph{Typowa transakcja USB składa sie z pakietów token, data i handshake. Transakcje izochroniczne nie są potwierdzane.}}
@@ -107,7 +108,8 @@
 	{\small \emph{Podłączyć je można tylko korzystając z zasilania zewnętrznego lub hybrydowego. Przy zasilaniu magistralowym zabraknie zasilania już na drugim hubie. Co więcej, należy mieć na uwadze maksymalne dopuszczalne opóźnienie sygnału, które przy przejściu przez 5 hubów jest osiągane - 350ns. Urządzenia podpięte do 5'tego huba mogą nie działać poprawnie.}}
 	
 	\item \textcolor{nie}{Mechanizm data toggle w USB służy do przywracania synchronizacji pomiędzy hostem i urządzeniem, utraconej na skutek wystąpienia błędów w pakietach danych.} \\
-	{\small \emph{Mechanizm data toggle zabezpiecza przed utratą synchronizacji pomiędzy hostem i urządzeniem na skutek błędu w potwierdzeniu odsyłanym przez odbiorcę.}}
+	{\small \emph{Mechanizm data toggle przywraca synchronizację pomiędzy hostem i urządzeniem na skutek błędu w potwierdzeniu odsyłanym przez odbiorcę.\\
+	Transakcja jest powtarzana w przypadku błędnego odebrania pakietu danych (odbiorca wysyła wówczas pakiet NAK handshake). Gdy wystąpiło błędne odebranie potwierdzenia ACK handshake przez nadawcę, dane wysyłane są jeszcze raz (wówczas odbiorca je odrzuca i wysyła pakiet ACK handshake) }}
 	
 	\item \textcolor{tak}{Host kontroler USB komunikuje się z interfejsem magistrali USB urządzenia peryferyjnego za pomocą fizycznego kanału komunikacyjnego.} \\
 	{\small \emph{Tak, używamy kabelka.}}
@@ -131,7 +133,7 @@
 	{\small \emph{Takie czary dopiero w USB 2.0}}
 	
 	\item \textcolor{nie}{W przypadku połączenia USB HighSpeed wykonywane jest podparcie linii D- do Vcc za pośrednictwem rezystora 1,5k.} \\
-	{\small \emph{Po podłączeniu urządzenia High Speed wpierw jest ono identyfikowane jako Full Speed, więc wykonywane jest podparcie linii D+ do Vcc za pośrednictwem rezystora 1,5k. Następnie, poprzez chirp ("dwierkanie") host i urządzenie ustalają, czy możliwa jest komunikacja w trybie High Speed. Jeśli tak, usuwane jest podparcie przez rezystor, a obwód zamykany jest terminatorami.}}
+	{\small \emph{Po podłączeniu urządzenia High Speed wpierw jest ono identyfikowane jako Full Speed, więc wykonywane jest podparcie linii D+ do Vcc za pośrednictwem rezystora 1,5k. Następnie, poprzez chirp ("ćwierkanie") host i urządzenie ustalają, czy możliwa jest komunikacja w trybie High Speed. Jeśli tak, usuwane jest podparcie przez rezystor, a obwód zamykany jest terminatorami.}}
 	
 	\item \textcolor{nie}{W kodowaniu NRZI co sześć jedynek jest wstawiany bit synchronizacji "0".} \\
 	{\small \emph{Pomieszane pojęcia. W kodowaniu NRZI nie występuje dodawanie bitu synchronizacji. Proces ten nazywa się bit stuffing. Zdanie było by poprawne, gdyby brzmiało np. W kodowaniu NRZI z bit stuffingiem co sześć.}}
@@ -162,32 +164,34 @@
 		\item \textcolor{tak}{Przełączanie pakietów danych} \\
 		{\small \emph{Tzw. Data Toggle}}
 		
-		\item \textcolor{tak}{Wykrywanie braku aktywności na linii danych;}
+		\item \textcolor{tak}{Wykrywanie braku aktywności na linii danych}
+		{\small \emph{Tak, po 3 ms braku aktywności USB przechodzi w tryb zmniejszonego poboru prądu.}}
 		
 		\item \textcolor{nie}{Zabezpieczenie znacznika SOF lub EOF} \\
-		{\small \emph{Reakcją jest natomiast objęte wystąpienie fałszywego znacznika kooca pakietu (false EOP)}}
+		{\small \emph{Reakcją jest natomiast objęte wystąpienie fałszywego znacznika koń ca pakietu (false EOP)}}
 		
 		\item \textcolor{nie}{kodowanie LRC} \\
 		{\small \emph{Pakiety zabezpieczone są kodowaniem CRC.}}
 	\end{itemize}
 	
-	\item \textcolor{nie}{Wydajnośd dolnego portu (USB 2.0) wynosi 500mA.} \\
+	\item \textcolor{nie}{Wydajność dolnego portu (USB 2.0) wynosi 500mA.} \\
 	{\small \emph{Nie wiadomo. Zasilany Hub może wystawić te 500mA, ale niezasilany już tylko 100mA}}
 	
 	\item \textcolor{tak}{USB 2.0 ma parę przewodów ekranowanych.} \\
 	{\small \emph{Taki upgrade.}}
 	
 	\item \textcolor{nie}{W kodowaniu NZR wstawia się dodatkowe bity synchroniczne.} \\
-	{\small \emph{Dodatkowe bity synchroniczne wstawia się w kodowaniu NRZI}}
+	{\small \emph{W USB dodatkowe bity synchroniczne wstawia się przy kodowaniu NRZI}}
 		
 	\item \textcolor{nie}{Urządzenie USB 2.0 może zasygnalizować swoją niegotowość do zapisu danych z szybkością High-Speed wysyłając pakiet PING-NYET.} \\
-	{\small \emph{Wychodzi na to, że niegotowość zgłasza samym NYET? Pyta – PING, odpowiada (niegotowość) NYET. I Tak cały czas, chyba że dostanie ACK. ACK – wykonanie transakcji OUT. NYRT – host kontynuuje wysyłanie zapytań PING}}
+	{\small \emph{Wychodzi na to, że niegotowość zgłasza samym NYET? Pyta – PING, odpowiada (niegotowość) NYET. I tak cały czas, chyba że dostanie ACK. ACK – wykonanie transakcji OUT. NYET – host kontynuuje wysyłanie zapytań PING}}
 	
 	\item \textcolor{nie}{W systemie deskryptorów urządzenia USB może wystąpić kilka deskryptorów urządzenia, konfiguracji, interfejsów I punktów końcowych.} \\
 	{\small \emph{Deskryptor urządzenia może być jeden. Innych – konfiguracji, interfejsu, końcowych może być więcej.}}
 	
 	\item \textcolor{tak}{Hub USB ma przerwaniowy punkt końcowy, który wykorzystuje do powiadamiania hosta o podłączeniu	urządzenia USB do któregoś z jego portów dolnych.} \\
-	{\small \emph{Chyba.}}
+	{\small \emph{Chyba.\\
+	Tak, jest to tzw. \emph{Hub change endpoint} (punkt końcowy "zmiany w hubie")}}
 	
 	\item \textcolor{nie}{Na wierzchołku wielopoziomowego, hierarchicznego układu deskryptorów USB znajduje się deskryptor konfiguracji.}
 	{\small \emph{Na szczycie znajduje się pojedynczy deskryptor urządzenia.}}
@@ -213,7 +217,7 @@
 	\item \textcolor{tak}{Po resecie w systemie FireWire (IEEE1394) wykonywane są procedury TREEID  i SELFID .} \\
 	{\small \emph{Po resecie następuje „TREEID” odpowiedzialne za ustalenie węzła głównego a później „SELFID” odpowiedzialne za rozesłanie adresów do poszczególnych portów.}}
 	
-	\item \textcolor{tak}{Transakcja dzielona IEEE1394 umożliwia wykorzystanie magistrali przez inne węzły po zakooczeniu subakcji żądania (request), a przed wysłaniem odpowiedzi (response).} \\
+	\item \textcolor{tak}{Transakcja dzielona IEEE1394 umożliwia wykorzystanie magistrali przez inne węzły po zakończeniu subakcji żądania (request), a przed wysłaniem odpowiedzi (response).} \\
 	{\small \emph{Tak, pomiędzy żądaniem a odpowiedzą magistrala jest wolna i można ją wykorzystać}}
 	
 	\item \textcolor{nie}{Transakcje asynchroniczne IEEE1394 są uprzywilejowane w stosunku do transakcji izochronicznych i w związku z tym zawsze wykonywane są na początku cyklu.} \\

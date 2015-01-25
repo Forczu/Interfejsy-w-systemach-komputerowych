@@ -1,4 +1,5 @@
 % !TeX spellcheck = pl_PL
+\newpage
 \section{IEEE-1394 (FireWire)}
 Cel projektantów FireWire: stworzenie interfejsu opartego na łączu szeregowym, który mógłby zastąpić równoległy port SCSI. Chodziło o zaprojektowanie bardzo szybkiej magistrali, dogodnej do transferu dużej ilości danych wymienianych z urządzeniami pamięci masowych oraz danych multimedialnych.
 
@@ -100,7 +101,7 @@ Po przeprowadzeniu konfiguracji węzły mogą rywalizować o dostęp do magistra
 \subsubsection{Współdzielenie magistrali}
 Transakcje asynchroniczne i izochroniczne współdzielą magistralę, ponieważ zarządzanie magistralą „stara się” umożliwić jednoczesne (quasi) jej wykorzystanie przez różne transfery.\\
 \includegraphics[width=10cm]{./wyklady/FIREWIRE_13_1.pdf}\\
-
+\newpage
 \subsection{Model komunikacyjny}
 Podstawowe funkcje warstw protokołu komunikacyjnego:
 \begin{itemize}
@@ -130,8 +131,9 @@ Podstawowe funkcje warstw protokołu komunikacyjnego:
 		\item wykonanie modyfikacji danych w urządzeniu (\emph{lock})
 	\end{itemize}
 	Inicjatorem transakcji jest warstwa aplikacji, która zleca jej wykonanie warstwie transakcji. Model wykonania transkcji wyróżnia inicjatora (\emph{requester}) oraz odbiorcę (\emph{responder}), a także dzieli transakcję na dwie operacje: wysłanie żądania i odebranie odpowiedzi.
+	\newpage
 	Transakcja asynchroniczna z potwierdzeniem żądania i odpowiedzi (pakietów).\\
-	\includegraphics[width=10cm]{./wyklady/FIREWIRE_8_1.pdf}
+	\includegraphics[width=8 cm]{./wyklady/FIREWIRE_8_1.pdf}
 	
 	\subsubsection{Warstwa połączeniowa}
 	Oparta na modelu żądanie-odpowiedź.
@@ -171,7 +173,7 @@ Podstawowe funkcje warstw protokołu komunikacyjnego:
 		\item Dla IEEE 1394a: S100, S200, S400
 		\item Większe szybkości istnieją dla nowszych standardów
 	\end{itemize}
-	
+	\newpage
 	\textbf{Transakcja asynchroniczna}\\
 	Jest to transakcja odczytu pomiędzy węzłami A i B (aplikacja w węźle B udostępnia dane tej w A).\\
 	\includegraphics[width=7cm]{./wyklady/FIREWIRE_17_1.pdf}
@@ -181,13 +183,16 @@ Podstawowe funkcje warstw protokołu komunikacyjnego:
 	\includegraphics[width=7cm]{./wyklady/FIREWIRE_19_1.pdf}\\\\
 	Pakiety w transakcjach izochronicznych.\\
 	Transakcje izochroniczne są jednokierunkowe i ograniczają się tylko do przekazania danych przez węzeł inicjujący transakcję. Odbiorca nie odsyła żadnej odpowiedzi. Znaczenie pól typowej transakcji izochronicznej:
+	\begin{wrapfigure}{l}{8cm}
+		\includegraphics[width=8cm]{./wyklady/FIREWIRE_20_1.pdf}
+	\end{wrapfigure}
 	\begin{itemize}
 		\item Numer kanału (Channel Number) – węzły uczestniczące w transakcji izochronicznej wykorzystują numer kanału jako adres,
 		\item Rodzaj transakcji(Transaction Type) – definiuje rodzaj przesyłanego pakietu jako „izochroniczny”.
 		\item Dane (Data) – przekazywane dane,
 		\item CRC – suma kontrolna.
 	\end{itemize}
-	\includegraphics[width=9cm]{./wyklady/FIREWIRE_20_1.pdf}
+	\clearpage
 	
 	
 \subsection{Interfejs fizyczny}
@@ -208,7 +213,7 @@ Interfejs sygnałowy jest bardzo rozbudowy, ponieważ służy nie tylko do trans
 
 \textbf{Uproszczony schemat układów interfejsowych}\\
 \includegraphics[width=9cm]{./wyklady/Rysunek01.pdf}
-
+\newpage
 \textbf{Odczytywanie stanu na linii połączeniowej} \\
 \begin{tabular}{|c|c|c|}
 	\hline Stan nadajnika nr 1 & Stan nadajnika nr 2 & Stan odczytywany na linii \\ 
@@ -266,8 +271,7 @@ Tylko szybkość S100 jest obligatoryjna dla węzłów. Pozostałe dwa mogą, al
 Informacja o możliwych szybkościach transmisji każdego węzła przekazywana jest do innych węzłów rezydujących na magistrali podczas konfiguracji (w szczególności informacja o maksymalnej szybkości transmisji przekazywana jest do węzła podłączonego do tego samego segmentu kabla).\\
 Zasadą jest nieprzekazywanie przez węzeł pakietów otrzymywanych z daną szybkością do podłączonych do niego węzłów o mniejszej szybkości.\\
 Węzeł może mieć kilka portów, przez niektóre porty może być połączony z węzłami o szybkości większej od podstawowej, a przez inne z węzłami o szybkości podstawowej (zatem możliwa jest sytuacja, gdy węzeł odbiera pakiet z szybkością większą od podstawowej, przekazywany przez inny "szybki" węzeł, ale nie będzie go mógł przekazać do węzłów "wolniejszych").\\
-\includegraphics[width=9cm]{./wyklady/FIREWIRE_31_1.pdf}
-
+\includegraphics[width=7cm]{./wyklady/FIREWIRE_31_1.pdf}
 
 \subsection{Dystrybucja zasilania}
 Węzły w systemie IEEE 1394 mogą być źródłem zasilania dla innych węzłów, korzystać z zasilania przez inne węzły lub też wykorzystywać zasilanie własne bez udostępniania go innym węzłom.\\
@@ -277,7 +281,7 @@ Informacje o zasilaniu przekazywane są na 3 bitowym polu \textbf{pwr} w pakieci
 \includegraphics[width=9cm]{./wyklady/FIREWIRE_32_1.pdf}
 \subsubsection{Dystrybucja zasilania}
 Jeden lub kilka węzłów może jednocześnie być źródłem zasilania. Ponieważ napięcia zasilania udostępniane przez węzły mogą się różnić konieczna jest dioda zapobiegająca przepływowi prądu zasilania do węzła o mniejszym napięciu.\\
-\includegraphics[width=9cm]{./wyklady/FIREWIRE_33_1.pdf}
+\includegraphics[width=8cm]{./wyklady/FIREWIRE_33_1.pdf}
 
 
 \subsection{Arbitraż}
@@ -303,10 +307,10 @@ Typ pakietu, który jest przygotowany do transmisji, determinuje rodzaj żądani
 	\item  arbitraż natychmiastowy (\emph{immediate arbitration service}) stosowany przy transmisji pakietu potwierdzenia
 	\item  arbitraż izochroniczny (\emph{isochronous arbitration service}) stosowany przy transmisji pakietu izochronicznego
 \end{itemize}
-\subsubsection{Przykładu arbitrażu}
-\includegraphics[width=9cm]{./wyklady/FIREWIRE_36_1.pdf}\\\\
-\includegraphics[width=9cm]{./wyklady/FIREWIRE_37_1.pdf}\\\\
-\includegraphics[width=9cm]{./wyklady/FIREWIRE_38_1.pdf}\\\\
+\subsubsection{Przykład arbitrażu}
+\includegraphics[width=8cm]{./wyklady/FIREWIRE_36_1.pdf}
+\includegraphics[width=8cm]{./wyklady/FIREWIRE_37_1.pdf}\\
+\includegraphics[width=9cm]{./wyklady/FIREWIRE_38_1.pdf}\\
 \subsubsection{Arbitraż asynchroniczny}
 \textbf{Zasada równych szans}
 \begin{itemize}
