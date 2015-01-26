@@ -208,6 +208,9 @@
 	\item \textcolor{nie}{Host może zasygnalizować chęć zapisu danych do urządzenia wysyłając pakiet NYET do urządzenia USB 2.0, które z kolei odpowiada pakietem PING jeśli jest gotowe do zapisu.} \\
 	{\small \emph{To host posyła PING - zapytanie, czy urządzenie jest gotowe do zapisu. Te odsyła ACK - gotowe, lub NYET - jeszcze nie.}}
 	
+	\item \textcolor{nie}{Czy w USB 2.0 liczba poziomów może być nieograniczona?} \\
+	{\small \emph{Nie ponieważ istnieją 2 typu złącz (typu A i typu B). Jeden z nich służy do wpinania do dolnych portów huba, drugi do górnego portu.}}
+	
 \end{itemize}
 
 \section{\textcolor{blue}{IEEE 1394 Firewire}}
@@ -233,7 +236,7 @@
 	{\small \emph{Tak, zawiera kod potwierdzenia i parzystość - patrz budowa pakietów}}
 	
 	\item \textcolor{nie}{W IEEE 1394 pakiet nowego cyklu (SCP) jest wysyłany ZAWSZE co 125us.} \\
-	{\small \emph{Izochroniczne owszem, ale asynchroniczne w ramach interwału równych szans, którego długość zależy od liczby węzłów asynchronicznych jednocześnie żądających dostępu do łącza.}}
+	{\small \emph{Izochroniczne owszem, ale asynchroniczne w ramach interwału równych szans, którego długość zależy od liczby węzłów asynchronicznych jednocześnie żądających dostępu do łącza. Oprócz tego, jeżeli jakaś transakcja asynchroniczna zacznie się tuż przed końcem rozesłania pakietu nowego cyklu SCP i będzie ona trwała dostatecznie długo, wtedy cykl ten zostanie wydłużony do skończenia tej transakcji. Następny cykl będzie wtedy krótszy, aby "wyrównać" przeciętny czas cyklu.}}
 	
 	\item \textcolor{tak}{IEEE 1394 posiada osobne pary ekranowanych przewodów (dla) TPA i TPB.} \\
 	{\small \emph{Tak wynika z przekroju budowy}}
@@ -263,13 +266,16 @@
 	{\small \emph{Przerwa pomiędzy subakcjami transakcji asynchronicznej może być regulowana.}}
 	
 	\item \textcolor{nie}{W przykładowym interfejsie IEEE 1394 występują tylko transakcje asynchroniczne. Jeżeli uczestnikiem (inicjatorem lub odbiorcą) transakcji asynchronicznej jest korzeń, to zawsze wygra on arbitraż jako pierwszy.} \\
-	{\small \emph{Zgodnie z zasadą "Bliżej korzenia, większe szanse" korzeń wygrywa wszystko. Jednak występują transakcje izochroniczne i asynchroniczne.}}
+	{\small \emph{Zgodnie z zasadą "Bliżej korzenia, większe szanse" korzeń wygrywa wszystko. Jednak jeżeli jest on odbiorcą, to węzeł będący jego nadawcą niekoniecznie musi wygrywać każdy arbitraż. Oprócz tego, występują transakcje izochroniczne i asynchroniczne.}}
 	
 	\item \textcolor{tak}{Kontroler cyklu musi być korzeniem w topologii IEE1394, bo musi wysyłać sygnał CSP.} \\
 	{\small \emph{Chyba.}}
 	
 	\item \textcolor{tak}{Węzeł w IEE1394, który zainicjalizował transakcje asynchroniczną może być odbiorcą transakcji zainicjalizowanej przez inny węzeł w tym samym Interwale Równych Szans.} \\
 	{\small \emph{Raczej tak, węzły asynchroniczne do wykonania transakcji nie wymagają alokacji pasma (subakcja). Also - zarządzanie magistralą stara się umożliwić jednoczesne jej wykorzystanie przez różne transfery.}}
+	
+	\item \textcolor{nie}{W systemie Firewire urządzenie, które jest najbliżej korzenia cały czas wygrywa arbitraż, blokując tym samym dostęp do magistrali innym urządzeniom na czas wykonania całego transefru, tzn. wszystkich transakcji w ramach transferu.} \\
+	{\small \emph{Nie, ponieważ po wykonaniu pierwszej transakcji węzeł cały czas wygrywający arbitraż będzie musiał czekać na nowy Interwał Równych Szans. Do tego czasu inne węzły realizują swoje transakcje.}}
 	
 \end{itemize}
 
@@ -298,11 +304,22 @@
 	
 \end{itemize}
 
+\section{\textcolor{blue}{RS-232}}
+\subsection*{Prawda/Fałsz}
+\begin{itemize}
+	\item \textcolor{nie}{Tryby HOLD, SNIFF oraz tryb PARK służą do usypiania Mastera.} \\
+	{\small \emph{To nieprawda. Tryby HOLD oraz SNIFF służą do usypiania Slave'a (HOLD musi cały czas podtrzymywać usypianie, SNIFF robi to jednorazowo. Tryby PARK służy do zmiany stanu Slave'a z aktywnego w zaparkowany.}}
+\end{itemize}
+
+
 \section{\textcolor{blue}{Inne}}
 \subsection*{Prawda/Fałsz}
 \begin{itemize}
 	\item \textcolor{nie}{Interfejsy USB, IEEE1394 oraz RS-232 udostępniają zasilanie systemowe i mają mechanizmy zarządzania zasilaniem.} \\
 	{\small \emph{USB i IEEE-1394 owszem, ale nie RS-232.}}
+	
+	\item \textcolor{nie}{Aby dołączyć do siecie pikonet w trakcie konfiguracji należy wykonać procedury TREEID oraz SELFID.}
+	{\small \emph{Pikonet jest związany z Bluetooth - aby dołączyć do sieci pikonet, należy wykonać procedury \textit{inquiring} oraz \textit{paging}. Procedury TREEID oraz SELFID są wykorzystywane podczas konfiguracji sieci IEEE 1394 Firewire.}}
 	
 \end{itemize}
 

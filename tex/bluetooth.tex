@@ -197,3 +197,35 @@ Slave może cały swój wysiłek poświęcić na to, by Master-senpai go zauważ
 Rezultatem jest wykrycie urządzenia i pobranie pewnych parametrów, jeżeli master jest chce.\\
 
 Paging: każdy kolejny pakiet jest szyfrowany innym kluczem.
+
+\subsection{Usypianie urządzeń}
+
+\begin{itemize}
+	\item \textbf{Tryb HOLD} - blokada łącza ACL na określony czas (zazwyczaj połączony z uśpieniem urządzenia).
+	Blokada ma charakter jednorazowy, ale może być powtarzana.
+	\item \textbf{Tryb SNIFF} - cykliczna blokada łącza ACL (zazwyczaj połączona z uśpieniem urządzenia)..
+	Kolejne blokady łącza są rozdzielone krótkimi interwałami nasłuchu, w których slave oczekuje na zaadresowane do niego pakiety.
+	\item \textbf{Stan PARK} - ogranicza do minimum komunikację stacji slave ze stacją master.
+	Łącze ACL do stacji slave zostaje trwale zablokowane, slave traci swój adres AM\_ADDR i przechodzi
+	do „zaparkowania”.
+\end{itemize}
+
+W trybach HOLD i SNIFF slave zachowuje AM\_ADDR i nie przestaje być członkiem pikonetu.Nadal aktywne pozostają łącza SCO i eSCO. \\
+W stanie PARK urządzenie otrzymuje dwa adresy zaparkowania, umożliwiające powrót do pikonetu.Podczas parkowania utrzymywana jest synchronizacja mastera z urządzeniem, utrzymywana za pomocą
+specjalnego kanału rozgłoszeniowego o nazwie \textit{beacon}.
+
+\subsection{Bezpieczeństwo}
+
+Za bezpieczny system komunikacyjny można uważać taki, który umożliwia poufną wymianę danych pomiędzy urządzeniami o potwierdzonej tożsamości.
+Mechanizmy związane z bezpieczeństwem w sieci Bluetooth: 
+\begin{itemize}
+	\item Parowanie urządzeń (pairing)
+	\item Wiązanie urządzeń (bonding)
+	\item Stosowanie kluczy
+	\begin{itemize}
+		\item klucz urządzenia (unit key)
+		\item inicjalizacyjny (initialization key)
+		\item połączeniowy (link key)
+		\item szyfrujący (encription key)
+	\end{itemize}
+\end{itemize}
