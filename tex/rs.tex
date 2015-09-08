@@ -226,7 +226,7 @@
 		\subsubsection{Rodzaje odpowiedzi}
 			\begin{itemize}
 				\item \textbf{Normalna} - w przypadku poprawnego wykonania polecenia.
-				\item \textbf{Szczególna} - jeżeli slave wykryje błąd przy odbiorze wiadomości lub nie jest w stanie wykonać polecenia, to przygotowuje specjalny komunikat o wystąpieniu błędu i przesyła jako odpowiedź. W przypadku tej wiadomości jest ona \textbf{powiększona} o 128 - miejsce na kod błędu.
+				\item \textbf{Szczególna} - jeżeli slave wykryje błąd przy odbiorze wiadomości lub nie jest w stanie wykonać polecenia, to przygotowuje specjalny komunikat o wystąpieniu błędu i przesyła jako odpowiedź. W przypadku tej wiadomości jest ona \textbf{powiększona} o 128 - najważniejszy bit ustawiony na 1. W pozostałych można zapisać szczegółową informację o błędzie.
 			\end{itemize}
 		\subsubsection{Parametry protokołu}
 			\begin{itemize}
@@ -278,8 +278,8 @@
 			\item Asynchroniczna transmisja znakowa
 			\item Formaty znaków
 			\begin{itemize}
-				\item Tryb ASCII: 7E1, 7O1, 7N2
-				\item Tryb RTU: 8E1, 8O1, 8N2
+				\item Tryb ASCII: 7E1, 7O1, 7N2 (10 bitów)
+				\item Tryb RTU: 8E1, 8O1, 8N2 (11 bitów)
 			\end{itemize}
 			\item Szybkość: od 1200 bd do 19200 bd
 			\item Rodzaj łącza:
